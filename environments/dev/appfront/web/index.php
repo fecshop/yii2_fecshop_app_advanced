@@ -17,14 +17,13 @@ $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/../../common/config/main-local.php'),
     require(__DIR__ . '/../config/main.php'),
     require(__DIR__ . '/../config/main-local.php'),
-	# fecshop base
+	# fecshop base config
 	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
-	# fecshop module base
-	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appadmin/config/appadmin.php'),
+	# fecshop module config
+	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php'),
+	# Third-party partners config
 	
-	# thrid part confing
-	
-	# user local config.
+	# developer local config 
 	require(__DIR__ . '/../config/fecshop_local.php')
     
 );

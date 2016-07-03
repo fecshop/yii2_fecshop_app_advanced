@@ -36,6 +36,10 @@ return [
             'appadmin/web/assets',
             'appfront/runtime',
             'appfront/web/assets',
+			'apphtml5/runtime',
+            'apphtml5/web/assets',
+			'appserver/runtime',
+            'appserver/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -44,6 +48,8 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appfront/config/main-local.php',
+			'apphtml5/config/main-local.php',
+			'appserver/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -53,6 +59,10 @@ return [
             'appadmin/web/assets',
             'appfront/runtime',
             'appfront/web/assets',
+			'apphtml5/runtime',
+            'apphtml5/web/assets',
+			'appserver/runtime',
+            'appserver/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -60,6 +70,8 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appfront/config/main-local.php',
+			'apphtml5/config/main-local.php',
+			'appserver/config/main-local.php',
         ],
     ],
 ];

@@ -20,7 +20,7 @@ $config = yii\helpers\ArrayHelper::merge(
 	# fecshop base config
 	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
 	# fecshop module config
-	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php'),
+	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appserver/config/appserver.php'),
 	
 	## Third-party partners config
 	

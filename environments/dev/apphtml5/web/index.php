@@ -4,8 +4,8 @@ $secure = 0;
 $http = $secure ? 'https' : 'http';
 $homeUrl = $http.'://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME']), '\\/');
 
-defined('YII_DEBUG') or define('YII_DEBUG', false);
-defined('YII_ENV') or define('YII_ENV', 'prod');
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require(__DIR__ . '/../../vendor/autoload.php');
 require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
@@ -20,11 +20,10 @@ $config = yii\helpers\ArrayHelper::merge(
 	# fecshop base config
 	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
 	# fecshop module config
-	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php'),
+	require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/apphtml5/config/apphtml5.php'),
+	# Third-party partners config
 	
-	## Third-party partners config
-	
-	# user local config.
+	# developer local config 
 	require(__DIR__ . '/../config/fecshop_local.php')
     
 );

@@ -8,10 +8,10 @@ $params = array_merge(
 
 
 return [
-    'id' => 'app-front',
+    'id' => 'app-server',
     'basePath' => dirname(__DIR__),
     //'bootstrap' => ['log'],
-    'controllerNamespace' => 'appfront\controllers',
+    'controllerNamespace' => 'appserver\controllers',
 	# compress css and js to one file,
 	//'bootstrap'    => ['assetsAutoCompress'],
     'components' => [
@@ -43,7 +43,7 @@ return [
 		
 		'cache' => [
             'class' => 'yii\redis\Cache',
-            'keyPrefix' => 'appfront',
+            'keyPrefix' => 'appserver',
         ],
 
     
