@@ -16,10 +16,18 @@ github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 
 安装这个扩展的首选方式是通过 [composer](http://getcomposer.org/download/).
 
-
-执行
+安装composer
 
 ```
+curl -sS https://getcomposer.org/installer | php  
+mv composer.phar /usr/local/bin/composer 
+composer self-update
+```
+
+安装fecshop app advanced
+
+```
+composer global require "fxp/composer-asset-plugin:~1.1.1"
 composer create-project --prefer-dist  fancyecommerce/fecshop-app-advanced
 cd fecshop-app-advanced
 ./init
@@ -27,13 +35,18 @@ cd fecshop-app-advanced
 ```
 
 
-
 执行完上面，就安装完成了。
 
 2、配置 fecshop app advanced
 
+```
 在common/main-local.php中配置mysql和mongodb
-
 在appfront/main-local.php中配置redis
-
 在appadmin/main-local.php中配置redis
+```
+
+3.配置nginx
+
+```
+nginx root 分别指向 appfront/web 和appadmin/web
+```
