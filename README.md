@@ -1,38 +1,34 @@
-FecShop  Advanced Project Template
-===============================
+# yii2_fecshop_app_advanced
+fecshop app advanced
 
-base on yii framework
+========
+
+> 项目已经开始, 正在开发中，框架整理阶段。
+> Terry
+
+1、安装 fecshop app advanced
+------------
+
+安装这个扩展的首选方式是通过 [composer](http://getcomposer.org/download/).
+
+
+执行
 
 ```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-tests                    contains various tests for the advanced application
-    codeception/         contains tests developed with Codeception PHP Testing Framework
+composer create-project --prefer-dist  fancyecommerce/fecshop-app-advanced
+cd fecshop-app-advanced
+./init
+
 ```
+
+
+
+执行完上面，就安装完成了。
+
+2、配置 fecshop app advanced
+
+在common/main-local.php中配置mysql和mongodb
+
+在appfront/main-local.php中配置redis
+
+在appadmin/main-local.php中配置redis
