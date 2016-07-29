@@ -65,20 +65,22 @@ return [
 				'' => 'fecadmin/index/index',
 			],
 		],
-		
+		/*
 		'request' => [
-			'class' => 'fecshop\services\Request',
-			/*
-			'enableCookieValidation' => true,
-			'enableCsrfValidation' => true,
-			'noCsrfRoutes' => [
-				'catalog/product/addreview',
-				'favorite/product/remark',
-				'paypal/ipn/index',
-				'paypal/ipn',
-			],
-			*/
+			'class' => 'fecshop\yii\web\Request',
+			'cookieValidationKey' => 'O1d232trdedd1x-M97_7QvwPo-5QGdkLMp#@#@',
+			
+			//'enableCookieValidation' => true,
+			//'enableCsrfValidation' => true,
+			//'noCsrfRoutes' => [
+			//	'catalog/product/addreview',
+			//	'favorite/product/remark',
+			//	'paypal/ipn/index',
+			//	'paypal/ipn',
+			//],
+			
 		],
+		*/
 	
 		/*
 		'view' => [

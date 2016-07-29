@@ -15,6 +15,7 @@ foreach (glob(__DIR__ . '/fecshop_local_services/*.php') as $filename){
     
 return [
 	'modules'=>$modules,
-    'components' => $services,
+    'services' => $services,
+	/* only config in front web */
 	'bootstrap' => ['store'],
 ];

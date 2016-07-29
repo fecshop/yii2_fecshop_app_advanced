@@ -11,12 +11,12 @@ return [
     'id' => 'app-front',
     'basePath' => dirname(__DIR__),
     //'bootstrap' => ['log'],
-    'controllerNamespace' => 'appfront\controllers',
-	# compress css and js to one file,
+    'controllerNamespace' => 'appadmin\controllers',
+	'modules'=>$modules,
 	//'bootstrap'    => ['assetsAutoCompress'],
+	# 自定义组件
     'components' => [
        /*
-	   #  compress css and js to one file,
 	   'assetsAutoCompress' =>
         [
             'class'             => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
@@ -26,39 +26,52 @@ return [
             'jsFileCompile'     => true,
         ],
 		*/
+		'assetManager' => [
+			'forceCopy' => true,
+		],
 		
 		
 		
 		'session' => [
-			# use mongodb storage session data
-			//'class' => 'yii\mongodb\Session',
-			//'db' => 'mongodb',
-			//'sessionCollection' => 'session',
-			# use redis storage session data
-			'class' => 'yii\redis\Session',
-			# session time out time.
-			'timeout' => 6000,
+				//'class' => 'yii\mongodb\Session',
+				'class' => 'yii\redis\Session',
+				//'db' => 'mongodb',
+				//'sessionCollection' => 'session',
+				'timeout' => 6000,
 				
 		],
 		
 		'cache' => [
             'class' => 'yii\redis\Cache',
-            'keyPrefix' => 'appfront',
+            'keyPrefix' => 'appadmin',
         ],
 
+
+		'user' => [
+			'identityClass' => 'fecadmin\models\AdminUser',
+			'enableAutoLogin' => true,
+		],
     
+		'errorHandler' => [
+			'errorAction' => 'site/error',
+		],
 		
 		'urlManager' => [
 			'class' => 'yii\web\UrlManager',
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
+			'rules' => [
+				'' => 'cms/home/index',
+			],
+			//'baseUrl' => '/fr/',
 		],
 		
 		'request' => [
-			'class' => 'fecshop\services\Request',
+			'class' => 'fecshop\yii\web\Request',
 			/*
 			'enableCookieValidation' => true,
 			'enableCsrfValidation' => true,
+			'cookieValidationKey' => 'O1d232trde1x-M97_7QvwPo-5QGdkLMp#@#@',
 			'noCsrfRoutes' => [
 				'catalog/product/addreview',
 				'favorite/product/remark',
@@ -75,6 +88,7 @@ return [
 				'baseUrl' => '@web/themes/adminlte',
 			],
 		], 
+		
 		//添加js,css;
 		'assetManager' => [
 			//'converter' => [

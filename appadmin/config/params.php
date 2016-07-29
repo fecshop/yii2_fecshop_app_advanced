@@ -1,4 +1,11 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
+	/**
+	 * admin language for  attribute
+	 */
+   
+	'systemlog' =>[
+                'enable' => 1,
+        ],
+
 ];

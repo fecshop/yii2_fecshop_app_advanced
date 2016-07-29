@@ -1,12 +1,12 @@
 <?php
-# ±¾ÎÄ¼þÔÚapp/web/index.php ´¦ÒýÈë¡£
+# æœ¬æ–‡ä»¶åœ¨app/web/index.php å¤„å¼•å…¥ã€‚
 
-# fecshopµÄºËÐÄÄ£¿é
+# fecshopçš„æ ¸å¿ƒæ¨¡å—
 $modules = [];
 foreach (glob(__DIR__ . '/fecshop_local_modules/*.php') as $filename){
 	$modules = array_merge($modules,require($filename));
 }
-# ·þÎñÆ÷×é¼þ
+# æœåŠ¡å™¨ç»„ä»¶
 $services = [];
 foreach (glob(__DIR__ . '/fecshop_local_services/*.php') as $filename){
 	$services = array_merge($services,require($filename));
@@ -15,6 +15,6 @@ foreach (glob(__DIR__ . '/fecshop_local_services/*.php') as $filename){
     
 return [
 	'modules'=>$modules,
-    'components' => $services,
+    'services' => $services,
 	//'bootstrap' => ['store'],
 ];
