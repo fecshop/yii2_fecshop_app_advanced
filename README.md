@@ -38,9 +38,8 @@ composer create-project --prefer-dist  fancyecommerce/fecshop-app-advanced
 2、配置 fecshop app advanced
 
 ```
-在common/main-local.php中配置mysql和mongodb
-在appfront/main-local.php中配置redis
-在appadmin/main-local.php中配置redis
+在common/main-local.php中配置mysql，mongodb，redis
+
 ```
 
 3.配置nginx
