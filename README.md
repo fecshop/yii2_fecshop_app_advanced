@@ -1,54 +1,49 @@
-Yii 2 Advanced Project Template
-===============================
+# yii2_fecshop_app_advanced
+fecshop app advanced
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+========
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+[![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/downloads)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced)
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+> 项目已经开始, 正在开发中，框架整理阶段。
+> Terry
 
-DIRECTORY STRUCTURE
--------------------
+1、安装 fecshop app advanced
+------------
+
+安装这个扩展的首选方式是通过 [composer](http://getcomposer.org/download/).
+
+安装composer
 
 ```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-tests                    contains various tests for the advanced application
-    codeception/         contains tests developed with Codeception PHP Testing Framework
+curl -sS https://getcomposer.org/installer | php  
+mv composer.phar /usr/local/bin/composer 
+composer self-update
+```
+
+安装fecshop app advanced
+
+```
+composer global require "fxp/composer-asset-plugin:~1.1.1"
+composer create-project --prefer-dist  fancyecommerce/fecshop-app-advanced
+
+```
+
+
+执行完上面，就安装完成了。
+
+2、配置 fecshop app advanced
+
+```
+在common/main-local.php中配置mysql，mongodb，redis
+
+```
+
+3.配置nginx
+
+```
+nginx root 分别指向 appfront/web 和appadmin/web
 ```
