@@ -31,7 +31,7 @@
 					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/fr', # 跳转后的url。
 				],
 			],
-			'fecshop.appfront.fancyecommerce.com/es' => [
+			'fecshop.appfront.es.fancyecommerce.com' => [
 				'language' 		=> 'es_ES',
 				'languageName' 	=> 'Español',
 				'localThemeDir'	=> '@appfront/theme/terry/theme01',
@@ -40,7 +40,7 @@
 				'mobile'		=> [
 					'enable'		=> true,
 					'condition'		=> ['tablet'],
-					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/es',	
+					'redirectDomain' 	=> 'fecshop.apphtml5.es.fancyecommerce.com',	
 				],
 			],
 			'fecshop.appfront.fancyecommerce.com/cn' => [

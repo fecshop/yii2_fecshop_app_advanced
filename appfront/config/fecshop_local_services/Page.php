@@ -26,7 +26,7 @@ return [
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/header.php',
 						'cache' => [
-							'enable'	=> true,
+							'enable'	=> false,
 							'timeout' 	=> 4500,
 						],
 					],
