@@ -44,26 +44,26 @@ composer update
 
 ```
 
-3.配置nginx
+3、配置nginx
 
 ```
 nginx root 分别指向 appfront/web 和appadmin/web
 ```
 
-4.配置store的域名
+4、配置store的域名
 
 在配置文件：`@app\config\fecshop_local_services\Store.php`
 
 
-5.配置语言：
+5、配置语言：
 
 在配置文件：`@app\config\fecshop_local_services\FecshopLang.php`
 
-6.配置货币：
+6、配置货币：
 
 在文件：`@app\config\fecshop_local_services\Page.php`
 
-7.配置是否强制复制assets到web目录，如果是开发环境，按照下面进行配置。
+7、配置是否强制复制assets到web目录，如果是开发环境，按照下面进行配置。
 
 这个是yii2的知识范畴
 
@@ -75,7 +75,7 @@ nginx root 分别指向 appfront/web 和appadmin/web
 
 如果是线上， 将forceCopy设置成false `['forceCopy' => false]`
 
-8.其他参看文档配置。
+8、其他参看文档配置。
 
 [Fecshop 初始配置](http://www.fecshop.com/doc/fecshop-guide/cn-1.0/guide-fecshop-init-config.html)
 
