@@ -9,7 +9,7 @@ return [
 			'rules' => [],
 		],
 		'assetManager' => [
-			'forceCopy' => true,
+			'forceCopy' => false,
 		],
     ],
 ];

@@ -48,6 +48,9 @@ return [
 				],
 			],
 		],
+		'assetManager' => [
+			'forceCopy' => true,
+		],
 	],
 	# 自定义参数
     'params' => $params,

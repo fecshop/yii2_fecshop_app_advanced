@@ -38,6 +38,9 @@ return [
             'class' => 'yii\redis\Cache',
             'keyPrefix' => 'appadmin',
         ],
+		'assetManager' => [
+			'forceCopy' => true,
+		],
 		
 	],
 	# 自定义参数

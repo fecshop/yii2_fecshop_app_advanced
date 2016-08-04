@@ -31,6 +31,7 @@ composer global require "fxp/composer-asset-plugin:~1.1.1"
 git clone git@github.com:fancyecommerce/yii2_fecshop_app_advanced.git  fecshop
 cd fecsop
 composer update
+./init
 ```
 
 
@@ -48,3 +49,37 @@ composer update
 ```
 nginx root 分别指向 appfront/web 和appadmin/web
 ```
+
+4. 配置store的域名
+
+在配置文件：`@app\config\fecshop_local_services\Store.php`
+
+
+5. 配置语言：
+
+在配置文件：`@app\config\fecshop_local_services\FecshopLang.php`
+
+6. 配置货币：
+
+在文件：`@app\config\fecshop_local_services\Page.php`
+
+8. 配置是否强制复制assets到web目录，如果是开发环境，按照下面进行配置。
+
+这个是yii2的知识范畴
+
+```
+'assetManager' => [
+	'forceCopy' => true,
+],
+```
+
+如果是线上， 将forceCopy设置成false `['forceCopy' => false]`
+
+9.其他参看文档配置。
+
+[Fecshop 初始配置](http://www.fecshop.com/doc/fecshop-guide/cn-1.0/guide-fecshop-init-config.html)
+
+
+
+
+
