@@ -25,7 +25,6 @@ return [
             'jsFileCompile'     => true,
         ],
 		*/
-		
 		'session' => [
 			//'class' => 'yii\mongodb\Session',
 			//'db' => 'mongodb',
@@ -38,7 +37,17 @@ return [
             'class' => 'yii\redis\Cache',
             'keyPrefix' => 'appfront',
         ],
-
+		
+		'i18n' => [
+			'translations' => [
+				'appfront' => [
+					'basePaths' => [
+						'@appfront/languages',
+					],
+					'sourceLanguage' => 'en_US', # 如果 en_US 也想翻译，那么可以改成en_XX。
+				],
+			],
+		],
 	],
 	# 自定义参数
     'params' => $params,

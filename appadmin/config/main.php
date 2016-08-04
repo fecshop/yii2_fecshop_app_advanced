@@ -41,11 +41,8 @@ return [
             'class' => 'yii\redis\Cache',
             'keyPrefix' => 'appadmin',
         ],
-		
-		'urlManager'=> [
-            'enablePrettyUrl' => true, //对url进行美化
-            'showScriptName' => false,//隐藏index.php
-            'rules' => []//网址匹配规则
+		'assetManager' => [
+			'forceCopy' => false,
 		],
 	],
 	# 自定义参数

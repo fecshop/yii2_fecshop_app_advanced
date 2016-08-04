@@ -25,9 +25,6 @@ return [
             'jsFileCompile'     => true,
         ],
 		*/
-		'assetManager' => [
-			'forceCopy' => true,
-		],
 		'session' => [
 			//'class' => 'yii\mongodb\Session',
 			//'db' => 'mongodb',

@@ -13,7 +13,7 @@ return [
     'controllerNamespace' => 'apphtml5\controllers',
 	'modules'=>$modules,
 	//'bootstrap'    => ['assetsAutoCompress'],
-	# ×Ô¶¨Òå×é¼ş
+	# è‡ªå®šä¹‰ç»„ä»¶
     'components' => [
        /*
 	   'assetsAutoCompress' =>
@@ -38,7 +38,8 @@ return [
             'class' => 'yii\redis\Cache',
             'keyPrefix' => 'appadmin',
         ],
+		
 	],
-	# ×Ô¶¨Òå²ÎÊı
+	# è‡ªå®šä¹‰å‚æ•°
     'params' => $params,
 ];

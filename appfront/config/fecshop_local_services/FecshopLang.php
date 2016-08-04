@@ -9,6 +9,7 @@
 return [
 	'fecshoplang' => [
 		//'class' => 'fecshop\services\FecshopLang',
+		/*
 		'allLangCode' => [
 			'en_US' => 'en',
 			'fr_FR' => 'fr',
@@ -19,5 +20,6 @@ return [
 			'zh_CN' => 'zh',
 		],
 		'defaultLangCode' => 'en',
+		*/
 	],
 ];
