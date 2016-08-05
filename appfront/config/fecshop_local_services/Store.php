@@ -15,7 +15,7 @@
 				'currency' 		=> 'USD',
 				'mobile'		=> [ # 当设备满足什么条件的时候，进行跳转。
 					'enable'		=> true,
-					'condition'		=> ['phone','tablet'],
+					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
 					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	
 				],
 			],

@@ -27,17 +27,27 @@ return [
 		*/
 		
 		'session' => [
-			//'class' => 'yii\mongodb\Session',
-			//'db' => 'mongodb',
-			//'sessionCollection' => 'session',
+			/**
+			 * use mongodb for session.
+			 */
+			/*
+			'class' => 'yii\mongodb\Session',
+			'db' => 'mongodb',
+			'sessionCollection' => 'session',
+			*/
 			'class' => 'yii\redis\Session',
-			'timeout' => 6000,	
+			'timeout' => 6000,
 		],
 		
 		'cache' => [
+			/**
+			 * use mongodb for cache.
+			 */
+			//'class' => 'yii\mongodb\Cache',
             'class' => 'yii\redis\Cache',
-            'keyPrefix' => 'appadmin',
+            'keyPrefix' => 'apphtml5',
         ],
+		
 		'assetManager' => [
 			'forceCopy' => true,
 		],
