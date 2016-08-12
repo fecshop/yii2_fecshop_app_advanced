@@ -18,6 +18,10 @@
 					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
 					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	
 				],
+				//'image'	=> [
+				//	'domain' => 'img.appfront.fancyecommerce.com',
+				//	'baseDir'=> '@appimage/appfront',
+				//]
 			],
 			'fecshop.appfront.fancyecommerce.com/fr' => [
 				'language' 		=> 'fr_FR',

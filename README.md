@@ -8,7 +8,10 @@ github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 [![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/downloads)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced)
 
 
-> 项目已经开始, 正在开发中，框架整理阶段。
+> 项目已经开始, 框架已经整理完毕，已经开始开发，这是安装fecshop
+> 的入口部分，您可以通过下面的通过composer的方式安装，安装后，
+> Yii2_fecshop,Yii2_fec_admin,Yii2_fec都会通过依赖包的方式被加载进来。
+
 > Terry
 
 1、安装 fecshop app advanced
@@ -28,7 +31,7 @@ composer self-update
 
 ```
 composer global require "fxp/composer-asset-plugin:~1.1.1"
-git clone git@github.com:fancyecommerce/yii2_fecshop_app_advanced.git  fecshop
+git clone https://github.com/fancyecommerce/yii2_fecshop_app_advanced.git   fecshop
 cd fecsop
 composer update
 ./init
