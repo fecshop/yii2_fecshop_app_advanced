@@ -7,7 +7,13 @@
  * @license http://www.fecshop.com/license/
  */
 return [
-	'fecshoplang' => [
-		//'defaultLangCode' => 'en',
+	'catalog' => [
+		'params'=> [
+			'category_breadcrumbs' => true, # 是否显示分类的面包屑导航。
+		],
 	],
 ];
+
+
+
+

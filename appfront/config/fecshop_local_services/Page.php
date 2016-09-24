@@ -13,7 +13,7 @@ return [
 			'widget' => [
 				'widgetConfig' => [
 					'head' => [
-						'class' => 'fecshop\app\appfront\modules\Cms\block\widgets\Head',
+						'class' => 'fecshop\app\appfront\widgets\Head',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/head.php',
 						'cache' => [
@@ -22,7 +22,7 @@ return [
 						],
 					],
 					'header' => [
-						'class' => 'fecshop\app\appfront\modules\Cms\block\widgets\Headers',
+						'class' => 'fecshop\app\appfront\widgets\Headers',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/header.php',
 						'cache' => [
@@ -31,7 +31,7 @@ return [
 						],
 					],
 					'menu' => [
-						'class' => 'fecshop\app\appfront\modules\Cms\block\widgets\Menu',
+						'class' => 'fecshop\app\appfront\widgets\Menu',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/menu.php',
 						'cache' => [
@@ -40,7 +40,7 @@ return [
 						],
 					],
 					'footer' => [
-						'class' => 'fecshop\app\appfront\modules\Cms\block\widgets\Footer',
+						'class' => 'fecshop\app\appfront\widgets\Footer',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/footer.php',
 						'cache' => [
@@ -52,6 +52,9 @@ return [
 						#'class' => 'fecshop\app\appfront\modules\Cms\block\widgets\Scroll',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
 						'view'  => 'widgets/scroll.php',
+					],
+					'breadcrumbs' => [
+						'view'  => 'widgets/breadcrumbs.php',
 					],
 				]
 				
@@ -81,9 +84,21 @@ return [
 				/**
 				 *	custom menu  in the front menu section.
 				 */
+				 
 				'frontCustomMenu' => [
+					
+				],
+				/**
+				 *	custom menu  behind the menu section.
+				 */
+				'behindCustomMenu' => [
 					[
-						'name' 		=> 'my custom menu',
+						'name' 		=> [
+							'name_en' => 'custom menu en',
+							'name_fr' => 'custom menu fr',
+							'name_es' => 'custom menu es',
+							'name_zh' => 'custom menu zh',
+						],
 						'urlPath'	=> '/my-custom-menu.html',
 						'childMenu' => [
 							[
@@ -106,24 +121,8 @@ return [
 							],
 						],	
 					],
-					[
-						'name' 		=> 'my custom menu 2',
-						'urlPath'	=> '/my-custom-menu-2.html',
-					],
 				],
-				/**
-				 *	custom menu  behind the menu section.
-				 */
-				'behindCustomMenu' => [
-					[
-						'name' 		=> 'my behind custom menu',
-						'urlPath'	=> '/my-behind-custom-menu.html',
-					],
-					[
-						'name' 		=> 'my behindcustom menu 2',
-						'urlPath'	=> '/my-behind-custom-menu-2.html',
-					],
-				],
+				
 			],
 			
 		],
