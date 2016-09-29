@@ -30,6 +30,9 @@ return [
 							'timeout' 	=> 4500,
 						],
 					],
+					'topsearch' => [
+					    'view'  => 'widgets/topsearch.php',
+					],
 					'menu' => [
 						'class' => 'fecshop\app\appfront\widgets\Menu',
 						# 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
@@ -55,6 +58,9 @@ return [
 					],
 					'breadcrumbs' => [
 						'view'  => 'widgets/breadcrumbs.php',
+					],
+					'flashmessage' => [
+						'view'  => 'widgets/flashmessage.php',
 					],
 				]
 				
