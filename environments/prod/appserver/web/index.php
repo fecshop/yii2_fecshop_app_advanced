@@ -30,7 +30,16 @@ $config = yii\helpers\ArrayHelper::merge(
 );
 
 $config['homeUrl'] = $homeUrl;
-
+/**
+ * yii class Map Custom
+ * 
+ */ 
+$yiiClassMap = require(__DIR__ . '/../config/YiiClassMap.php');
+if(is_array($yiiClassMap) && !empty($yiiClassMap)){
+	foreach($yiiClassMap as $namespace => $filePath){
+		Yii::$classMap[$namespace] = $filePath;
+	}
+}
 /**
  * 添加fecshop的服务 ，Yii::$service  ,  将services的配置添加到这个对象。
  * 使用方法：Yii::$service->cms->article;

@@ -1,11 +1,13 @@
 <?php
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
     require(__DIR__ . '/params.php'),
     require(__DIR__ . '/params-local.php')
 );
-
+# Yii class Map rewrite
+//$params['AppYiiClassMap'] = require(__DIR__ . '/classMap.php');
 
 return [
     'id' => 'app-front',
@@ -14,6 +16,7 @@ return [
     'controllerNamespace' => 'appfront\controllers',
 	//'bootstrap'    => ['assetsAutoCompress'],
 	# 自定义组件
+	
     'components' => [
        /*
 	   'assetsAutoCompress' =>
