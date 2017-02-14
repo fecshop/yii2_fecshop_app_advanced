@@ -38,7 +38,7 @@ return [
 			'sessionCollection' => 'session',
 			*/
 			'class' => 'yii\redis\Session',
-			'timeout' => 86400,
+			'timeout' => 86400 * 7,
 		],
 		
 		'cache' => [

@@ -8,4 +8,6 @@ Yii::setAlias('@appserver', dirname(dirname(__DIR__)) . '/appserver');
 Yii::setAlias('@appapi', dirname(dirname(__DIR__)) . '/appapi');
 Yii::setAlias('@appimage', dirname(dirname(__DIR__)) . '/appimage');
 
+Yii::setAlias('@Facebook', dirname(dirname(__DIR__)) . '/vendor/fancyecommerce/fecshop/lib/Facebook');
+Yii::setAlias('@google', dirname(dirname(__DIR__)) . '/vendor/fancyecommerce/fecshop/lib/google');
 

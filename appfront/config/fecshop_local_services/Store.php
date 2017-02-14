@@ -37,6 +37,17 @@
 					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
 					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	
 				],
+				'thirdLogin' => [
+					'facebook' =>[                       #fb api配置 ，fb可以一个app设置pc和手机两个域名 
+						'facebook_app_id'     => '1849609081926823',
+						'facebook_app_secret' => '2e097a6d5a424531770fc05760dd7139',
+					],
+					"google" => [                       #谷歌api visit https://code.google.com/apis/console to generate your google api
+						'CLIENT_ID'  	 => '380372364773-qdj1seag9bh2n0pgrhcv2r5uoc58ltp3.apps.googleusercontent.com',
+						'CLIENT_SECRET'  => 'ei8RaoCDoAlIeh1nHYm0rrwO',
+					],
+				]
+
 				//'image'	=> [
 				//	'domain' => 'img.appfront.fancyecommerce.com',
 				//	'baseDir'=> '@appimage/appfront',
