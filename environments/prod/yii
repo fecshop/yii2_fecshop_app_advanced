@@ -1,42 +1,60 @@
 #!/usr/bin/env php
 <?php
 /**
- * Fecshop console bootstrap file.
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 Fecshop Software LLC
- * @license http://www.fecshop.com/license/
+ * Yii console bootstrap file.
+ *
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
  */
-defined('YII_DEBUG') or define('YII_DEBUG', false);
-defined('YII_ENV') or define('YII_ENV', 'prod');
-
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
 require(__DIR__ . '/vendor/autoload.php');
+#require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/vendor/fancyecommerce/fecshop/yii/Yii.php');
+
 require(__DIR__ . '/common/config/bootstrap.php');
 require(__DIR__ . '/console/config/bootstrap.php');
-
 $config = yii\helpers\ArrayHelper::merge(
+
     require(__DIR__ . '/common/config/main.php'),
     require(__DIR__ . '/common/config/main-local.php'),
     require(__DIR__ . '/console/config/main.php'),
     require(__DIR__ . '/console/config/main-local.php'),
+	
 	# fecshop services config
 	require(__DIR__ . '/vendor/fancyecommerce/fecshop/config/fecshop.php'),
+	
 	# fecshop module config
 	require(__DIR__ . '/vendor/fancyecommerce/fecshop/app/console/config/console.php'),
-	
+
 	# thrid part confing
-	
+
 	# common modules and services.
 	require(__DIR__ . '/common/config/fecshop_local.php'),
-	 
+
 	# console local modules and services.
 	require(__DIR__ . '/console/config/fecshop_local.php')
-    
+	
 );
 
+$yiiClassMap = require(__DIR__ . '/console/config/YiiClassMap.php');
+if(is_array($yiiClassMap) && !empty($yiiClassMap)){
+	foreach($yiiClassMap as $namespace => $filePath){
+		Yii::$classMap[$namespace] = $filePath;
+	}
+}
+
+/**
+ * 添加fecshop的服务 ，Yii::$service  ,  将services的配置添加到这个对象。
+ * 使用方法：Yii::$service->cms->article;
+ * 上面的例子就是获取cms服务的子服务article。
+ */
 new fecshop\services\Application($config['services']);
 unset($config['services']);
 
 $application = new yii\console\Application($config);
+
 $exitCode = $application->run();
 exit($exitCode);
+

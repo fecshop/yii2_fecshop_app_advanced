@@ -17,8 +17,20 @@ return [
 						'rate' 		=> 1,
 						'symbol' 	=> '$',
 					],
+					'EUR' => [
+						'rate' 		=> 0.93,
+						'symbol' 	=> '€',
+					],
+					//'AUD' => [
+					//	'rate' 		=> 1.33,
+					//	'symbol' 	=> 'AU$',
+					//],
+					'GBP' => [
+						'rate' 		=> 0.8,
+						'symbol' 	=> '£',
+					],
 					'RMB' => [
-						'rate' 		=> 6.3,
+						'rate' 		=> 6.87,
 						'symbol' 	=> '￥',
 					],
 				],
