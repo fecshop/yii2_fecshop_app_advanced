@@ -22,15 +22,15 @@ github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 安装composer
 
 ```
-curl -sS https://getcomposer.org/installer | php  
-mv composer.phar /usr/local/bin/composer 
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 composer self-update
 ```
 
 安装fecshop app advanced
 
 ```
-composer global require "fxp/composer-asset-plugin:~1.1.1"
+composer global require "fxp/composer-asset-plugin:^1.2.0"
 git clone https://github.com/fancyecommerce/yii2_fecshop_app_advanced.git   fecshop
 cd fecsop
 composer update
