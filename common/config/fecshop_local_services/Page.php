@@ -14,11 +14,11 @@ return [
 				'defaultCurrency' => 'USD',  # 如果store不设置货币，就使用这个store默认货币
 				'currencys' => [
 					'USD' => [
-						'rate' 		=> 1,
+						'rate' 		=> 1, # 汇率
 						'symbol' 	=> '$',
 					],
 					'EUR' => [
-						'rate' 		=> 0.93,
+						'rate' 		=> 0.93, # 汇率
 						'symbol' 	=> '€',
 					],
 					//'AUD' => [

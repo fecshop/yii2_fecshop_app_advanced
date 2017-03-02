@@ -25,6 +25,7 @@
 				//]
 			],
 			*/
+			# 数据的key就是域名
 			'fecshop.appfront.fancyecommerce.com' => [
 				'language' 		=> 'en_US',
 				'languageName' 	=> 'English',
@@ -35,8 +36,9 @@
 				'mobile'		=> [ # 当设备满足什么条件的时候，进行跳转。
 					'enable'		=> true,
 					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
-					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	
+					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	# 如果是移动设备访问进行域名跳转
 				],
+				# 第三方账号登录配置
 				'thirdLogin' => [
 					'facebook' =>[                       #fb api配置 ，fb可以一个app设置pc和手机两个域名 
 						'facebook_app_id'     => '1849609081926823',

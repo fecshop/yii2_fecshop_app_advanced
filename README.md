@@ -60,11 +60,13 @@ nginx root 分别指向 appfront/web 和appadmin/web
 
 5、配置语言：
 
-在配置文件：`@app\config\fecshop_local_services\FecshopLang.php`
+在配置文件（：`@common\config\fecshop_local_services\FecshopLang.php`
+
+
 
 6、配置货币：
 
-在文件：`@app\config\fecshop_local_services\Page.php`
+在文件：`@common\config\fecshop_local_services\Page.php`
 
 7、配置是否强制复制assets到web目录，如果是开发环境，按照下面进行配置。
 
@@ -78,7 +80,29 @@ nginx root 分别指向 appfront/web 和appadmin/web
 
 如果是线上， 将forceCopy设置成false `['forceCopy' => false]`
 
-8、其他参看文档配置。
+8、导入数据库表(migrate)
+
+mysql(导入mysql的表，数据，索引):
+
+```
+./yii migrate --interactive=0 --migrationPath=@fecshop/migrations/mysqldb
+```
+
+mongodb(导入mongodb的表，数据，索引):
+
+```
+./yii mongodb-migrate  --interactive=0 --migrationPath=@fecshop/migrations/mongodb
+```
+
+mongodb的示例数据存放路径为：
+
+./vendor/fancyecommerce/fecshop/migrations/mongodb-example-data/example_data.js
+
+可以通过mongodb的后台，或者通过php的rockmongo安装这些mongodb中的示例数据。
+
+
+
+9、其他参看文档配置。
 
 [Fecshop 初始配置](http://www.fecshop.com/doc/fecshop-guide/cn-1.0/guide-fecshop-init-config.html)
 
