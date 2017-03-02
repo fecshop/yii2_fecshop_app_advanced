@@ -17,7 +17,7 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
 		"yiisoft/yii2-apidoc": "~2.0.0",
-        "fancyecommerce/fecshop": "1.0.0.9",
+        "fancyecommerce/fecshop": "1.0.1.1",
         "skeeks/yii2-assets-auto-compress": "*"
     },
     "require-dev": {
