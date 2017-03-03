@@ -68,7 +68,7 @@ return [
 			
 			
 			
-			
+			#添加自定义menu
 			'menu' => [
 				'displayHome' => [
 					'enable' => true,
@@ -86,12 +86,7 @@ return [
 				 */
 				'behindCustomMenu' => [
 					[
-						'name' 		=> [
-							'name_en' => 'custom menu en',
-							'name_fr' => 'custom menu fr',
-							'name_es' => 'custom menu es',
-							'name_zh' => 'custom menu zh',
-						],
+						'name' 		=> 'custom menu',
 						'urlPath'	=> '/my-custom-menu.html',
 						'childMenu' => [
 							[
@@ -99,15 +94,15 @@ return [
 								'urlPath'	=> '/my-custom-menu-2.html',
 							],
 							[
-								'name' 		=> 'my custom menu 2',
+								'name' 		=> 'my custom menu 3',
 								'urlPath'	=> '/my-custom-menu-2.html',
 								'childMenu' => [
 									[
-										'name' 		=> 'my custom menu 2',
+										'name' 		=> 'my custom menu 3',
 										'urlPath'	=> '/my-custom-menu-2.html',
 									],
 									[
-										'name' 		=> 'my custom menu 2',
+										'name' 		=> 'my custom menu 3',
 										'urlPath'	=> '/my-custom-menu-2.html',
 									],
 								],	

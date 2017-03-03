@@ -41,7 +41,6 @@ return [
 								'purple'		=> 'purple',
 								'brown'			=> 'brown',
 								'golden'		=> 'golden',
-								'leopard'		=> 'leopard',
 								'multicolor'	=> 'multicolor',
 								'white & blue' 	=> 'White & Blue',
 								'white & black' 	=> 'White & Black',
