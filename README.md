@@ -27,6 +27,8 @@ mv composer.phar /usr/local/bin/composer
 composer self-update
 ```
 
+详细参看：`http://www.fancyecommerce.com/2016/05/10/yii2-%E5%AE%89%E8%A3%85-composer/`
+
 安装fecshop app advanced
 
 ```
@@ -47,11 +49,23 @@ composer update
 
 ```
 
-3、配置nginx
+3、配置环境
 
+3.1、配置nginx
 ```
 nginx root 分别指向 appfront/web 和appadmin/web
 ```
+3.2、安装mongodb
+
+详细参看地址：`http://www.fancyecommerce.com/2016/05/03/yii2-mongodb%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE-mongo/`
+
+3.3、需要安装的php扩展
+
+详细参看地址：`http://www.fancyecommerce.com/2016/05/03/php-%E6%89%A9%E5%B1%95%E5%AE%89%E8%A3%85-mongo-%EF%BC%8Credis-%EF%BC%8Csoap%EF%BC%8Cimap%EF%BC%8Cpdo_mysql%EF%BC%8Coauth/`
+
+3.4、redis配置
+
+详细参看地址：`http://www.fancyecommerce.com/2016/05/03/yii2-redis-%E9%85%8D%E7%BD%AE/`
 
 4、配置store的域名
 
