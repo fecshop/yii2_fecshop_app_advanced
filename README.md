@@ -32,7 +32,7 @@ composer self-update
 ```
 composer global require "fxp/composer-asset-plugin:^1.2.0"
 git clone https://github.com/fancyecommerce/yii2_fecshop_app_advanced.git   fecshop
-cd fecsop
+cd fecshop
 composer update
 ./init
 ```
