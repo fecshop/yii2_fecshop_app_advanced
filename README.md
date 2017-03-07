@@ -16,7 +16,8 @@ github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 
 
 
-本地开发环境推荐使用vagrant部署，box我已经弄好，地址在百度云盘，下载地址为：`https://pan.baidu.com/s/1kVwRD2Z`
+本地开发环境推荐使用vagrant部署，box我已经弄好，地址在百度云盘，下载地址为：`https://pan.baidu.com/s/1kVwRD2Z`，
+进入后打开文件夹，下载 `package.box`
 ，vagrant的使用教程为：http://www.fancyecommerce.com/2016/09/22/vagrant-%E4%B8%8B%E8%BD%BD%E9%83%A8%E7%BD%B2linux%E7%8E%AF%E5%A2%83/
 ，您可以通过vagrant安装使用。安装完成后，各个区块的访问地址为：
 
