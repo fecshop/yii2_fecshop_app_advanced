@@ -27,13 +27,12 @@ mv composer.phar /usr/local/bin/composer
 composer self-update
 ```
 
-详细参看：`http://www.fancyecommerce.com/2016/05/10/yii2-%E5%AE%89%E8%A3%85-composer/`
 
 安装fecshop app advanced
 
 ```
 composer global require "fxp/composer-asset-plugin:^1.2.0"
-git clone https://github.com/fancyecommerce/yii2_fecshop_app_advanced.git   fecshop
+composer create-project fancyecommerce/yii2_fecshop_app_advanced fecshop 1.0.1.3
 cd fecshop
 composer update
 ./init

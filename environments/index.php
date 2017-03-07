@@ -42,6 +42,7 @@ return [
             'apphtml5/web/assets',
 			'appserver/runtime',
             'appserver/web/assets',
+			'appimage/common/media/catalog/product',
         ],
         'setExecutable' => [
             'yii',
