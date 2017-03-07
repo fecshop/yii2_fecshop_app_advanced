@@ -34,7 +34,6 @@ composer self-update
 composer global require "fxp/composer-asset-plugin:^1.2.0"
 composer create-project fancyecommerce/yii2_fecshop_app_advanced fecshop 1.0.1.3
 cd fecshop
-composer update
 ./init
 ```
 
@@ -66,9 +65,11 @@ nginx root 分别指向 appfront/web 和appadmin/web
 
 详细参看地址：`http://www.fancyecommerce.com/2016/05/03/yii2-redis-%E9%85%8D%E7%BD%AE/`
 
-4、配置store的域名
+4、配置store的域名和图片的域名
 
-在配置文件：`@app\config\fecshop_local_services\Store.php`
+store在配置文件：`@app\config\fecshop_local_services\Store.php`
+
+图片域名配置文件：`@common\config\fecshop_local_services\Image.php`
 
 
 5、配置语言：
