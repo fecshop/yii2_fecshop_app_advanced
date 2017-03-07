@@ -61,7 +61,8 @@ cd fecshop
 
 4.1 添加host
 
-打开C:\Windows\System32\drivers\etc\hosts，添加如下代码：
+打开C:\Windows\System32\drivers\etc\hosts，添加如下代码（如果是其他IP，将
+127.0.0.1 替换成其他IP即可。）：
 
 ```
 127.0.0.1       rock.fecshoptest.com
