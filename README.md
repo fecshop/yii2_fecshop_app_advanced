@@ -14,6 +14,43 @@ github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
 
 > Terry
 
+
+
+本地开发环境推荐使用vagrant部署，box我已经弄好，地址在百度云盘，下载地址为：`https://pan.baidu.com/s/1kVwRD2Z`
+，vagrant的使用教程为：http://www.fancyecommerce.com/2016/09/22/vagrant-%E4%B8%8B%E8%BD%BD%E9%83%A8%E7%BD%B2linux%E7%8E%AF%E5%A2%83/
+，您可以通过vagrant安装使用。安装完成后，各个区块的访问地址为：
+
+```
+pc端地址：appfront.fecshoptest.com appfront.fecshoptest.es 指向 /www/web/develop/fecshop/appfront/web 
+ 
+后台端地址：appadmin.fecshoptest.com 指向/www/web/develop/fecshop/appadmin/web
+
+html5端地址（未开发）：apphtml5.fecshoptest.com 指向/www/web/develop/fecshop/apphtml5/web
+
+api端地址（未开发）：appapi.fecshoptest.com 	 指向/www/web/develop/fecshop/appapi/web
+
+手机app端地址（未开发）：appserver.fecshoptest.com 指向/www/web/develop/fecshop/appserver/web
+
+common图片端地址：img.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/common
+
+appadmin图片端地址：img2.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appadmin
+
+appfront图片端地址：img3.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appfront
+
+apphtml5图片端地址：img4.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/apphtml5
+
+appserver图片端地址：img5.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appserver
+
+rock mongo访问地址：rock.fecshoptest.com    账号：admin  密码：123456
+
+phpmyadmin访问地址: my.fecshoptest.com		账号：root   密码：123456
+
+后台端地址：appadmin.fecshoptest.com访问后，后台的用户名和密码为admin  123456
+
+```
+
+
+
 1、环境配置：
 ------------
 
