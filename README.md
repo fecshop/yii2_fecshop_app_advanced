@@ -72,6 +72,7 @@ store在配置文件：`@app\config\fecshop_local_services\Store.php`
 图片域名配置文件：`@common\config\fecshop_local_services\Image.php`
 
 
+
 5、配置语言：
 
 在配置文件（：`@common\config\fecshop_local_services\FecshopLang.php`
@@ -108,13 +109,18 @@ mongodb(导入mongodb的表，数据，索引):
 ./yii mongodb-migrate  --interactive=0 --migrationPath=@fecshop/migrations/mongodb
 ```
 
+8.2、测试数据安装：
+
 mongodb的示例数据存放路径为：
 
 ./vendor/fancyecommerce/fecshop/migrations/mongodb-example-data/example_data.js
 
 可以通过mongodb的后台，或者通过php的rockmongo安装这些mongodb中的示例数据。
 
-
+mongodb的示例数据产品对应的图片下载地址为：http://www.fancyecommerce.com/appimage.zip
+，下载完成后，覆盖到fecshop根目录即可。
+如果下载速度慢，你可以到百度云盘下载appimage.zip，下载地址为：https://pan.baidu.com/s/1kVwRD2Z
+如果覆盖图片后，在网站发现产品图片没有出来，那么您需要清空 appimage/common/media/catalog/product/cache/*  下面所有文件和文件夹，重新刷新页面即可。
 
 9、其他参看文档配置。
 
