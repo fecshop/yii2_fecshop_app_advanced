@@ -84,7 +84,7 @@
 				'languageName' 	=> '中文',
 				'localThemeDir'	=> '@appfront/theme/terry/theme01',
 				'thirdThemeDir'	=> [],
-				'currency' 		=> 'RMB',
+				'currency' 		=> 'CNY',
 				'mobile'		=> [
 					'enable'		=> false,
 					'condition'		=> ['phone','tablet'],

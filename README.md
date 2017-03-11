@@ -51,6 +51,28 @@ phpmyadmin访问地址: my.fecshoptest.com		账号：root   密码：123456
 ```
 
 
+添加host
+
+打开C:\Windows\System32\drivers\etc\hosts，添加如下代码（如果是其他IP，将
+127.0.0.1 替换成其他IP即可。）：
+
+```
+127.0.0.1       rock.fecshoptest.com
+127.0.0.1       my.fecshoptest.com
+127.0.0.1       appadmin.fecshoptest.com
+127.0.0.1       appfront.fecshoptest.com
+127.0.0.1       appfront.fecshoptest.es
+127.0.0.1       apphtml5.fecshoptest.com
+127.0.0.1       appapi.fecshoptest.com
+127.0.0.1       appserver.fecshoptest.com
+127.0.0.1       img.fecshoptest.com		#appimage/common
+127.0.0.1       img2.fecshoptest.com	#appimage/appadmin
+127.0.0.1       img3.fecshoptest.com	#appimage/appfront
+127.0.0.1       img4.fecshoptest.com	#appimage/apphtml5
+127.0.0.1       img5.fecshoptest.com	#appimage/appserver
+```
+
+
 如果您想要自己部署环境和安装，那么请按照下面的步骤进行：
 
 1、环境配置：
@@ -79,7 +101,7 @@ composer self-update
 
 ```
 composer global require "fxp/composer-asset-plugin:^1.2.0"
-composer create-project fancyecommerce/yii2_fecshop_app_advanced fecshop 1.0.1.3
+composer create-project fancyecommerce/yii2_fecshop_app_advanced fecshop 1.0.1.4
 cd fecshop
 ./init
 ```

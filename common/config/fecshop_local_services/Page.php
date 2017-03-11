@@ -13,11 +13,11 @@ return [
 				'baseCurrecy' => 'USD',  # 产品的价格都使用基础货币填写价格值。
 				'defaultCurrency' => 'USD',  # 如果store不设置货币，就使用这个store默认货币
 				'currencys' => [
-					'USD' => [
+					'USD' => [  # 美元
 						'rate' 		=> 1, # 汇率
-						'symbol' 	=> '$',
+						'symbol' 	=> '$', #货币符号
 					],
-					'EUR' => [
+					'EUR' => [  # 欧元
 						'rate' 		=> 0.93, # 汇率
 						'symbol' 	=> '€',
 					],
@@ -25,11 +25,11 @@ return [
 					//	'rate' 		=> 1.33,
 					//	'symbol' 	=> 'AU$',
 					//],
-					'GBP' => [
+					'GBP' => [  # 英镑
 						'rate' 		=> 0.8,
 						'symbol' 	=> '£',
 					],
-					'RMB' => [
+					'CNY' => [  # 人民币
 						'rate' 		=> 6.87,
 						'symbol' 	=> '￥',
 					],
