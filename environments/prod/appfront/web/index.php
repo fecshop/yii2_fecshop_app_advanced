@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL || ~E_NOTICE); //除去 E_NOTICE 之外的所有错误信息
 #ini_set('session.cookie_domain', '.fancyecommerce.com'); //初始化域名，
-
 $homeUrl = 'http://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME']), '\\/');
 
 defined('YII_DEBUG') or define('YII_DEBUG', false);
