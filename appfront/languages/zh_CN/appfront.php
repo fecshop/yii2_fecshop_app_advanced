@@ -1,4 +1,4 @@
 <?php
 return [
- 'fecshop'  => 'zh_CN fecshop',
+ 'Follow Us'					=> '关注我们',
 ];
