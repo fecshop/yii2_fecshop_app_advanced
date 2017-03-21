@@ -10,33 +10,29 @@ return [
 	'page' => [
 		'childService' => [
 			//'widget' => [
-				
-				
 			//],
 			
-			
-			
-			#添加自定义menu
 			'menu' => [
 				'displayHome' => [
-					'enable' => true,
-					'display'=> 'Home',
+					'enable' => true,  		# 是否在菜单中显示home
+					'display'=> 'Home',		# 显示对应的字符。
 				],
 				/**
-				 *	custom menu  in the front menu section.
+				 *	在菜单前面部分（产品分类菜单的前面部分）的自定义菜单。参考behindCustomMenu里面的格式
 				 */
 				 
 				'frontCustomMenu' => [
 					
 				],
+				
 				/**
-				 *	custom menu  behind the menu section.
+				 *	在菜单后面部分（产品分类菜单的前面部分）的自定义菜单
 				 */
 				'behindCustomMenu' => [
 					[
-						'name' 		=> 'custom menu',
-						'urlPath'	=> '/my-custom-menu.html',
-						'childMenu' => [
+						'name' 		=> 'custom menu',			# 菜单名字
+						'urlPath'	=> '/my-custom-menu.html',	# 菜单对应的url
+						'childMenu' => [						# 子菜单
 							[
 								'name' 		=> 'my custom menu 2',
 								'urlPath'	=> '/my-custom-menu-2.html',
