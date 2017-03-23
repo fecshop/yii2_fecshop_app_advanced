@@ -101,7 +101,7 @@ composer self-update
 
 ```
 composer global require "fxp/composer-asset-plugin:^1.2.0"
-composer create-project fancyecommerce/fecshop-app-advanced  fecshop_1016 1.0.1.6
+composer create-project fancyecommerce/fecshop-app-advanced  fecshop_1017 1.0.1.7
 cd fecshop
 ./init
 ```
