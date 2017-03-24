@@ -1,358 +1,138 @@
-# yii2_fecshop_app_advanced
-fecshop app advanced
-
-========
-
-github: https://github.com/fancyecommerce/yii2_fecshop_app_advanced
-
-[![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/downloads)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced) [![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop-app-advanced/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop-app-advanced)
-
-
-> 项目已经开始, 框架已经整理完毕，已经开始开发，这是安装fecshop
-> 的入口部分，您可以通过下面的通过composer的方式安装，安装后，
-> Yii2_fecshop,Yii2_fec_admin,Yii2_fec都会通过依赖包的方式被加载进来。
-
-> Terry
+<p>
+  <a href="http://fecshop.appfront.fancyecommerce.com/">
+    <img src="http://img.appfront.fancyecommerce.com/custom/logo.png">
+  </a>
+</p>
+<br/>
 
 
 
-本地开发环境推荐使用vagrant部署，box我已经弄好，地址在百度云盘，下载地址为：`https://pan.baidu.com/s/1kVwRD2Z`，
-进入后打开文件夹，下载 `package.box`
-，vagrant的使用教程为：http://www.fancyecommerce.com/2016/09/22/vagrant-%E4%B8%8B%E8%BD%BD%E9%83%A8%E7%BD%B2linux%E7%8E%AF%E5%A2%83/
-，您可以通过vagrant安装使用。安装完成后，各个区块的访问地址为：
-
-```
-pc端地址：appfront.fecshoptest.com appfront.fecshoptest.es 指向 /www/web/develop/fecshop/appfront/web 
- 
-后台端地址：appadmin.fecshoptest.com 指向/www/web/develop/fecshop/appadmin/web
-
-html5端地址（未开发）：apphtml5.fecshoptest.com 指向/www/web/develop/fecshop/apphtml5/web
-
-api端地址（未开发）：appapi.fecshoptest.com 	 指向/www/web/develop/fecshop/appapi/web
-
-手机app端地址（未开发）：appserver.fecshoptest.com 指向/www/web/develop/fecshop/appserver/web
-
-common图片端地址：img.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/common
-
-appadmin图片端地址：img2.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appadmin
-
-appfront图片端地址：img3.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appfront
-
-apphtml5图片端地址：img4.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/apphtml5
-
-appserver图片端地址：img5.fecshoptest.com 	指向/www/web/develop/fecshop/appimage/appserver
-
-rock mongo访问地址：rock.fecshoptest.com    账号：admin  密码：123456
-
-phpmyadmin访问地址: my.fecshoptest.com		账号：root   密码：123456
-
-后台端地址：appadmin.fecshoptest.com访问后，后台的用户名和密码为admin  123456
-
-```
+[![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop) [![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop/downloads)](https://packagist.org/packages/fancyecommerce/fecshop) [![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop)
 
 
-添加host
-
-打开C:\Windows\System32\drivers\etc\hosts，添加如下代码（如果是其他IP，将
-127.0.0.1 替换成其他IP即可。）：
-
-```
-127.0.0.1       rock.fecshoptest.com
-127.0.0.1       my.fecshoptest.com
-127.0.0.1       appadmin.fecshoptest.com
-127.0.0.1       appfront.fecshoptest.com
-127.0.0.1       appfront.fecshoptest.es
-127.0.0.1       apphtml5.fecshoptest.com
-127.0.0.1       appapi.fecshoptest.com
-127.0.0.1       appserver.fecshoptest.com
-127.0.0.1       img.fecshoptest.com		#appimage/common
-127.0.0.1       img2.fecshoptest.com	#appimage/appadmin
-127.0.0.1       img3.fecshoptest.com	#appimage/appfront
-127.0.0.1       img4.fecshoptest.com	#appimage/apphtml5
-127.0.0.1       img5.fecshoptest.com	#appimage/appserver
-```
 
 
-如果您想要自己部署环境和安装，那么请按照下面的步骤进行：
+项目状态：
 
-1、环境配置：
+> 项目已经开始,本项目由Terry筹划，预计到2017-05-01出来第一个正式版本。
+
+
+1、Fecsop介绍
 ------------
 
-需要安装mongodb php mysq等等，详情参看文章：
-http://www.fancyecommerce.com/2017/03/06/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/
+Fecshop 全称为Fancy ECommerce Shop，是基于php Yii2框架之上开发的一款优秀的开源电商系统，遵循[OSL3.0协议](http://www.oschina.net/question/28_8527)，
+Fecshop支持多语言，多货币，架构上支持pc，手机web，手机app，和erp对接等入口，您可以免费快速的定制和部署属于您的电商系统。
 
+详细参看地址：[Fecsop介绍](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-description.html)
 
+FecShop 英文演示地址：http://fecshop.appfront.fancyecommerce.com/
 
-2、安装 fecshop app advanced
+FecShop 中文演示地址：http://fecshop.appfront.fancyecommerce.com/cn
+
+FecShop 作者QQ：2358269014
+
+FecShop QQ群：186604851 ，入群验证：fecshop
+
+FecShop Github地址: https://github.com/fancyecommerce/yii2_fecshop
+
+2、Fecsop文档
 ------------
 
-安装这个扩展的首选方式是通过 [composer](http://getcomposer.org/download/).
+**二开以及安装文档：** [Fecshop 安装开发文档](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-README.html)【撰写中】
 
-安装composer
-
-```
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
-composer self-update
-```
+**使用帮助说明文档：** [Fecshop 使用帮助文档](http://www.fecshop.com/doc/fecshop-guide/instructions/cn-1.0/guide-README.html)【撰写中】
 
 
-安装fecshop app advanced
-
-```
-composer global require "fxp/composer-asset-plugin:^1.2.0"
-composer create-project fancyecommerce/fecshop-app-advanced  fecshop_1017 1.0.1.7
-cd fecshop
-./init
-```
-
-
-执行完上面，就安装完成了。
-
-3、配置 fecshop app advanced
-------------
-
-```
-在common/main-local.php中配置mysql，mongodb，redis
-
-```
-
-4、配置环境
-------------
-
-4.1 添加host
-
-打开C:\Windows\System32\drivers\etc\hosts，添加如下代码（如果是其他IP，将
-127.0.0.1 替换成其他IP即可。）：
-
-```
-127.0.0.1       rock.fecshoptest.com
-127.0.0.1       my.fecshoptest.com
-127.0.0.1       appadmin.fecshoptest.com
-127.0.0.1       appfront.fecshoptest.com
-127.0.0.1       appfront.fecshoptest.es
-127.0.0.1       apphtml5.fecshoptest.com
-127.0.0.1       appapi.fecshoptest.com
-127.0.0.1       appserver.fecshoptest.com
-127.0.0.1       img.fecshoptest.com		#appimage/common
-127.0.0.1       img2.fecshoptest.com	#appimage/appadmin
-127.0.0.1       img3.fecshoptest.com	#appimage/appfront
-127.0.0.1       img4.fecshoptest.com	#appimage/apphtml5
-127.0.0.1       img5.fecshoptest.com	#appimage/appserver
-```
-
-
-4.2、配置nginx
-```
-appfront.fecshoptest.com appfront.fecshoptest.es 指向 fecshop/appfront/web 
- 
-appadmin.fecshoptest.com 指向fecshop/appadmin/web
-
-apphtml5.fecshoptest.com 指向fecshop/apphtml5/web
-
-appapi.fecshoptest.com 	 指向fecshop/appapi/web
-
-appserver.fecshoptest.com 指向fecshop/appserver/web
-
-img.fecshoptest.com 	指向fecshop/appimage/common
-
-img2.fecshoptest.com 	指向fecshop/appimage/appadmin
-
-img3.fecshoptest.com 	指向fecshop/appimage/appfront
-
-img4.fecshoptest.com 	指向fecshop/appimage/apphtml5
-
-img5.fecshoptest.com 	指向fecshop/appimage/appserver
-
-```
-
-
-
-5、配置store的域名和图片的域名，您可以和我下面的示例代码一致，
-------------
-
-store在配置文件：`@app\config\fecshop_local_services\Store.php`
-
-譬如我的代码(您可以和我的保持一致，相应域名已经在上面添加host)：
-
-```
-<?php
-   return [
-   'store' => [
-		'class' => 'fecshop\services\Store',
-		'stores' => [
-			# store_code ,define by domain and fold.
-			# 语言必须在fecshoplang中定义，否则将无法得到语言属性。
-			# 在添加store的时候，必须查看 添加的语言在 fecshoplang中是否定义。
-			# 数据的key就是域名
-			'appfront.fecshoptest.com' => [
-				'language' 		=> 'en_US',
-				'languageName' 	=> 'English',
-				
-				//'localThemeDir'	=> '@appfront/theme/terry/theme01',
-				'thirdThemeDir'	=> [],
-				'currency' 		=> 'USD',
-				'mobile'		=> [ # 当设备满足什么条件的时候，进行跳转。
-					'enable'		=> true,
-					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
-					'redirectUrl' 	=> 'apphtml5.fecshoptest.com',	# 如果是移动设备访问进行域名跳转
-				],
-				# 第三方账号登录配置
-				'thirdLogin' => [
-					'facebook' =>[                       #fb api配置 ，fb可以一个app设置pc和手机两个域名 
-						'facebook_app_id'     => '1849609081926823',
-						'facebook_app_secret' => '2e097a6d5a424531770fc05760dd7139',
-					],
-					"google" => [                       #谷歌api visit https://code.google.com/apis/console to generate your google api
-						'CLIENT_ID'  	 => '380372364773-qdj1seag9bh2n0pgrhcv2r5uoc58ltp3.apps.googleusercontent.com',
-						'CLIENT_SECRET'  => 'ei8RaoCDoAlIeh1nHYm0rrwO',
-					],
-				]
-
-				//'image'	=> [
-				//	'domain' => 'img.appfront.fancyecommerce.com',
-				//	'baseDir'=> '@appimage/appfront',
-				//]
-			],
-			'appfront.fecshoptest.com/fr' => [
-				'language' 		=> 'fr_FR',
-				'languageName' 	=> 'Français',
-				'localThemeDir'	=> '@appfront/theme/terry/theme01',
-				'thirdThemeDir'	=> [],
-				'currency' 		=> 'RMB',
-				'mobile'		=> [
-					'enable'			=> true,
-					'condition'			=> ['phone'], # phone 代表手机，tablet代表平板。
-					'redirectDomain' 	=> 'apphtml5.fecshoptest.com/fr', # 跳转后的url。
-				],
-			],
-			'appfront.fecshoptest.es' => [
-				'language' 		=> 'es_ES',
-				'languageName' 	=> 'Español',
-				'localThemeDir'	=> '@appfront/theme/terry/theme01',
-				'thirdThemeDir'	=> [],
-				'currency' 		=> 'USD',
-				'mobile'		=> [
-					'enable'		=> true,
-					'condition'		=> ['tablet'],
-					'redirectDomain' 	=> 'fecshop.apphtml5.es.fancyecommerce.com',	
-				],
-			],
-			'appfront.fecshoptest.com/cn' => [
-				'language' 		=> 'zh_CN',
-				'languageName' 	=> '中文',
-				'localThemeDir'	=> '@appfront/theme/terry/theme01',
-				'thirdThemeDir'	=> [],
-				'currency' 		=> 'RMB',
-				'mobile'		=> [
-					'enable'		=> false,
-					'condition'		=> ['phone','tablet'],
-					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/cn',	
-				],
-			],
-		],
-		
-	],
-			
-];
-```
-
-图片域名配置文件：`@common\config\fecshop_local_services\Image.php`
-,譬如我的代码(您可以和我的保持一致，相应域名已经在上面添加host)：
-
-```
-<?php
-/**
- * FecShop file.
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-return [
-	'image' => [
-		'appbase'	=> [
-			'appfront' => [
-				'basedir' => '@appimage/appfront',
-				'basedomain' => 'http://img3.fecshoptest.com',
-			],
-			'apphtml5' => [
-				'basedir' => '@appimage/apphtml5',
-				'basedomain' => 'http://img2.fecshoptest.com',
-			],
-			'appadmin' => [
-				'basedir' => '@appimage/appadmin',
-				'basedomain' => 'http://img2.fecshoptest.com',
-			],
-			'common' => [
-				'basedir' => '@appimage/common',
-				'basedomain' => 'http://img.fecshoptest.com',
-			],
-		],
-	],
-];
-```
-
-
-6、配置语言（可以先使用默认）：
-------------
-
-在配置文件（：`@common\config\fecshop_local_services\FecshopLang.php`
-
-
-
-7、配置货币（可以先使用默认）：
-------------
-
-在文件：`@common\config\fecshop_local_services\Page.php`
-
-8、配置是否强制复制assets到web目录，如果是开发环境，按照下面进行配置（可选配置，可以先不管这个）。
+3、安装Fecsop
 ------------
 
 
-这个是yii2的知识范畴
+3.1、vagrant安装：
 
-```
-'assetManager' => [
-	'forceCopy' => true,
-],
-```
-
-如果是线上， 将forceCopy设置成false `['forceCopy' => false]`
-
-9、导入数据库表(migrate)，在fecshop根目录执行下面的命令行
-------------
-
-mysql(导入mysql的表，数据，索引):
-
-```
-./yii migrate --interactive=0 --migrationPath=@fecshop/migrations/mysqldb
-```
-
-mongodb(导入mongodb的表，数据，索引):
-
-```
-./yii mongodb-migrate  --interactive=0 --migrationPath=@fecshop/migrations/mongodb
-```
-
-9.2、测试数据安装：
-
-mongodb的示例数据存放路径为：
-
-`./vendor/fancyecommerce/fecshop/migrations/mongodb-example-data/example_data.js`
-
-可以通过mongodb的后台，或者通过php的rockmongo安装这些mongodb中的示例数据。
-
-mongodb的示例数据产品对应的图片下载地址为：`http://www.fancyecommerce.com/appimage.zip`
-，下载完成后，覆盖到fecshop根目录即可。
-如果下载速度慢，你可以到百度云盘下载`appimage.zip`，下载地址为：`https://pan.baidu.com/s/1kVwRD2Z`
-如果覆盖图片后，在网站发现产品图片没有出来，那么您需要清空 `appimage/common/media/catalog/product/cache/*`  下面所有文件和文件夹，重新刷新页面即可。
-
-10、其他参看文档配置。
-------------
-
-[Fecshop 初始配置](http://www.fecshop.com/doc/fecshop-guide/cn-1.0/guide-fecshop-init-config.html)
+通过vagrant加载box的方式直接安装，环境和fecshop的配置都已经弄好，详细可以参看文档地址：[Fecshop vagrant安装](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-vagrantinstall.html)
 
 
+3.2、全手动安装：
 
+从基础linux一步一步的配置的方式，详细参看文档： [Fecshop 全手动安装](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-hand-install.html)
+
+推荐使用第一种方式快速部署。
+
+4、fecshop 配置：
+----------------
+
+配置详细参看：[fecshop 配置](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-config.html)
+
+如果您使用vagrant box的安装方式，上面的这些步骤，在box都配置好了。
+
+5、架构特色
+-----------
+
+架构特色：参看详细介绍：[Fecshop 架构特色](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-framework.html)
+
+下面是简叙：
+
+Fecshop 全称为Fancy ECommerce Shop，是一款优秀的开源电商系统，遵循[OSL3.0协议](http://www.oschina.net/question/28_8527)，
+目的是为了方便yii2用户快速的
+开发商城，Fecshop作为一款可以持续性发展的商城系统，
+在框架层面有以下特性：
+
+1. 由于商城系统的复杂性，原始的框架MVC结构，显的有点力不从心，Fecshop框架
+加入了[Block层](fecshop-feature-block.md)，
+Controller层只负责调度， Model只负责数据库映射，中间的处理逻辑由block来完成，View层
+负责显示，这样各司其职， 以免造成controller文件过于庞大。
+
+2. 加入[独立功能块](fecshop-feature-independent-block.md)，有点类似Yii2的Widget，目的是为了让一些侧栏公用块
+可以通过配置的方式
+添加，同时，还可以具有设置缓存的功能，譬如侧栏的产品浏览记录，
+newsletter等独立显示块可能在很多
+页面用到，通过独立功能块可以配置方便的载入。
+
+3. 在Model层的上层加入[服务层Services](fecshop-services-abc.md)，这样，Controller，Block，View 层，在原则上
+不能直接调用model，必须通过Services层以及子Services层，然后Services访问各个
+model，组织数据，事务处理等操作，
+将数据结果返回给上层，这种设计可以方便以后业务
+发展后，进而根据业务特点进行重构，或者以后如果出现新技术，新方式，
+都重构成自己想要的样子，譬如，
+将某个底层由mysql换成mongodb，或者为了应付高并发读写并且多事务性的功能部分，
+进行分库分表的设计方式。
+
+4. Fecshop[ 多模板系统](fecshop-feature-mutil-themes.md)，Fecshop设置了多个模板路径，各个模板路径下的文件被加载
+的优先级不同，其中，Fecshop的模板路径下的文件最全面，但是优先级最低，
+，第三方模板路径优先级其次，用户本地模板路径优先级最高，
+用户可以通过
+复制相应路径下的view或者js，css文件到本地模板路径，存在于高优先级
+模板路径的文件会被优先加载，这样用户可以通过多模板系统的原理进行模板的
+制作，同时，不影响Fecshop模板的升级，如果Fecshop view文件升级后被修改，
+那么用户可以比对本地模板文件与升级模板文件的代码的不同，
+复制更改的代码到本地模板路径
+即可。第三方的模板路径的优先级介于本地模板路径和Fecshop
+模板路径之间。
+
+5. [重写机制](fecshop-feature-rewrite.md)，Fecshop的功能基本都可以被用户重写，包括servies层，Modules，
+Controller，Block，Views，View Layout，
+以及Js Css Img等，都可以被用户重写，其中 Js，Css，Img，Views，View Layout
+ 是通过多模板
+路径优先级来实现的，其他的是通过配置文件的覆盖更改来实现重写，这样，用户
+就可以很方便重构Fecshop或者第三方的功能和模板。
+
+6. 升级最小化干扰，Fecshop的核心文件是放到vendor/fancyecommerce/fecshop
+路径下面，和第三方扩展，用户二次开发路径完全隔离开，
+Fecshop可以通过composer进行核心功能的升级，用户只需要通过composer升级
+即可。
+
+7. 快速高效，[Fecshop Servises](fecshop-services-abc.md)遵循Yii2的懒加载方式，只初始化使用到的组件服务，
+缓存方面有整页缓存，block部分缓存，动态数据ajax加载等方式，让您的网站快速响应。
+
+8. [Fecshop 多入口模式](fecshop-feature-mutil-entrances.md)，分为 appadmin（后台）， appfront（PC前端），apphtml5（手机web），
+appserver（手机app服务），appapi（erp，或者其他接口对接），
+不同的业务，不同的设备，进入不同的入口，各个入口共用服务层services，
+但是modules部分独立，这样相互干扰最小，可以相互独立开发。
+
+9. 后台封装化，fec_admin扩展可以快速的实现增删改查类型的表单列表，
+方便用户快速的做增删改查。
+
+鉴于以上特点，您可以下载安装fecshop，然后更改fecshop的模板和功能，扩展自己想要
+的功能，或者安装第三方开发好了的扩展或者模板，来快速的组建起来您的网站。
 
 
