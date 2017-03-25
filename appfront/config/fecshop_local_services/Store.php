@@ -3,7 +3,6 @@
    'store' => [
 		'class' => 'fecshop\services\Store',
 		'stores' => [
-			
 			# store key：域名去掉http部分，作为key，这个必须这样定义。
 			'fecshop.appfront.fancyecommerce.com' => [
 				'language' 		=> 'en_US',		# 语言简码需要在@common/config/fecshop_local_services/FecshopLang.php 中定义。
@@ -28,7 +27,9 @@
 						'CLIENT_ID'  	 => '380372364773-qdj1seag9bh2n0pgrhcv2r5uoc58ltp3.apps.googleusercontent.com',
 						'CLIENT_SECRET'  => 'ei8RaoCDoAlIeh1nHYm0rrwO',
 					],
-				]
+				],
+				# sitemap的路径。
+				'sitemapDir' => '@appfront/web/sitemap.xml',
 			],
 			'fecshop.appfront.fancyecommerce.com/fr' => [
 				'language' 		=> 'fr_FR',
@@ -41,6 +42,7 @@
 					'condition'			=> ['phone'], # phone 代表手机，tablet代表平板。
 					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/fr', # 跳转后的url。
 				],
+				'sitemapDir' => '@appfront/web/fr/sitemap.xml',
 			],
 			'fecshop.appfront.es.fancyecommerce.com' => [
 				'language' 		=> 'es_ES',
@@ -53,6 +55,7 @@
 					'condition'		=> ['tablet'],
 					'redirectDomain' 	=> 'fecshop.apphtml5.es.fancyecommerce.com',	
 				],
+				'sitemapDir' => '@appfront/web/sitemap_es.xml',
 			],
 			'fecshop.appfront.fancyecommerce.com/cn' => [
 				'language' 		=> 'zh_CN',
@@ -65,6 +68,7 @@
 					'condition'		=> ['phone','tablet'],
 					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/cn',	
 				],
+				'sitemapDir' => '@appfront/web/cn/sitemap.xml',
 			],
 		],
 		

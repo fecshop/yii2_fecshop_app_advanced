@@ -2,3 +2,6 @@
 !.gitignore
 !assets
 !favicon.ico
+!gss.xsl
+!cn
+!fr
