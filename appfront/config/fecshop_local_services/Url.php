@@ -7,6 +7,6 @@
  */
 return [
 	'url' => [
-		'showScriptName'=> true, # if is show index.php in url.  if set false ,you must config nginx rewrite 
+		'showScriptName'=> false, # if is show index.php in url.  if set false ,you must config nginx rewrite 
 	],
 ];

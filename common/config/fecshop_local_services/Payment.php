@@ -8,49 +8,49 @@
 return [
 	'payment' => [
 		
-		'noRelasePaymentMethod' => 'check_money',  	# ²»ÐèÒªÊÍ·Å¿â´æµÄÖ§¸¶·½Ê½¡£Æ©Èç»õµ½¸¶¿î£¬ÔÚÏµÍ³ÖÐ
-													# pending¶©µ¥£¬Èç¹ûÒ»¶ÎÊ±¼äÎ´¸¶¿î£¬»áÊÍ·Å²úÆ·¿â´æ£¬µ«ÊÇ»õµ½¸¶¿îÀàÐÍµÄ¶©µ¥²»»áÊÍ·Å£¬
-													# Èç¹ûÐèÒªÊÍ·Å²úÆ·¿â´æ£¬¿Í·þÔÚºóÌ¨È¡Ïû¶©µ¥¼´¿ÉÊÍ·Å²úÆ·¿â´æ¡£
-		'paymentConfig' => [		# Ö§¸¶·½Ê½ÅäÖÃ
-			'standard' => [			# ±ê×¼Ö§¸¶ÀàÐÍ£ºÔÚ¹ºÎï³µÒ³Ãæ½øÈëÏÂµ¥Ò³Ãæ£¬ÌîÐ´Ö§¸¶ÐÅÏ¢£¬È»ºóÌø×ªµ½µÚÈý·½Ö§¸¶ÍøÕ¾µÄÖ§¸¶ÀàÐÍ¡£
-				'check_money' => [	# »õµ½¸¶¿îÀàÐÍ¡£
+		'noRelasePaymentMethod' => 'check_money',  	# ä¸éœ€è¦é‡Šæ”¾åº“å­˜çš„æ”¯ä»˜æ–¹å¼ã€‚è­¬å¦‚è´§åˆ°ä»˜æ¬¾ï¼Œåœ¨ç³»ç»Ÿä¸­
+													# pendingè®¢å•ï¼Œå¦‚æžœä¸€æ®µæ—¶é—´æœªä»˜æ¬¾ï¼Œä¼šé‡Šæ”¾äº§å“åº“å­˜ï¼Œä½†æ˜¯è´§åˆ°ä»˜æ¬¾ç±»åž‹çš„è®¢å•ä¸ä¼šé‡Šæ”¾ï¼Œ
+													# å¦‚æžœéœ€è¦é‡Šæ”¾äº§å“åº“å­˜ï¼Œå®¢æœåœ¨åŽå°å–æ¶ˆè®¢å•å³å¯é‡Šæ”¾äº§å“åº“å­˜ã€‚
+		'paymentConfig' => [		# æ”¯ä»˜æ–¹å¼é…ç½®
+			'standard' => [			# æ ‡å‡†æ”¯ä»˜ç±»åž‹ï¼šåœ¨è´­ç‰©è½¦é¡µé¢è¿›å…¥ä¸‹å•é¡µé¢ï¼Œå¡«å†™æ”¯ä»˜ä¿¡æ¯ï¼Œç„¶åŽè·³è½¬åˆ°ç¬¬ä¸‰æ–¹æ”¯ä»˜ç½‘ç«™çš„æ”¯ä»˜ç±»åž‹ã€‚
+				'check_money' => [	# è´§åˆ°ä»˜æ¬¾ç±»åž‹ã€‚
 					'label' 				=> 'Check / Money Order',
-					//'image' => ['images/mastercard.png','common'] ,# Ö§¸¶Ò³ÃæÏÔÊ¾µÄÍ¼Æ¬¡£
-					'supplement' 			=> 'Off-line Money Payments', # ²¹³äÐÅÏ¢
-					'style'					=> '<style></style>',  # ²¹³äcss£¬Äú¿ÉÒÔÔÚÕâÀïÌîÐ´Ò»Ð©css
-					'start_url' 			=> '@homeUrl/payment/checkmoney/start',	# µã»÷°´Å¥ºó£¬Ìø×ªµÄurl£¬ÔÚÕâ¸öurlÀïÃæÐ´Ö§¸¶Ìø×ªÇ°µÄÌá½»ÐÅÏ¢¡£
-					'success_redirect_url' 	=> '@homeUrl/payment/success',			# ÔÚÖ§¸¶Æ½Ì¨Ö§¸¶³É¹¦ºó£¬·µ»ØµÄÒ³Ãæ
+					//'image' => ['images/mastercard.png','common'] ,# æ”¯ä»˜é¡µé¢æ˜¾ç¤ºçš„å›¾ç‰‡ã€‚
+					'supplement' 			=> 'Off-line Money Payments', # è¡¥å……ä¿¡æ¯
+					'style'					=> '<style></style>',  # è¡¥å……cssï¼Œæ‚¨å¯ä»¥åœ¨è¿™é‡Œå¡«å†™ä¸€äº›css
+					'start_url' 			=> '@homeUrl/payment/checkmoney/start',	# ç‚¹å‡»æŒ‰é’®åŽï¼Œè·³è½¬çš„urlï¼Œåœ¨è¿™ä¸ªurlé‡Œé¢å†™æ”¯ä»˜è·³è½¬å‰çš„æäº¤ä¿¡æ¯ã€‚
+					'success_redirect_url' 	=> '@homeUrl/payment/success',			# åœ¨æ”¯ä»˜å¹³å°æ”¯ä»˜æˆåŠŸåŽï¼Œè¿”å›žçš„é¡µé¢
 				],
-				'paypal_standard' => [	# paypal±ê×¼Ö§¸¶ÀàÐÍ
+				'paypal_standard' => [	# paypalæ ‡å‡†æ”¯ä»˜ç±»åž‹
 					'label' 				=> 'PayPal Website Payments Standard',
-					'image' 				=> ['images/paypal_standard.png','common'], # Ö§¸¶Ò³ÃæÏÔÊ¾µÄÍ¼Æ¬¡£
-					'supplement' 			=> 'You will be redirected to the PayPal website when you place an order. ', # ²¹³ä,j½«±»ÏÔÊ¾ÔÚÇ°¶ËÒ³ÃæÖ§¸¶ÁÐ±íµ×²¿¡£
-					# Ñ¡ÔñÖ§¸¶ºó£¬½øÈëµ½ÏàÓ¦Ö§¸¶Ò³ÃæµÄstartÒ³Ãæ¡£
+					'image' 				=> ['images/paypal_standard.png','common'], # æ”¯ä»˜é¡µé¢æ˜¾ç¤ºçš„å›¾ç‰‡ã€‚
+					'supplement' 			=> 'You will be redirected to the PayPal website when you place an order. ', # è¡¥å……,jå°†è¢«æ˜¾ç¤ºåœ¨å‰ç«¯é¡µé¢æ”¯ä»˜åˆ—è¡¨åº•éƒ¨ã€‚
+					# é€‰æ‹©æ”¯ä»˜åŽï¼Œè¿›å…¥åˆ°ç›¸åº”æ”¯ä»˜é¡µé¢çš„starté¡µé¢ã€‚
 					'start_url' 			=> '@homeUrl/payment/paypal/standard/start',
-					# ½ÓÊÕIPNÏûÏ¢µÄÒ³Ãæ¡£
+					# æŽ¥æ”¶IPNæ¶ˆæ¯çš„é¡µé¢ã€‚
 					'IPN_url' 				=> '@homeUrl/payment/paypal/standard/ipn',
-					# ÔÚµÚÈý·½Ö§¸¶³É¹¦ºó£¬Ìø×ªµ½ÍøÕ¾µÄÒ³Ãæ
+					# åœ¨ç¬¬ä¸‰æ–¹æ”¯ä»˜æˆåŠŸåŽï¼Œè·³è½¬åˆ°ç½‘ç«™çš„é¡µé¢
 					'success_redirect_url' 	=> '@homeUrl/payment/success',
-					# ½øÈëpaypalÖ§¸¶Ò³Ãæ£¬µã»÷È¡Ïû½øÈëÍøÕ¾µÄÒ³Ãæ¡£
+					# è¿›å…¥paypalæ”¯ä»˜é¡µé¢ï¼Œç‚¹å‡»å–æ¶ˆè¿›å…¥ç½‘ç«™çš„é¡µé¢ã€‚
 					'cancel_url'			=> '@homeUrl/payment/paypal/standard/cancel',
 					
-					# µÚÈý·½Ö§¸¶ÍøÕ¾µÄurl
+					# ç¬¬ä¸‰æ–¹æ”¯ä»˜ç½‘ç«™çš„url
 					'payment_url'=>'https://www.sandbox.paypal.com/cgi-bin/webscr',
-					# IPN URL¿ÉÒÔºÍÉÏÃæµÄ payment_url µÄÖµ¡£Òò´Ë²»ÐèÒªµ¥¶À¸ãÒ»¸öurlÅäÖÃÁË¡£
+					# IPN URLå¯ä»¥å’Œä¸Šé¢çš„ payment_url çš„å€¼ã€‚å› æ­¤ä¸éœ€è¦å•ç‹¬æžä¸€ä¸ªurlé…ç½®äº†ã€‚
 					//'ipn_url'	 => 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr'
-					//# ÓÃ»§Ãû
+					//# ç”¨æˆ·å
 					//'user' => 'zqy234api1-facilitator@126.com',
-					# ÕËºÅ
+					# è´¦å·
 					'account'=> 'zqy234api1-facilitator@126.com',
-					# ÃÜÂë
+					# å¯†ç 
 					'password'=>'HF4TNTTXUD6YQREH',
-					# Ç©Ãû
+					# ç­¾å
 					'signature'=>'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
 					
 				],
 			],
 			
-			'express' => [	# ÔÚ¹ºÎï³µÒ³ÃæÖ±½ÓÌø×ªµ½Ö§¸¶Æ½Ì¨£¬Æ©Èçpaypal¿ì½ÝÖ§¸¶·½Ê½¡£
+			'express' => [	# åœ¨è´­ç‰©è½¦é¡µé¢ç›´æŽ¥è·³è½¬åˆ°æ”¯ä»˜å¹³å°ï¼Œè­¬å¦‚paypalå¿«æ·æ”¯ä»˜æ–¹å¼ã€‚
 				'paypal_express' =>[
 					'nvp_url' => 'https://api-3t.sandbox.paypal.com/nvp',
 					'api_url' => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
@@ -58,11 +58,26 @@ return [
 					'password'=>'HF4TNTTXUD6YQREH',
 					'signature'=>'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
 					
-					'enable'=> 1,
 					'label'=>'PayPal Express Payments',
+					
+					'return_url' => '@homeUrl/payment/paypal/express/review',
+					'cancel_url' => '@homeUrl/payment/paypal/express/cancel',
 				],
 			],
 			
+		],
+		
+		'childService' => [
+			'paypal' => [
+				'use_local_certs' => true,	# 
+				'express_payment_method' => 'paypal_express',
+				'version' => '109.0',
+				'crt_file' 	=> [
+					'www.sandbox.paypal.com' 	=>'@fecshop/services/payment/cert/paypal.crt',
+					'api-3t.sandbox.paypal.com' =>'@fecshop/services/payment/cert/api-3tsandboxpaypalcom.crt',
+				
+				],
+			],
 		],
 		
 	]
