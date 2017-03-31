@@ -7,7 +7,7 @@
  */
 return [
 	'order' => [
-		'increment_id' => '1000000000', # 订单的格式。
+		'increment_id' => '1100000000', # 订单的格式。
 		'requiredAddressAttr' => [ # 必填的订单字段。
 			'first_name',
 			'last_name',

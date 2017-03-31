@@ -59,9 +59,13 @@ return [
 					'signature'=>'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
 					
 					'label'=>'PayPal Express Payments',
-					
+					# 跳转到paypal确认后，返回fecshop的url
 					'return_url' => '@homeUrl/payment/paypal/express/review',
+					# 取消支付后，返回fecshop的url
 					'cancel_url' => '@homeUrl/payment/paypal/express/cancel',
+					# 支付成功后，返回fecshop的url
+					'success_redirect_url' 	=> '@homeUrl/payment/success',
+					
 				],
 			],
 			
@@ -69,12 +73,17 @@ return [
 		
 		'childService' => [
 			'paypal' => [
-				'use_local_certs' => true,	# 
+				
 				'express_payment_method' => 'paypal_express',
 				'version' => '109.0',
+				
+				# 是否使用证书的方式进行paypal api对接（https ssl）
+				# 如果配置为true，那么必须在crt_file中配置证书地址。
+				# 默认不使用证书验证
+				'use_local_certs' => false,	
 				'crt_file' 	=> [
-					'www.sandbox.paypal.com' 	=>'@fecshop/services/payment/cert/paypal.crt',
-					'api-3t.sandbox.paypal.com' =>'@fecshop/services/payment/cert/api-3tsandboxpaypalcom.crt',
+					'www.paypal.com' 	=>'@fecshop/services/payment/cert/paypal.crt',
+					'api-3t.paypal.com' =>'@fecshop/services/payment/cert/api-3tsandboxpaypalcom.crt',
 				
 				],
 			],
