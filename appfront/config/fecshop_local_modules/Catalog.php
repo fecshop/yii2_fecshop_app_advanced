@@ -99,7 +99,9 @@ return [
 			
 			'favorite' => [
 				'addSuccessRedirectFavoriteList' => false , # 产品收藏成功后是否跳转到账户中心的收藏列表
-			]
+			],
+			
+			
 		],
 	],
 ];
