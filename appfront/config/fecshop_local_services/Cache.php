@@ -11,7 +11,7 @@ return [
 		 * cache 总开关，设置false后，无论cacheConfig中的enable
 		 * 是否为true，都会全部关闭掉cache。
 		 */
-		'enable'=> true, 	
+		'enable'=> false, 	
 		/**
 		 * 各个页面cache的配置
 		 */

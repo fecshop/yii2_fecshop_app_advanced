@@ -20,7 +20,7 @@ return [
 			'zip'
 		],
 		#处理多少分钟后，支付状态为pending的订单，归还库存。
-		'minuteBeforeThatReturnPendingStock' 	=>  60,
+		'minuteBeforeThatReturnPendingStock' 	=>  600,
 		# 脚本一次性处理多少个pending订单。
 		'orderCountThatReturnPendingStock' 		=>  30,
 		# 订单状态配置
