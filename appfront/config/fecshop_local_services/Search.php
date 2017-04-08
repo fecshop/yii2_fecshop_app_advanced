@@ -8,7 +8,7 @@
 return [
 	'search' => [
 		'filterAttr' => [
-			'color','size', # ÔÚËÑË÷Ò³Ãæ²àÀ¸µÄËÑË÷¹ýÂËÊôÐÔ×Ö¶Î
+			'color','size', # åœ¨æœç´¢é¡µé¢ä¾§æ çš„æœç´¢è¿‡æ»¤å±žæ€§å­—æ®µ
 		],
 	]
 ];
