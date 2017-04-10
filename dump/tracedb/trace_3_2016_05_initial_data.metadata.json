@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"tracedb.trace_3_2016_05_initial_data"},{"v":1,"key":{"service_datetime":{"$numberLong":"1"}},"name":"service_datetime_1","ns":"tracedb.trace_3_2016_05_initial_data"}]}

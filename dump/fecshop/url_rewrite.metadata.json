@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"fecshop.url_rewrite"},{"v":1,"key":{"custom_url":{"$numberLong":"1"}},"name":"custom_url_1","ns":"fecshop.url_rewrite","w":{"$numberLong":"1"}},{"v":1,"key":{"type":{"$numberLong":"1"}},"name":"type_1","ns":"fecshop.url_rewrite","w":{"$numberLong":"1"}}]}

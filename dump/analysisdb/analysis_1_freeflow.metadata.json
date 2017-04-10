@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"analysisdb.analysis_1_freeflow"},{"v":1,"key":{"value.process_date":{"$numberLong":"1"}},"name":"value_process_date_1","ns":"analysisdb.analysis_1_freeflow"}]}
