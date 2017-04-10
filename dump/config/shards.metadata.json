@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"config.shards"},{"v":1,"unique":true,"key":{"host":1},"name":"host_1","ns":"config.shards"}]}

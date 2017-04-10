@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"config.locks"},{"v":1,"key":{"ts":1},"name":"ts_1","ns":"config.locks"},{"v":1,"key":{"state":1,"process":1},"name":"state_1_process_1","ns":"config.locks"}]}

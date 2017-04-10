@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"config.lockpings"},{"v":1,"key":{"ping":1},"name":"ping_1","ns":"config.lockpings"}]}

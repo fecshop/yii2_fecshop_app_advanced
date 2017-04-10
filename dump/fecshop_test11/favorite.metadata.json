@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"fecshop_test11.favorite"},{"v":1,"key":{"user_id":-1},"name":"user_id_-1","background":true,"ns":"fecshop_test11.favorite"},{"v":1,"key":{"product_id":-1},"name":"product_id_-1","background":true,"ns":"fecshop_test11.favorite"}]}

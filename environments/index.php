@@ -36,15 +36,22 @@ return [
             'appadmin/web/assets',
             'appapi/runtime',
             'appapi/web/assets',
+			
 			'appfront/runtime',
             'appfront/web/assets',
 			'appfront/web/cn/assets',
 			'appfront/web/fr/assets',
+			
 			'apphtml5/runtime',
             'apphtml5/web/assets',
 			'appserver/runtime',
             'appserver/web/assets',
 			'appimage/common/media/catalog/product',
+			
+			'appapi/merge_config.php',
+			'appfront/merge_config.php',
+			'apphtml5/merge_config.php',
+			'appserver/merge_config.php',
         ],
         'setExecutable' => [
             'yii',
@@ -73,6 +80,11 @@ return [
             'apphtml5/web/assets',
 			'appserver/runtime',
             'appserver/web/assets',
+			'appimage/common/media/catalog/product',
+			'appapi/merge_config.php',
+			'appfront/merge_config.php',
+			'apphtml5/merge_config.php',
+			'appserver/merge_config.php',
         ],
         'setExecutable' => [
             'yii',

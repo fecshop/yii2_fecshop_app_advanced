@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"config.chunks"},{"v":1,"unique":true,"key":{"ns":1,"min":1},"name":"ns_1_min_1","ns":"config.chunks"},{"v":1,"unique":true,"key":{"ns":1,"shard":1,"min":1},"name":"ns_1_shard_1_min_1","ns":"config.chunks"},{"v":1,"unique":true,"key":{"ns":1,"lastmod":1},"name":"ns_1_lastmod_1","ns":"config.chunks"}]}

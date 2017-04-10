@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"analysisdb.trace_3_user_center_data"},{"v":1,"key":{"identify":{"$numberLong":"1"}},"name":"identify_1","ns":"analysisdb.trace_3_user_center_data"},{"v":1,"key":{"email":{"$numberLong":"1"}},"name":"email_1","ns":"analysisdb.trace_3_user_center_data"}]}
