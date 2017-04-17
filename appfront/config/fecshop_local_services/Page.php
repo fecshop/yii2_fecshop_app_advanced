@@ -11,6 +11,15 @@ return [
 		'childService' => [
 			//'widget' => [
 			//],
+			'asset' => [
+				'class' =>  'fecshop\services\page\Asset',
+				# 在js后面加一个v参数，修改js后，更改v参数，否则，浏览器会使用缓存。
+				# /assets/dbdba3fa/js/js.js?v=2
+				'jsVersion'		=> 1,
+				'cssVersion'	=> 1,
+				# js和css的域名，譬如：http://www.fecshop.com/ 如果不设置，则使用网站的域名。
+				# 'jsCssDomain'   => '',
+			],
 			
 			'menu' => [
 				'displayHome' => [

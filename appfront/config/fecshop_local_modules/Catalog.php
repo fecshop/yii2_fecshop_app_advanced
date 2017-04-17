@@ -10,13 +10,13 @@ return [
 	'catalog' => [
 		'params'=> [
 			###############################
-			## 		category��������	 ##
+			## 		category部分设置	 ##
 			###############################
-			'category_breadcrumbs' => false, # �Ƿ���ʾ��������м������
+			'category_breadcrumbs' => false, # 是否显示分类的面包屑导航。
 			/**
-			 * ע�⣺�����������Ʒ���˵����ԣ�������select���͵ģ������������벻Ҫ�ã�
-			 * ����select���ͣ�Ŀǰ��֧�ֶ��������ݿ�洢��select���͵ĸ���ֵ��ͨ��ǰ�˷����ļ���ʵ�ַ���ġ�
-			 * ����color  size ��Ӧ�ı���ֵ��ֻ����ʹ�� '����','�ַ�','�ո�','&','-','_' ��6���ַ�
+			 * 注意：做侧栏分类产品过滤的属性，必须是select类型的，其他的类型请不要用，
+			 * 对于select类型，目前不支持多语言数据库存储，select类型的各个值是通过前端翻译文件来实现翻译的、
+			 * 对于color  size 对应的保存值，只可以使用 '数字','字符','空格','&','-','_' 这6类字符
 			 */
 			'category_filter_attr' =>[
 				'color','size',
@@ -25,25 +25,25 @@ return [
 			'category_filter_category' 	=> true,
 			'category_filter_price' 	=> true,
 			'category_query' =>[
-				# �ŵ���һ���ľ���Ĭ��ֵ��Ʃ�������30
-				'numPerPage' => [30,60,90],		# ��Ʒ��ʾ�������о�
-				# �ŵ���һ���ľ���Ĭ��ֵ��Ʃ�������hot
-				'sort' => [						# ��������ʽ
-					# �����Ʃ��hot  new  low-to-high ֻ���� ��ĸ�����飬-��_ ��4���ַ��� 
+				# 放到第一个的就是默认值，譬如下面的30
+				'numPerPage' => [30,60,90],		# 产品显示个数的列举
+				# 放到第一个的就是默认值，譬如下面的hot
+				'sort' => [						# 所有排序方式
+					# 下面的譬如hot  new  low-to-high 只能用 字母，数组，-，_ 这4种字符。 
 					'hot' => [
-						'label'   	=> 'Hot',   # ��ʾ���ַ�
-						'db_columns'=> 'score', # ��Ӧ���ݿ���ֶ�
-						'direction'	=> 'desc',  # ����ʽ
+						'label'   	=> 'Hot',   # 显示的字符
+						'db_columns'=> 'score', # 对应数据库的字段
+						'direction'	=> 'desc',  # 排序方式
 					],
 					'review_count' => [
-						'label'   	=> 'Review',   # ��ʾ���ַ�
-						'db_columns'=> 'review_count', # ��Ӧ���ݿ���ֶ�
-						'direction'	=> 'desc',  # ����ʽ
+						'label'   	=> 'Review',   # 显示的字符
+						'db_columns'=> 'review_count', # 对应数据库的字段
+						'direction'	=> 'desc',  # 排序方式
 					],
 					'favorite_count' => [
-						'label'   	=> 'Favorite',   # ��ʾ���ַ�
-						'db_columns'=> 'favorite_count', # ��Ӧ���ݿ���ֶ�
-						'direction'	=> 'desc',  # ����ʽ
+						'label'   	=> 'Favorite',   # 显示的字符
+						'db_columns'=> 'favorite_count', # 对应数据库的字段
+						'direction'	=> 'desc',  # 排序方式
 					],
 					'new' => [
 						'label'   	=> 'New',
@@ -75,30 +75,30 @@ return [
 				],
 			],
 			###############################
-			## 		Product��������		 ##
+			## 		Product部分设置		 ##
 			###############################
-			# ��Ʒҳ��ͼƬ������
+			# 产品页面图片的设置
 			'productImgSize' => [
-				'small_img_width'  => 80,  # �ײ�Сͼ�Ŀ���
-				'small_img_height' => 110,  # �ײ�Сͼ�ĸ߶�
-				'middle_img_width' => 400,  # ��ͼ�Ŀ���
+				'small_img_width'  => 80,  # 底部小图的宽度
+				'small_img_height' => 110,  # 底部小图的高度
+				'middle_img_width' => 400,  # 主图的宽度
 			],
-			'productImgMagnifier' => false, # �Ƿ��ѷŴ󾵵ķ�ʽ��ʾ������������ڿ��ķ�ʽ�鿴
+			'productImgMagnifier' => false, # 是否已放大镜的方式显示，如果否，则是内窥的方式查看
 			
 			###############################
-			##     Review��������		 ##
+			##     Review部分设置		 ##
 			###############################
 			'review' => [
-				'add_captcha' 			 => true ,  # ����reviewҳ���Ƿ�����֤����֤��
-				'productPageReviewCount' => 20, 	# �ڲ�Ʒҳ����ʾ��review�ĸ�����
-				'reviewPageReviewCount'	 => 40, 	# ��review�б�ҳ�棬��ʾ��review�ĸ���
-				'addReviewOnlyLogin'	 => true,   # ֻ�е�¼�û������ʸ�������ۡ�
-				'ifShowCurrentUserNoAuditReview' => true, # ��ǰ�û����ӵ����ۣ���̨δ��˵����ۣ��Ƿ���ʾ�������ͨ��ip���жϡ�
-				'filterByLang'			=> true,	# �Ƿ�ͨ�����Խ������۹��ˣ�Ĭ��ֻ��ʾ��ǰ�������µ����ۣ�Ҳ���ǿͻ����������۵�store�����ԡ�
+				'add_captcha' 			 => true ,  # 增加review页面是否开启验证码验证。
+				'productPageReviewCount' => 20, 	# 在产品页面显示的review的个数。
+				'reviewPageReviewCount'	 => 40, 	# 在review列表页面，显示的review的个数
+				'addReviewOnlyLogin'	 => true,   # 只有登录用户才有资格进行评论。
+				'ifShowCurrentUserNoAuditReview' => true, # 当前用户添加的评论，后台未审核的评论，是否显示？这个是通过ip来判断。
+				'filterByLang'			=> true,	# 是否通过语言进行评论过滤？默认只显示当前的语言下的评论，也就是客户在添加评论的store的语言。
 			],
 			
 			'favorite' => [
-				'addSuccessRedirectFavoriteList' => false , # ��Ʒ�ղسɹ����Ƿ���ת���˻����ĵ��ղ��б�
+				'addSuccessRedirectFavoriteList' => false , # 产品收藏成功后是否跳转到账户中心的收藏列表
 			],
 			
 			

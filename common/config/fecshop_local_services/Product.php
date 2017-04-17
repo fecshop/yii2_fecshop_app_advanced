@@ -27,12 +27,12 @@ return [
 				 * 您可以给产品属性组添加的属性类型就上面几种，在后台编辑产品的时候，选择不同的属性组，就会加载相应的属性出来。
 				 */
 				'spu_attr' => [  # spu用来区分sku的属性，譬如下面的属性的不同，对应不同的sku，进而是不同的库存
+					# 第一个属性会被用户当做图片来显示。
 					'color'	  => [
 						'dbtype'=> 'String',
 						'label'	=>'颜色',
 						'name'	=>'color',
 						'sort_order' => 1,
-						'relateImage' => true,  # 该属性用图片展示。
 						'display'=>[
 							'type' => 'select',
 							'data' => [
@@ -66,7 +66,7 @@ return [
 						//'require' => 0,
 						//'default' => 2,
 					],
-					
+					# 第二个属性不会当做图片来显示
 					'size'	  => [
 						'dbtype'=> 'String',
 						'label'	=>'尺码',
@@ -87,6 +87,7 @@ return [
 						//'require' => 0,
 						//'default' => 2,
 					],
+					
 					
 				],
 				'general_attr' => [  
@@ -421,6 +422,7 @@ return [
 						'label'	=>'My Size',
 						'name'	=>'size',
 						'require' => 1,
+						'showAsImg' => false,
 						'display'	=>[
 							'type' 	=>'select',
 							'data' 	=>[
@@ -440,6 +442,7 @@ return [
 						'label'	=>'My Size',
 						'name'	=>'size',
 						'require' => 1,
+						'showAsImg' => false,
 						'display'	=>[
 							'type' 	=>'select',
 							'data' 	=>[
@@ -459,6 +462,7 @@ return [
 						'label'	=>'My Size',
 						'name'	=>'size',
 						'require' => 1,
+						'showAsImg' => false,
 						'display'	=>[
 							'type' 	=>'select',
 							'data' 	=>[

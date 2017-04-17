@@ -9,7 +9,7 @@ return [
 	'url' => [
 		'showScriptName'=> false, # if is show index.php in url.  if set false ,you must config nginx rewrite 
 		'randomCount'=> 8,  # if url key  is exist in url write table ,  add a random string  behide the url key, this param is define random String length
-		# ×Ó·þÎñ
+		# å­æœåŠ¡
 		'childService' => [
 			'rewrite' => [
 				'storage' => 'mongodb',

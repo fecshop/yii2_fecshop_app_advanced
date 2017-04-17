@@ -13,7 +13,7 @@ return [
     'controllerNamespace' => 'appserver\controllers',
 	'modules'=>$modules,
 	//'bootstrap'    => ['assetsAutoCompress'],
-	# ×Ô¶¨Òå×é¼ş
+	# è‡ªå®šä¹‰ç»„ä»¶
     'components' => [
        /*
 	   'assetsAutoCompress' =>
@@ -48,6 +48,6 @@ return [
             'keyPrefix' => 'appserver',
         ],
 	],
-	# ×Ô¶¨Òå²ÎÊı
+	# è‡ªå®šä¹‰å‚æ•°
     'params' => $params,
 ];

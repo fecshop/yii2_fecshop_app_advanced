@@ -11,9 +11,9 @@
 				'thirdThemeDir'	=> [],  # 第三方模板路径，数组，可以多个路径
 				'currency' 		=> 'USD', # 当前store的默认货币,这个货币简码，必须在货币配置中配置
 				'mobile'		=> [ # 当设备满足什么条件的时候，进行跳转。
-					'enable'		=> true,
+					'enable'		=> false,
 					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
-					'redirectUrl' 	=> 'fecshop.apphtml5.fancyecommerce.com',	# 如果是移动设备访问进行域名跳转，这里填写的值为store key
+					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com',	# 如果是移动设备访问进行域名跳转，这里填写的值为store key
 				],
 				# 第三方账号登录配置
 				'thirdLogin' => [
@@ -38,7 +38,7 @@
 				'thirdThemeDir'	=> [],
 				'currency' 		=> 'RMB',
 				'mobile'		=> [
-					'enable'			=> true,
+					'enable'			=> false,
 					'condition'			=> ['phone'], # phone 代表手机，tablet代表平板。
 					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com/fr', # 跳转后的url。
 				],
@@ -51,7 +51,7 @@
 				'thirdThemeDir'	=> [],
 				'currency' 		=> 'USD',
 				'mobile'		=> [
-					'enable'		=> true,
+					'enable'		=> false,
 					'condition'		=> ['tablet'],
 					'redirectDomain' 	=> 'fecshop.apphtml5.es.fancyecommerce.com',	
 				],

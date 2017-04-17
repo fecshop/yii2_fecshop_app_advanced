@@ -7,10 +7,10 @@
  */
 return [
 	'shipping' => [
-		# ShippingµÄÔË·Ñ£¬ÊÇ±í¸ñµÄÐÎÊ½Â¼Èë£¬shippingCsvDirÊÇ´æ·ÅÔË·Ñ±í¸ñµÄÎÄ¼þÂ·¾¶¡£
+		# Shippingçš„è¿è´¹ï¼Œæ˜¯è¡¨æ ¼çš„å½¢å¼å½•å…¥ï¼ŒshippingCsvDiræ˜¯å­˜æ”¾è¿è´¹è¡¨æ ¼çš„æ–‡ä»¶è·¯å¾„ã€‚
 		'shippingCsvDir' => '@common/config/shipping', 
 		'shippingConfig'=>[
-			'free_shipping'=>[  # ÃâÔË·Ñ
+			'free_shipping'=>[  # å…è¿è´¹
 				'label'=>'Free shipping( 7-20 work days)',
 				'name' => 'HKBRAM',
 				'cost' => 0,
@@ -18,13 +18,13 @@ return [
 			'fast_shipping'=>[
 				'label'=>'Fast Shipping( 5-10 work days)',
 				'name' => 'HKDHL',
-				'cost' => 'csv' # Çë½«ÎÄ¼þÃû×ÖµÄÃüÃûÐ´Èë fast_shipping.csv
+				'cost' => 'csv' # è¯·å°†æ–‡ä»¶åå­—çš„å‘½åå†™å…¥ fast_shipping.csv
 				
 			],
 		],
-		# ¸ÃÖµ±ØÐëÔÚÉÏÃæµÄÅäÖÃ $shippingConfigÖÐ´æÔÚ£¬Èç¹û²»´æÔÚ£¬Ôò·µ»ØÎª¿Õ¡£
+		# è¯¥å€¼å¿…é¡»åœ¨ä¸Šé¢çš„é…ç½® $shippingConfigä¸­å­˜åœ¨ï¼Œå¦‚æžœä¸å­˜åœ¨ï¼Œåˆ™è¿”å›žä¸ºç©ºã€‚
 		'defaultShippingMethod' => [
-			'enable'	=> true, # Èç¹ûÖµÎªtrue£¬ÄÇÃ´ÓÃ»§ÔÚcartÉú³ÉµÄÊ±ºò£¬¾Í»áÌîÐ´ÉÏÄ¬ÈÏµÄ»õÔË·½Ê½¡£
+			'enable'	=> true, # å¦‚æžœå€¼ä¸ºtrueï¼Œé‚£ä¹ˆç”¨æˆ·åœ¨cartç”Ÿæˆçš„æ—¶å€™ï¼Œå°±ä¼šå¡«å†™ä¸Šé»˜è®¤çš„è´§è¿æ–¹å¼ã€‚
 			'shipping' => 'fast_shipping',
 		],
 	]

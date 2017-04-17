@@ -7,8 +7,8 @@
  */
 return [
 	'order' => [
-		'increment_id' => '1100000000', # ¶©µ¥µÄ¸ñÊ½¡£
-		'requiredAddressAttr' => [ # ±ØÌîµÄ¶©µ¥×Ö¶Î¡£
+		'increment_id' => '1100000000', # è®¢å•çš„æ ¼å¼ã€‚
+		'requiredAddressAttr' => [ # å¿…å¡«çš„è®¢å•å­—æ®µã€‚
 			'first_name',
 			'last_name',
 			'email',
@@ -19,17 +19,17 @@ return [
 			'state',
 			'zip'
 		],
-		#´¦Àí¶àÉÙ·ÖÖÓºó£¬Ö§¸¶×´Ì¬ÎªpendingµÄ¶©µ¥£¬¹é»¹¿â´æ¡£
+		#å¤„ç†å¤šå°‘åˆ†é’ŸåŽï¼Œæ”¯ä»˜çŠ¶æ€ä¸ºpendingçš„è®¢å•ï¼Œå½’è¿˜åº“å­˜ã€‚
 		'minuteBeforeThatReturnPendingStock' 	=>  600,
-		# ½Å±¾Ò»´ÎÐÔ´¦Àí¶àÉÙ¸öpending¶©µ¥¡£
+		# è„šæœ¬ä¸€æ¬¡æ€§å¤„ç†å¤šå°‘ä¸ªpendingè®¢å•ã€‚
 		'orderCountThatReturnPendingStock' 		=>  30,
-		# ¶©µ¥×´Ì¬ÅäÖÃ
-		'payment_status_pending' 				=> 'pending',		# Î´¸¶¿î
-		'payment_status_processing' 			=> 'processing',	# ÒÑ¸¶¿î
-		'payment_status_canceled' 				=> 'canceled',		# ÒÑÈ¡Ïû
-		'payment_status_complete' 				=> 'complete',		# ÒÑÍê³É
+		# è®¢å•çŠ¶æ€é…ç½®
+		'payment_status_pending' 				=> 'pending',		# æœªä»˜æ¬¾
+		'payment_status_processing' 			=> 'processing',	# å·²ä»˜æ¬¾
+		'payment_status_canceled' 				=> 'canceled',		# å·²å–æ¶ˆ
+		'payment_status_complete' 				=> 'complete',		# å·²å®Œæˆ
 		'payment_status_holded' 				=> 'holded',		# hold
-		'payment_status_suspected_fraud' 		=> 'suspected_fraud',#ÆÛÕ©
+		'payment_status_suspected_fraud' 		=> 'suspected_fraud',#æ¬ºè¯ˆ
 		
 	],
 ];

@@ -8,16 +8,16 @@
 return [
 	'email' => [
 		'mailerConfig' => [
-			# Ä¬ÈÏÍ¨ÓÃÅäÖÃ
+			# é»˜è®¤é€šç”¨é…ç½®
 			'default' => [
 				'class' => 'yii\swiftmailer\Mailer',
 				'transport' => [
-					'class' => 'Swift_SmtpTransport',
-					'host' => 'smtp.qq.com',			#SMTP Host
-					'username' => '372716335@qq.com',   #SMTP ÕËºÅ
-					'password' => 'wffmbummgnhhcbbj',	#SMTP ÃÜÂë
-					'port' => '587',					#SMTP ¶Ë¿Ú
-					'encryption' => 'tls',
+					'class' 	=> 'Swift_SmtpTransport',
+					'host' 		=> 'smtp.qq.com',			#SMTP Host
+					'username' 	=> '2420577683@qq.com',   #SMTP è´¦å·
+					'password' 	=> 'zdveeweuevnldjgd',	#SMTP å¯†ç 
+					'port' 		=> '587',					#SMTP ç«¯å£
+					'encryption'=> 'tls',
 				],
 				'messageConfig'=>[  
 				   'charset'=>'UTF-8',  
