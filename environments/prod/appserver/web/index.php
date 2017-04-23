@@ -33,7 +33,7 @@ if($use_merge_config_file){
 		# fecshop services config
 		require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
 		# fecshop module config
-		require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php'),
+		require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appserver/config/appserver.php'),
 		
 		# thrid part confing
 		

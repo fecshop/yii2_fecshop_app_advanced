@@ -10,7 +10,11 @@
 				'localThemeDir'	=> '@appfront/theme/terry/theme01', # 设置当前store对应的模板路径。关于多模板的方面的知识，您可以参看fecshop多模板的知识。
 				'thirdThemeDir'	=> [],  # 第三方模板路径，数组，可以多个路径
 				'currency' 		=> 'USD', # 当前store的默认货币,这个货币简码，必须在货币配置中配置
-				'mobile'		=> [ # 当设备满足什么条件的时候，进行跳转。
+				/**
+				 * 当设备满足什么条件的时候，进行跳转。
+				 * 这种方式不怎么高效，最好的方式是在nginx中配置。
+				 */
+				'mobile'		=> [ 
 					'enable'		=> false,
 					'condition'		=> ['phone','tablet'], # phone 代表手机，tablet代表平板
 					'redirectDomain' 	=> 'fecshop.apphtml5.fancyecommerce.com',	# 如果是移动设备访问进行域名跳转，这里填写的值为store key
@@ -28,6 +32,8 @@
 						'CLIENT_SECRET'  => 'ei8RaoCDoAlIeh1nHYm0rrwO',
 					],
 				],
+				# 用于sitemap生成中域名。
+				'https'			=> true,
 				# sitemap的路径。
 				'sitemapDir' => '@appfront/web/sitemap.xml',
 			],
