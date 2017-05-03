@@ -1,19 +1,22 @@
 <?php
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
     require(__DIR__ . '/params.php'),
     require(__DIR__ . '/params-local.php')
 );
+# Yii class Map rewrite
+//$params['AppYiiClassMap'] = require(__DIR__ . '/classMap.php');
 
 return [
-    'id' => 'app-html5',
+    'id' => 'app-front',
     'basePath' => dirname(__DIR__),
     //'bootstrap' => ['log'],
     'controllerNamespace' => 'apphtml5\controllers',
-	'modules'=>$modules,
 	//'bootstrap'    => ['assetsAutoCompress'],
 	# 自定义组件
+	
     'components' => [
        /*
 	   'assetsAutoCompress' =>
@@ -25,7 +28,6 @@ return [
             'jsFileCompile'     => true,
         ],
 		*/
-		
 		'session' => [
 			/**
 			 * use mongodb for session.
@@ -36,7 +38,7 @@ return [
 			'sessionCollection' => 'session',
 			*/
 			'class' => 'yii\redis\Session',
-			'timeout' => 6000,
+			'timeout' => 86400 * 7,
 		],
 		
 		'cache' => [
@@ -48,10 +50,19 @@ return [
             'keyPrefix' => 'apphtml5',
         ],
 		
+		'i18n' => [
+			'translations' => [
+				'apphtml5' => [
+					'basePaths' => [
+						'@apphtml5/languages',
+					],
+					'sourceLanguage' => 'en_US', # 如果 en_US 也想翻译，那么可以改成en_XX。
+				],
+			],
+		],
 		'assetManager' => [
 			'forceCopy' => true,
 		],
-		
 	],
 	# 自定义参数
     'params' => $params,

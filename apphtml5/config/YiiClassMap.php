@@ -1,5 +1,5 @@
 <?php
 return [
-	//'fecshop\app\appfront\helper\test\My' => '@appfront/helper/My.php',   
+	//'fecshop\app\apphtml5\helper\test\My' => '@apphtml5/helper/My.php',   
 	
 ];
