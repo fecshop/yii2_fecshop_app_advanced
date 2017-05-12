@@ -4,7 +4,7 @@
     "keywords": ["yii2", "fecshop","cart", "shop", "e-commerce"],
     "homepage": "http://www.fecshop.com/",
     "type": "project",
-    "license": "OSL-3",
+    "license": "BSD-3-Clause",
     "support": {
         "forum": "http://www.fecshop.com/forum/",
         "wiki": "http://www.fecshop.com/wiki/",
@@ -17,7 +17,7 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
 		"yiisoft/yii2-apidoc": "~2.0.0",
-        "fancyecommerce/fecshop": ">=1.1.2.7"
+        "fancyecommerce/fecshop": ">=1.1.2.8"
        
     },
     "require-dev": {
