@@ -2,18 +2,17 @@
 
 namespace tests\codeception\common\unit\models;
 
-use Yii;
-use tests\codeception\common\unit\DbTestCase;
 use Codeception\Specify;
 use common\models\LoginForm;
 use tests\codeception\common\fixtures\UserFixture;
+use tests\codeception\common\unit\DbTestCase;
+use Yii;
 
 /**
- * Login form test
+ * Login form test.
  */
 class LoginFormTest extends DbTestCase
 {
-
     use Specify;
 
     public function setUp()
@@ -23,7 +22,7 @@ class LoginFormTest extends DbTestCase
         Yii::configure(Yii::$app, [
             'components' => [
                 'user' => [
-                    'class' => 'yii\web\User',
+                    'class'         => 'yii\web\User',
                     'identityClass' => 'common\models\User',
                 ],
             ],
@@ -65,7 +64,6 @@ class LoginFormTest extends DbTestCase
 
     public function testLoginCorrect()
     {
-
         $model = new LoginForm([
             'username' => 'bayer.hudson',
             'password' => 'password_0',
@@ -79,14 +77,14 @@ class LoginFormTest extends DbTestCase
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function fixtures()
     {
         return [
             'user' => [
-                'class' => UserFixture::className(),
-                'dataFile' => '@tests/codeception/common/unit/fixtures/data/models/user.php'
+                'class'    => UserFixture::className(),
+                'dataFile' => '@tests/codeception/common/unit/fixtures/data/models/user.php',
             ],
         ];
     }

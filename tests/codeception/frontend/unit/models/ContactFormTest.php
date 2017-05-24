@@ -2,13 +2,12 @@
 
 namespace tests\codeception\frontend\unit\models;
 
-use Yii;
-use tests\codeception\frontend\unit\TestCase;
 use frontend\models\ContactForm;
+use tests\codeception\frontend\unit\TestCase;
+use Yii;
 
 class ContactFormTest extends TestCase
 {
-
     use \Codeception\Specify;
 
     protected function setUp()
@@ -30,10 +29,10 @@ class ContactFormTest extends TestCase
         $model = new ContactForm();
 
         $model->attributes = [
-            'name' => 'Tester',
-            'email' => 'tester@example.com',
+            'name'    => 'Tester',
+            'email'   => 'tester@example.com',
             'subject' => 'very important letter subject',
-            'body' => 'body of current message',
+            'body'    => 'body of current message',
         ];
 
         $model->sendEmail('admin@example.com');
@@ -54,6 +53,6 @@ class ContactFormTest extends TestCase
 
     private function getMessageFile()
     {
-        return Yii::getAlias(Yii::$app->mailer->fileTransportPath) . '/testing_message.eml';
+        return Yii::getAlias(Yii::$app->mailer->fileTransportPath).'/testing_message.eml';
     }
 }

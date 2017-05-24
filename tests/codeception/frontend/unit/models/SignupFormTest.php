@@ -2,21 +2,20 @@
 
 namespace tests\codeception\frontend\unit\models;
 
-use tests\codeception\frontend\unit\DbTestCase;
-use tests\codeception\common\fixtures\UserFixture;
 use Codeception\Specify;
 use frontend\models\SignupForm;
+use tests\codeception\common\fixtures\UserFixture;
+use tests\codeception\frontend\unit\DbTestCase;
 
 class SignupFormTest extends DbTestCase
 {
-
     use Specify;
 
     public function testCorrectSignup()
     {
         $model = new SignupForm([
             'username' => 'some_username',
-            'email' => 'some_email@example.com',
+            'email'    => 'some_email@example.com',
             'password' => 'some_password',
         ]);
 
@@ -33,7 +32,7 @@ class SignupFormTest extends DbTestCase
     {
         $model = new SignupForm([
             'username' => 'troy.becker',
-            'email' => 'nicolas.dianna@hotmail.com',
+            'email'    => 'nicolas.dianna@hotmail.com',
             'password' => 'some_password',
         ]);
 
@@ -44,7 +43,7 @@ class SignupFormTest extends DbTestCase
     {
         return [
             'user' => [
-                'class' => UserFixture::className(),
+                'class'    => UserFixture::className(),
                 'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php',
             ],
         ];
