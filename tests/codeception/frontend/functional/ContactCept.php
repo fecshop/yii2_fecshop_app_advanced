@@ -1,6 +1,7 @@
 <?php
-use tests\codeception\frontend\FunctionalTester;
+
 use tests\codeception\frontend\_pages\ContactPage;
+use tests\codeception\frontend\FunctionalTester;
 
 /* @var $scenario Codeception\Scenario */
 
@@ -23,10 +24,10 @@ $I->see('The verification code is incorrect', '.help-block');
 
 $I->amGoingTo('submit contact form with not correct email');
 $contactPage->submit([
-    'name' => 'tester',
-    'email' => 'tester.email',
-    'subject' => 'test subject',
-    'body' => 'test content',
+    'name'       => 'tester',
+    'email'      => 'tester.email',
+    'subject'    => 'test subject',
+    'body'       => 'test content',
     'verifyCode' => 'testme',
 ]);
 $I->expectTo('see that email address is wrong');
@@ -38,10 +39,10 @@ $I->dontSee('The verification code is incorrect', '.help-block');
 
 $I->amGoingTo('submit contact form with correct data');
 $contactPage->submit([
-    'name' => 'tester',
-    'email' => 'tester@example.com',
-    'subject' => 'test subject',
-    'body' => 'test content',
+    'name'       => 'tester',
+    'email'      => 'tester@example.com',
+    'subject'    => 'test subject',
+    'body'       => 'test content',
     'verifyCode' => 'testme',
 ]);
 $I->see('Thank you for contacting us. We will respond to you as soon as possible.');

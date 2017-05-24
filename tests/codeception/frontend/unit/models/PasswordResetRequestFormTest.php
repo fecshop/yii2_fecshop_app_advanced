@@ -2,12 +2,12 @@
 
 namespace tests\codeception\frontend\models;
 
-use Yii;
-use tests\codeception\frontend\unit\DbTestCase;
+use Codeception\Specify;
+use common\models\User;
 use frontend\models\PasswordResetRequestForm;
 use tests\codeception\common\fixtures\UserFixture;
-use common\models\User;
-use Codeception\Specify;
+use tests\codeception\frontend\unit\DbTestCase;
+use Yii;
 
 class PasswordResetRequestFormTest extends DbTestCase
 {
@@ -32,21 +32,17 @@ class PasswordResetRequestFormTest extends DbTestCase
     public function testSendEmailWrongUser()
     {
         $this->specify('no user with such email, message should not be sent', function () {
-
             $model = new PasswordResetRequestForm();
             $model->email = 'not-existing-email@example.com';
 
             expect('email not sent', $model->sendEmail())->false();
-
         });
 
         $this->specify('user is not active, message should not be sent', function () {
-
             $model = new PasswordResetRequestForm();
             $model->email = $this->user[1]['email'];
 
             expect('email not sent', $model->sendEmail())->false();
-
         });
     }
 
@@ -60,13 +56,11 @@ class PasswordResetRequestFormTest extends DbTestCase
         expect('user has valid token', $user->password_reset_token)->notNull();
 
         $this->specify('message has correct format', function () use ($model) {
-
             expect('message file exists', file_exists($this->getMessageFile()))->true();
 
             $message = file_get_contents($this->getMessageFile());
             expect('message "from" is correct', $message)->contains(Yii::$app->params['supportEmail']);
             expect('message "to" is correct', $message)->contains($model->email);
-
         });
     }
 
@@ -74,14 +68,14 @@ class PasswordResetRequestFormTest extends DbTestCase
     {
         return [
             'user' => [
-                'class' => UserFixture::className(),
-                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php'
+                'class'    => UserFixture::className(),
+                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php',
             ],
         ];
     }
 
     private function getMessageFile()
     {
-        return Yii::getAlias(Yii::$app->mailer->fileTransportPath) . '/testing_message.eml';
+        return Yii::getAlias(Yii::$app->mailer->fileTransportPath).'/testing_message.eml';
     }
 }

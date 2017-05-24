@@ -3,13 +3,14 @@
  * FecShop file.
  *
  * @link http://www.fecshop.com/
+ *
  * @copyright Copyright (c) 2016 FecShop Software LLC
  * @license http://www.fecshop.com/license/
  */
 return [
     'catalogsearch' => [
         'class' => '\fecshop\app\apphtml5\modules\Catalogsearch\Module',
-        
+
         'params'=> [
             //'categorysearch_filter_attr' =>[
             //	'color','size',
@@ -27,7 +28,7 @@ return [
 
             //'search_filter_category' 	=> true,
 
-            'search_query' =>[
+            'search_query' => [
                 // 放到第一个的就是默认值，譬如下面的30
                 'numPerPage' => [6],        // 产品显示个数的列举
 
@@ -46,6 +47,6 @@ return [
                 ],
             ],
         ],
-        
+
     ],
 ];

@@ -1,12 +1,12 @@
 <?php
 
 $config = [
-	'components' => [
+    'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'FoOwzm-NS4xrnCPaCEhUP0QYOmnAdHjL',
         ],
-		'redis' => [
+        'redis' => [
             'database' => '1',
         ],
     ],
@@ -20,4 +20,5 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = 'yii\gii\Module';
 }
+
 return $config;

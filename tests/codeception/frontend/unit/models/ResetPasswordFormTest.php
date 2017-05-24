@@ -2,13 +2,12 @@
 
 namespace tests\codeception\frontend\unit\models;
 
-use tests\codeception\frontend\unit\DbTestCase;
-use tests\codeception\common\fixtures\UserFixture;
 use frontend\models\ResetPasswordForm;
+use tests\codeception\common\fixtures\UserFixture;
+use tests\codeception\frontend\unit\DbTestCase;
 
 class ResetPasswordFormTest extends DbTestCase
 {
-
     /**
      * @expectedException \yii\base\InvalidParamException
      */
@@ -35,8 +34,8 @@ class ResetPasswordFormTest extends DbTestCase
     {
         return [
             'user' => [
-                'class' => UserFixture::className(),
-                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php'
+                'class'    => UserFixture::className(),
+                'dataFile' => '@tests/codeception/frontend/unit/fixtures/data/models/user.php',
             ],
         ];
     }

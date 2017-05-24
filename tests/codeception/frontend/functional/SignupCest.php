@@ -2,14 +2,14 @@
 
 namespace tests\codeception\frontend\functional;
 
-use tests\codeception\frontend\_pages\SignupPage;
 use common\models\User;
+use tests\codeception\frontend\_pages\SignupPage;
 
 class SignupCest
 {
-
     /**
-     * This method is called before each cest class test method
+     * This method is called before each cest class test method.
+     *
      * @param \codeception_frontend\FunctionalTester $I
      */
     public function _before($I)
@@ -18,6 +18,7 @@ class SignupCest
 
     /**
      * This method is called after each cest class test method, even if test failed.
+     *
      * @param \codeception_frontend\FunctionalTester $I
      */
     public function _after($I)
@@ -28,17 +29,16 @@ class SignupCest
 
     /**
      * This method is called when test fails.
+     *
      * @param \codeception_frontend\FunctionalTester $I
      */
     public function _failed($I)
     {
-
     }
 
     /**
-     *
      * @param \codeception_frontend\FunctionalTester $I
-     * @param \Codeception\Scenario $scenario
+     * @param \Codeception\Scenario                  $scenario
      */
     public function testUserSignup($I, $scenario)
     {
@@ -60,7 +60,7 @@ class SignupCest
         $I->amGoingTo('submit signup form with not correct email');
         $signupPage->submit([
             'username' => 'tester',
-            'email' => 'tester.email',
+            'email'    => 'tester.email',
             'password' => 'tester_password',
         ]);
 
@@ -72,14 +72,14 @@ class SignupCest
         $I->amGoingTo('submit signup form with correct email');
         $signupPage->submit([
             'username' => 'tester',
-            'email' => 'tester.email@example.com',
+            'email'    => 'tester.email@example.com',
             'password' => 'tester_password',
         ]);
 
         $I->expectTo('see that user is created');
         $I->seeRecord('common\models\User', [
             'username' => 'tester',
-            'email' => 'tester.email@example.com',
+            'email'    => 'tester.email@example.com',
         ]);
 
         $I->expectTo('see that user logged in');

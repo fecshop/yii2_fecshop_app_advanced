@@ -3,7 +3,7 @@
  * The manifest of files that are local to specific environment.
  * This file returns a list of environments that the application
  * may be installed under. The returned data must be in the following
- * format:
+ * format:.
  *
  * ```php
  * return [
@@ -30,28 +30,28 @@
  */
 return [
     'Development' => [
-        'path' => 'dev',
+        'path'        => 'dev',
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/web/assets',
             'appapi/runtime',
             'appapi/web/assets',
-			
-			'appfront/runtime',
+
+            'appfront/runtime',
             'appfront/web/assets',
-			'appfront/web/cn/assets',
-			'appfront/web/fr/assets',
-			
-			'apphtml5/runtime',
+            'appfront/web/cn/assets',
+            'appfront/web/fr/assets',
+
+            'apphtml5/runtime',
             'apphtml5/web/assets',
-			'appserver/runtime',
+            'appserver/runtime',
             'appserver/web/assets',
-			'appimage/common/media/catalog/product',
-			
-			//'appapi/merge_config.php',
-			//'appfront/merge_config.php',
-			//'apphtml5/merge_config.php',
-			//'appserver/merge_config.php',
+            'appimage/common/media/catalog/product',
+
+            //'appapi/merge_config.php',
+            //'appfront/merge_config.php',
+            //'apphtml5/merge_config.php',
+            //'appserver/merge_config.php',
         ],
         'setExecutable' => [
             'yii',
@@ -60,31 +60,31 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appapi/config/main-local.php',
-			'appfront/config/main-local.php',
-			'apphtml5/config/main-local.php',
-			'appserver/config/main-local.php',
+            'appfront/config/main-local.php',
+            'apphtml5/config/main-local.php',
+            'appserver/config/main-local.php',
         ],
     ],
     'Production' => [
-        'path' => 'prod',
+        'path'        => 'prod',
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/web/assets',
             'appapi/runtime',
             'appapi/web/assets',
-			'appfront/runtime',
+            'appfront/runtime',
             'appfront/web/assets',
-			'appfront/web/cn/assets',
-			'appfront/web/fr/assets',
-			'apphtml5/runtime',
+            'appfront/web/cn/assets',
+            'appfront/web/fr/assets',
+            'apphtml5/runtime',
             'apphtml5/web/assets',
-			'appserver/runtime',
+            'appserver/runtime',
             'appserver/web/assets',
-			'appimage/common/media/catalog/product',
-			//'appapi/merge_config.php',
-			//'appfront/merge_config.php',
-			//'apphtml5/merge_config.php',
-			//'appserver/merge_config.php',
+            'appimage/common/media/catalog/product',
+            //'appapi/merge_config.php',
+            //'appfront/merge_config.php',
+            //'apphtml5/merge_config.php',
+            //'appserver/merge_config.php',
         ],
         'setExecutable' => [
             'yii',
@@ -92,9 +92,9 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appapi/config/main-local.php',
-			'appfront/config/main-local.php',
-			'apphtml5/config/main-local.php',
-			'appserver/config/main-local.php',
+            'appfront/config/main-local.php',
+            'apphtml5/config/main-local.php',
+            'appserver/config/main-local.php',
         ],
     ],
 ];

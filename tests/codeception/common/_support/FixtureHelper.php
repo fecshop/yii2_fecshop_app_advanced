@@ -2,8 +2,8 @@
 
 namespace tests\codeception\common\_support;
 
-use tests\codeception\common\fixtures\UserFixture;
 use Codeception\Module;
+use tests\codeception\common\fixtures\UserFixture;
 use yii\test\FixtureTrait;
 use yii\test\InitDbFixture;
 
@@ -15,8 +15,7 @@ use yii\test\InitDbFixture;
  */
 class FixtureHelper extends Module
 {
-
-    /**
+    /*
      * Redeclare visibility because codeception includes all public methods that do not start with "_"
      * and are not excluded by module settings, in actor class.
      */
@@ -33,6 +32,7 @@ class FixtureHelper extends Module
     /**
      * Method called before any suite tests run. Loads User fixture login user
      * to use in acceptance and functional tests.
+     *
      * @param array $settings
      */
     public function _beforeSuite($settings = [])
@@ -41,7 +41,7 @@ class FixtureHelper extends Module
     }
 
     /**
-     * Method is called after all suite tests run
+     * Method is called after all suite tests run.
      */
     public function _afterSuite()
     {
@@ -49,7 +49,7 @@ class FixtureHelper extends Module
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function globalFixtures()
     {
@@ -59,13 +59,13 @@ class FixtureHelper extends Module
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function fixtures()
     {
         return [
             'user' => [
-                'class' => UserFixture::className(),
+                'class'    => UserFixture::className(),
                 'dataFile' => '@tests/codeception/common/fixtures/data/init_login.php',
             ],
         ];
