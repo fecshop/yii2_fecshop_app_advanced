@@ -64,7 +64,7 @@ return [
             'forceCopy' => true,
         ],
 
-        /*
+        
         'log' =>[
             # 追踪级别
             # 消息跟踪级别
@@ -93,7 +93,7 @@ return [
                 ],
             ],
         ],
-        */
+        
     ],
     // 自定义参数
     'params' => $params,

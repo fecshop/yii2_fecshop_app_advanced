@@ -9,7 +9,6 @@
  */
 return [
     'payment' => [
-
         'noRelasePaymentMethod' => 'check_money',    // 不需要释放库存的支付方式。譬如货到付款，在系统中
                                                     // pending订单，如果一段时间未付款，会释放产品库存，但是货到付款类型的订单不会释放，
                                                     // 如果需要释放产品库存，客服在后台取消订单即可释放产品库存。
@@ -23,6 +22,27 @@ return [
                     'start_url'                => '@homeUrl/payment/checkmoney/start',    // 点击按钮后，跳转的url，在这个url里面写支付跳转前的提交信息。
                     'success_redirect_url'     => '@homeUrl/payment/success',            // 在支付平台支付成功后，返回的页面
                 ],
+                
+                'paypal_standard' => [
+                    'start_url'            => '@homeUrl/payment/paypal/standard/start',
+                    'nvp_url'  => 'https://api-3t.sandbox.paypal.com/nvp',
+                    'api_url'  => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+                    'account'  => 'zqy234api1-facilitator_api1.126.com',
+                    'password' => 'HF4TNTTXUD6YQREH',
+                    'signature'=> 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
+                    'label'=> 'PayPal Express Payments',
+                    // 跳转到paypal确认后，返回fecshop的url
+                    'return_url' => '@homeUrl/payment/paypal/standard/review',
+                    // 取消支付后，返回fecshop的url
+                    'cancel_url' => '@homeUrl/payment/paypal/standard/cancel',
+                    // 支付成功后，返回fecshop的url
+                    'success_redirect_url'    => '@homeUrl/payment/success',
+                    // IPN地址
+                    'ipn_url' => '@homeUrl/payment/paypal/standard/ipn',
+                ],
+                
+                
+                /*
                 'paypal_standard' => [    // paypal标准支付类型
                     'label'                 => 'PayPal Website Payments Standard',
                     'image'                 => ['images/paypal_standard.png', 'common'], // 支付页面显示的图片。
@@ -35,7 +55,6 @@ return [
                     'success_redirect_url'    => '@homeUrl/payment/success',
                     // 进入paypal支付页面，点击取消进入网站的页面。
                     'cancel_url'            => '@homeUrl/payment/paypal/standard/cancel',
-
                     // 第三方支付网站的url
                     'payment_url'=> 'https://www.sandbox.paypal.com/cgi-bin/webscr',
                     // IPN URL可以和上面的 payment_url 的值。因此不需要单独搞一个url配置了。
@@ -48,10 +67,9 @@ return [
                     'password'=> 'HF4TNTTXUD6YQREH',
                     // 签名
                     'signature'=> 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
-
                 ],
+                */
             ],
-
             'express' => [    // 在购物车页面直接跳转到支付平台，譬如paypal快捷支付方式。
                 'paypal_express' => [
                     'nvp_url'  => 'https://api-3t.sandbox.paypal.com/nvp',
@@ -59,7 +77,6 @@ return [
                     'account'  => 'zqy234api1-facilitator_api1.126.com',
                     'password' => 'HF4TNTTXUD6YQREH',
                     'signature'=> 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
-
                     'label'=> 'PayPal Express Payments',
                     // 跳转到paypal确认后，返回fecshop的url
                     'return_url' => '@homeUrl/payment/paypal/express/review',
@@ -67,18 +84,16 @@ return [
                     'cancel_url' => '@homeUrl/payment/paypal/express/cancel',
                     // 支付成功后，返回fecshop的url
                     'success_redirect_url'    => '@homeUrl/payment/success',
-
+                    // IPN地址
+                    'ipn_url' => '@homeUrl/payment/paypal/express/ipn',
                 ],
             ],
-
         ],
-
         'childService' => [
             'paypal' => [
-
                 'express_payment_method' => 'paypal_express',
+                'standard_payment_method' => 'paypal_standard',
                 'version'                => '109.0',
-
                 // 是否使用证书的方式进行paypal api对接（https ssl）
                 // 如果配置为true，那么必须在crt_file中配置证书地址。
                 // 默认不使用证书验证
@@ -86,10 +101,8 @@ return [
                 'crt_file'        => [
                     'www.paypal.com'    => '@fecshop/services/payment/cert/paypal.crt',
                     'api-3t.paypal.com' => '@fecshop/services/payment/cert/api-3tsandboxpaypalcom.crt',
-
                 ],
             ],
         ],
-
     ],
 ];
