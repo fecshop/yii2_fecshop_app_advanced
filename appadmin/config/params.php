@@ -6,7 +6,7 @@ return [
      */
 
     'systemlog' => [
-                'enable' => 1,
-        ],
-
+        'enable' => 1,
+    ],
+    'localThemeDir' => '@appadmin/theme/local/theme01',
 ];
