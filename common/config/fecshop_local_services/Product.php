@@ -581,6 +581,7 @@ return [
                         'dbtype'      => 'String',
                         'label'       => '型号',
                         'name'        => 'xinghao',
+                        'showAsImg' => true,
                         'sort_order'  => 1,
                         'relateImage' => true,  // 该属性用图片展示。
                         'display'     => [
