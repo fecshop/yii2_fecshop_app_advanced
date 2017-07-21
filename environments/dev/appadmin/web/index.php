@@ -34,15 +34,33 @@ $config = yii\helpers\ArrayHelper::merge(
 );
 
 $config['homeUrl'] = $homeUrl;
+
 /**
- * yii class Map Custom.
- */
-$yiiClassMap = require __DIR__.'/../config/YiiClassMap.php';
-if (is_array($yiiClassMap) && !empty($yiiClassMap)) {
-    foreach ($yiiClassMap as $namespace => $filePath) {
-        Yii::$classMap[$namespace] = $filePath;
-    }
+ * yii class Map Custom 
+ */ 
+$yiiClassMap = yii\helpers\ArrayHelper::merge(
+    require(__DIR__ . '/../config/YiiClassMap.php'),
+    require(__DIR__ . '/../../common/config/YiiClassMap.php')
+);
+if(is_array($yiiClassMap) && !empty($yiiClassMap)){
+	foreach($yiiClassMap as $namespace => $filePath){
+		Yii::$classMap[$namespace] = $filePath;
+	}
 }
+
+/**
+ * Yii 重写block controller model等
+ * 也就是说：除了compoent 和services，其他的用RewriteMap的方式来实现重写
+ * 重写的类可以集成被重写的类
+ */ 
+$yiiRewriteMap = yii\helpers\ArrayHelper::merge(
+    require(__DIR__ . '/../config/YiiRewriteMap.php'),
+    require(__DIR__ . '/../../common/config/YiiRewriteMap.php')
+);
+if(is_array($yiiRewriteMap) && !empty($yiiRewriteMap)){
+	Yii::$rewriteMap = $yiiRewriteMap;
+}
+
 /*
  * 添加fecshop的服务 ，Yii::$service  ,  将services的配置添加到这个对象。
  * 使用方法：Yii::$service->cms->article;

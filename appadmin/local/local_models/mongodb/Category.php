@@ -5,6 +5,12 @@ use yii\mongodb\ActiveRecord;
 
 class Category extends ActiveRecord
 {
+    const MENU_SHOW      = 1;
+    const MENU_NOT_SHOW  = 2;
+    const STATUS_ENABLE  = 1;
+    const STATUS_DISABLE = 2;
+
+    
     /**
      * mongodb collection 的名字，相当于mysql的table name
      */
@@ -23,6 +29,7 @@ class Category extends ActiveRecord
             'parent_id',
             'name',
             'status',
+            'menu_show',
             'url_key',
             'level',
             'thumbnail_image',
@@ -44,7 +51,6 @@ class Category extends ActiveRecord
             'created_at',
             'updated_at',
             'created_user_id',
-            'ori_id',//..此处为增加字段
             //other
             /*
                 category filter
@@ -52,6 +58,6 @@ class Category extends ActiveRecord
 
 
             */
-        ];
+       ];
     }
 }
