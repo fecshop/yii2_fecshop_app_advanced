@@ -9,6 +9,12 @@
  */
 return [
     'catalog' => [
+        /**
+         * Yii2 controllerMap 重写机制。
+         */
+        //'controllerMap' => [
+        //    'category' => 'appfront\local\local_modules\Catalog\controllers\CategoryController',          
+        //],
         'params'=> [
             //##############################
             //# 		category部分设置	 ##
