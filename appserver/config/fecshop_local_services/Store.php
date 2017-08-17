@@ -3,14 +3,38 @@
    'store' => [
         'class'  => 'fecshop\services\Store',
         'stores' => [
-            // store key£ºÓòÃûÈ¥µôhttp²¿·Ö£¬×÷Îªkey£¬Õâ¸ö±ØÐëÕâÑù¶¨Òå¡£
+            // store keyï¼šåŸŸååŽ»æŽ‰httpéƒ¨åˆ†ï¼Œä½œä¸ºkeyï¼Œè¿™ä¸ªå¿…é¡»è¿™æ ·å®šä¹‰ã€‚
             'fecshop.appserver.fancyecommerce.com' => [
-                'language'         => 'en_US',        // ÓïÑÔ¼òÂëÐèÒªÔÚ@common/config/fecshop_local_services/FecshopLang.php ÖÐ¶¨Òå¡£
-                'languageName'     => 'English',    // ÓïÑÔ¼òÂë¶ÔÓ¦µÄÎÄ×ÖÃû³Æ£¬½«»á³öÏÖÔÚÓïÑÔÇÐ»»ÁÐ±íÖÐÏÔÊ¾¡£
-                'currency'         => 'USD', // µ±Ç°storeµÄÄ¬ÈÏ»õ±Ò,Õâ¸ö»õ±Ò¼òÂë£¬±ØÐëÔÚ»õ±ÒÅäÖÃÖÐÅäÖÃ
+                'language'         => 'en_US',        // è¯­è¨€ç®€ç éœ€è¦åœ¨@common/config/fecshop_local_services/FecshopLang.php ä¸­å®šä¹‰ã€‚
+                'languageName'     => 'English',    // è¯­è¨€ç®€ç å¯¹åº”çš„æ–‡å­—åç§°ï¼Œå°†ä¼šå‡ºçŽ°åœ¨è¯­è¨€åˆ‡æ¢åˆ—è¡¨ä¸­æ˜¾ç¤ºã€‚
+                'currency'         => 'USD', // å½“å‰storeçš„é»˜è®¤è´§å¸,è¿™ä¸ªè´§å¸ç®€ç ï¼Œå¿…é¡»åœ¨è´§å¸é…ç½®ä¸­é…ç½®
                 
-                // ÓÃÓÚsitemapÉú³ÉÖÐÓòÃû¡£
+                // ç”¨äºŽsitemapç”Ÿæˆä¸­åŸŸåã€‚
                 'https'            => false,
+                
+                'serverLangs'   => [
+                    
+                    [
+                        'code'             => 'fr',
+                        'language'         => 'fr_FR',        // è¯­è¨€ç®€ç éœ€è¦åœ¨@common/config/fecshop_local_services/FecshopLang.php ä¸­å®šä¹‰ã€‚
+                        'languageName'     => 'FranÃ§ais',
+                    ],
+                    [
+                        'code'             => 'en',
+                        'language'         => 'en_US',        // è¯­è¨€ç®€ç éœ€è¦åœ¨@common/config/fecshop_local_services/FecshopLang.php ä¸­å®šä¹‰ã€‚
+                        'languageName'     => 'English',
+                    ],
+                    [
+                        'code'             => 'es',
+                        'language'         => 'es_ES',        // è¯­è¨€ç®€ç éœ€è¦åœ¨@common/config/fecshop_local_services/FecshopLang.php ä¸­å®šä¹‰ã€‚
+                        'languageName'     => 'EspaÃ±ol',
+                    ],
+                    [
+                        'code'             => 'zh',
+                        'language'         => 'zh_CN',        // è¯­è¨€ç®€ç éœ€è¦åœ¨@common/config/fecshop_local_services/FecshopLang.php ä¸­å®šä¹‰ã€‚
+                        'languageName'     => 'ä¸­æ–‡',
+                    ],
+                ],
                 
             ],
             
