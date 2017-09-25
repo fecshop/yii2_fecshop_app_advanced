@@ -36,6 +36,20 @@
                     ],
                 ],
                 
+                // 第三方账号登录配置
+                'thirdLogin' => [
+                    // facebook账号登录
+                    'facebook' => [       //fb api配置 ，fb可以一个app设置pc和手机web两个域名
+                        'facebook_app_id'     => '108618299786621',
+                        'facebook_app_secret' => '420b56da4f4664a4d1065a1d31e5ec73',
+                    ],
+                    // google账号登录
+                    'google' => [       //谷歌api visit https://code.google.com/apis/console to generate your google api
+                        'CLIENT_ID'      => '380372364773-qdj1seag9bh2n0pgrhcv2r5uoc58ltp3.apps.googleusercontent.com',
+                        'CLIENT_SECRET'  => 'ei8RaoCDoAlIeh1nHYm0rrwO',
+                    ],
+                ],
+                
             ],
             
         ],
