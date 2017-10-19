@@ -102,6 +102,13 @@ return [
         ],
         'childService' => [
             'paypal' => [
+                /**
+                 * paypal 主账户可以绑定多个子账户，每个子账户一个邮箱，在网站付款后
+                 * 将相应的子账户的email呈现给买家
+                 * 可以通过下面指定这个账户呈现给买家的收款paypal email
+                 * **如果** 您的paypal只有一个emial，这个部分为空即可，默认为空，不需要填写。
+                 */
+                'seller_email' => '', //譬如：payment@fecshop.com
                 'express_payment_method' => 'paypal_express',
                 'standard_payment_method' => 'paypal_standard',
                 'version'                => '109.0',

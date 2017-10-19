@@ -1,10 +1,10 @@
 <?php
 
-error_reporting(E_ALL || ~E_NOTICE); //é™¤åŽ» E_NOTICE ä¹‹å¤–çš„æ‰€æœ‰é”™è¯¯ä¿¡æ¯
-//ini_set('session.cookie_domain', '.fancyecommerce.com'); //åˆå§‹åŒ–åŸŸåï¼Œ
+error_reporting(E_ALL || ~E_NOTICE); //³ýÈ¥ E_NOTICE Ö®ÍâµÄËùÓÐ´íÎóÐÅÏ¢
+//ini_set('session.cookie_domain', '.fancyecommerce.com'); //³õÊ¼»¯ÓòÃû£¬
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('YII_DEBUG') or define('YII_DEBUG', false);
+defined('YII_ENV') or define('YII_ENV', 'prod');
 
 require __DIR__.'/../../vendor/autoload.php';
 require __DIR__.'/../../vendor/fancyecommerce/fecshop/yii/Yii.php';
@@ -21,7 +21,7 @@ $config = yii\helpers\ArrayHelper::merge(
     // fecshop services config
     require(__DIR__.'/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
     // fecshop module config
-    require(__DIR__.'/../../vendor/fancyecommerce/fecshop/app/apphtml5/config/apphtml5.php'),
+    require(__DIR__.'/../../vendor/fancyecommerce/fecshop/app/appapi/config/appapi.php'),
 
     // thrid part confing
 
@@ -36,12 +36,12 @@ $config = yii\helpers\ArrayHelper::merge(
 $str = '<?php '.PHP_EOL;
 $str .= 'return '.PHP_EOL;
 
-//å•ä¸ªåˆ¶è¡¨ç¬¦ç”¨å‡ ä¸ªç©ºæ ¼æ¥è¡¨ç¤º
+//µ¥¸öÖÆ±í·ûÓÃ¼¸¸ö¿Õ¸ñÀ´±íÊ¾
 const TAB_DEFAULT_SPACES = 4;
 /**
- * èŽ·å–æŸç»´çš„ç¼©è¿›ç©ºæ ¼å­—ç¬¦ä¸²
- * @param $dimensional ç»´æ•°ï¼Œå³å½“å‰åœ¨æ•°ç»„çš„ç¬¬å‡ å±‚ã€‚
- * @return string è¿”å›žå½“å‰å±‚çš„ç¼©è¿›ç©ºæ ¼çš„å­—ç¬¦ä¸²
+ * »ñÈ¡Ä³Î¬µÄËõ½ø¿Õ¸ñ×Ö·û´®
+ * @param $dimensional Î¬Êý£¬¼´µ±Ç°ÔÚÊý×éµÄµÚ¼¸²ã¡£
+ * @return string ·µ»Øµ±Ç°²ãµÄËõ½ø¿Õ¸ñµÄ×Ö·û´®
  */
 function obtainSpaces($dimensional)
 {
@@ -54,8 +54,8 @@ function obtainSpaces($dimensional)
 }
 
 /**
- * @param $val æ•°ç»„çš„é”®å€¼å¯¹é‡Œçš„å€¼ï¼ˆå¦‚æžœä¸æ˜¯æ•°ç»„çš„æ—¶å€™çš„)
- * @return string è¿”å›žç›¸åº”ç±»åž‹æ‰€å¯¹åº”çš„å­—ç¬¦ä¸²
+ * @param $val Êý×éµÄ¼üÖµ¶ÔÀïµÄÖµ£¨Èç¹û²»ÊÇÊý×éµÄÊ±ºòµÄ)
+ * @return string ·µ»ØÏàÓ¦ÀàÐÍËù¶ÔÓ¦µÄ×Ö·û´®
  */
 function formatNotArray($val)
 {
@@ -87,12 +87,12 @@ function formatNotArray($val)
 
 
 /**
- * æ ¼å¼åŒ–æ•°ç»„ï¼ˆæ ¼å¼åŒ–æˆå­—ç¬¦ä¸²)
- * @param $arr è¦æ ¼å¼åŒ–çš„æ•°ç»„
- * @param $dimensional ç»´åº¦ï¼Œå³å½“å‰æ•°ç»„å¤„äºŽè¢«åµŒå¥—åœ¨ç¬¬å‡ å±‚ä¸­
- * @param $pre_sapces_str ä¸Šä¸€ç»´åº¦çš„è¾“å‡ºç©ºæ ¼å­—ç¬¦ä¸²
- * @param $curr_spaces_str å½“å‰ç»´åº¦çš„è¾“å‡ºç©ºæ ¼å­—ç¬¦ä¸²
- * @return string æ•°ç»„æ ¼å¼åŒ–åŽæ‰€å¾—å­—ç¬¦ä¸²
+ * ¸ñÊ½»¯Êý×é£¨¸ñÊ½»¯³É×Ö·û´®)
+ * @param $arr Òª¸ñÊ½»¯µÄÊý×é
+ * @param $dimensional Î¬¶È£¬¼´µ±Ç°Êý×é´¦ÓÚ±»Ç¶Ì×ÔÚµÚ¼¸²ãÖÐ
+ * @param $pre_sapces_str ÉÏÒ»Î¬¶ÈµÄÊä³ö¿Õ¸ñ×Ö·û´®
+ * @param $curr_spaces_str µ±Ç°Î¬¶ÈµÄÊä³ö¿Õ¸ñ×Ö·û´®
+ * @return string Êý×é¸ñÊ½»¯ºóËùµÃ×Ö·û´®
  */
 function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 {
@@ -121,10 +121,10 @@ function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 }
 
 /**
- * è½¬æˆphpä»£ç 
- * @param $arr è¦è½¬çš„æ•°ç»„
- * @param int $dimensional ç»´åº¦ï¼Œå³å½“å‰æ•°ç»„å¤„äºŽè¢«åµŒå¥—åœ¨ç¬¬å‡ å±‚ä¸­
- * @return string æ ¼å¼åŒ–åŽæ‰€å¾—å­—ç¬¦ä¸²
+ * ×ª³Éphp´úÂë
+ * @param $arr Òª×ªµÄÊý×é
+ * @param int $dimensional Î¬¶È£¬¼´µ±Ç°Êý×é´¦ÓÚ±»Ç¶Ì×ÔÚµÚ¼¸²ãÖÐ
+ * @return string ¸ñÊ½»¯ºóËùµÃ×Ö·û´®
  */
 function toPhpCode($arr, $dimensional = 0)
 {
