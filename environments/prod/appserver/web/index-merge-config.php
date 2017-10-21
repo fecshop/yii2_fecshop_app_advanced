@@ -54,10 +54,11 @@ function obtainSpaces($dimensional)
 }
 
 /**
- * @param $val 数组的键值对里的值（如果不是数组的时候的)
+ * 格式化字符串和其它非引用类型
+ * @param $val 数组的键值对里的值
  * @return string 返回相应类型所对应的字符串
  */
-function formatNotArray($val)
+function formatStringAndOther($val)
 {
     if (is_string($val)) {
         return "'".$val."'";
@@ -65,26 +66,31 @@ function formatNotArray($val)
     if (is_bool($val)) {
         return $val? 'true' : 'false';
     }
-    if (is_object($val)) {
-        $post_log = '';
-        ob_start();
-        ob_implicit_flush(false);
-        $func = new ReflectionFunction($val);
-        $filename = $func->getFileName();
-        $start_line = $func->getStartLine() - 1; // it's actually - 1, otherwise you wont get the function() block
-        $end_line = $func->getEndLine();
-        $length = $end_line - $start_line;
-        $source = file($filename);
-        $body = implode("", array_slice($source, $start_line, $length));
-        echo $body;
-        $post_log = ob_get_clean();
-        return $post_log;
-    }
-    //if()
     return is_null($val)? "''" : $val;
 }
 
-
+/**
+ * 用ReflectionFunction来获取闭环对象所在源文件的一些信息
+ * 再根据信息得到相应代码并打印到缓存中，再从缓存中返回字符串
+ * @param $val 数组中键值对里的值，即要反射出原代码的闭环对象。
+ * @return string 返回闭环对象对应的代码
+ */
+function formatClosureObject($val)
+{
+    $code_str = '';
+    ob_start();
+    ob_implicit_flush(false);
+    $func = new ReflectionFunction($val);
+    $filename = $func->getFileName();
+    $start_line = $func->getStartLine(); //作者原来在这里“-1”很灵巧。但为可读性好一点改到下面的"+1"和"-1"了。
+    $end_line = $func->getEndLine();
+    $length = $end_line - $start_line + 1;
+    $source = file($filename);
+    $code = implode("", array_slice($source, $start_line - 1, $length));//file转成数组后行数从零开始故减一
+    echo $code;
+    $code_str = ob_get_clean();
+    return $code_str;
+}
 
 /**
  * 格式化数组（格式化成字符串)
@@ -97,27 +103,27 @@ function formatNotArray($val)
 function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 {
     $str = PHP_EOL.$pre_sapces_str.'['.PHP_EOL;
-    $index = 1;
+    $eol_flag = 1;
     foreach ($arr as $k => $v) {
-        1 != $index && $str .= PHP_EOL;
-        $index = -1;
-        $key = is_string($k)? "'".$k."'" : $k;
+        1 != $eol_flag && $str .= PHP_EOL;
+        $eol_flag = -1;
+        $key = is_string($k) ? "'" . $k . "'" : $k;
         $value = '';
+        if (is_object($v)) {
+            $value = formatClosureObject($v);
+            $str .= $value;
+            $eol_flag = 1;
+            continue;
+        }
         if (is_array($v)) {
             $value = toPhpCode($v, $dimensional);
-            $str .= $curr_spaces_str.$key.'=>'.$value.',';
-        }else if(is_object($v)) {
-            $value = formatNotArray($v);
-            $str .= $curr_spaces_str.$value;
-        }else {
-            $value = formatNotArray($v);
-            $str .= $curr_spaces_str.$key.'=>'.$value.',';
+        }else{
+            $value = formatStringAndOther($v);
         }
-        //$str .= $curr_spaces_str.$key.'=>'.$value.',';
+        $str .= $curr_spaces_str . $key . '=>' . $value . ',';
     }
     $str .= PHP_EOL.$pre_sapces_str.']';
     return $str;
-
 }
 
 /**
@@ -129,7 +135,7 @@ function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 function toPhpCode($arr, $dimensional = 0)
 {
     if (!is_array($arr)) {
-        return formatNotArray($arr);
+        return formatStringAndOther($arr);
     }
     $pre_sapces_str = obtainSpaces($dimensional);
     $dimensional++;
