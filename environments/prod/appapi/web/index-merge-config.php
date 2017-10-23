@@ -36,7 +36,13 @@ $config = yii\helpers\ArrayHelper::merge(
 $str = '<?php '.PHP_EOL;
 $str .= 'return '.PHP_EOL;
 
-//单个制表符用几个空格来表示
+/**
+ * 下面是fecshop热心用户【phoenix】优化后的代码：  http://www.fecshop.com/member/phoenix
+ * 从下面开始到 `$str .= toPhpCode($config);` 代码结束部分。
+ */
+/**
+ * 单个制表符用几个空格来表示
+ */
 const TAB_DEFAULT_SPACES = 4;
 /**
  * 获取某维的缩进空格字符串
