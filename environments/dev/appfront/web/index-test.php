@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //除去 E_NOTICE E_COMPILE_WARNING 之外的所有错误信息
 // NOTE: Make sure this file is not accessible when deployed to production
 if (!in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])) {
     die('You are not allowed to access this file.');
