@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //³ıÈ¥ E_NOTICE E_COMPILE_WARNING Ö®ÍâµÄËùÓĞ´íÎóĞÅÏ¢
-//ini_set('session.cookie_domain', '.fancyecommerce.com'); //³õÊ¼»¯ÓòÃû£¬
+error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //é™¤å» E_NOTICE E_COMPILE_WARNING ä¹‹å¤–çš„æ‰€æœ‰é”™è¯¯ä¿¡æ¯
+//ini_set('session.cookie_domain', '.fancyecommerce.com'); //åˆå§‹åŒ–åŸŸåï¼Œ
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
 defined('YII_DEBUG') or define('YII_DEBUG', false);
 defined('YII_ENV') or define('YII_ENV', 'prod');
@@ -36,17 +36,17 @@ $str = '<?php '.PHP_EOL;
 $str .= 'return '.PHP_EOL;
 
 /**
- * ÏÂÃæÊÇfecshopÈÈĞÄÓÃ»§¡¾phoenix¡¿ÓÅ»¯ºóµÄ´úÂë£º  http://www.fecshop.com/member/phoenix
- * ´ÓÏÂÃæ¿ªÊ¼µ½ `$str .= toPhpCode($config);` ´úÂë½áÊø²¿·Ö¡£
+ * ä¸‹é¢æ˜¯fecshopçƒ­å¿ƒç”¨æˆ·ã€phoenixã€‘ä¼˜åŒ–åçš„ä»£ç ï¼š  http://www.fecshop.com/member/phoenix
+ * ä»ä¸‹é¢å¼€å§‹åˆ° `$str .= toPhpCode($config);` ä»£ç ç»“æŸéƒ¨åˆ†ã€‚
  */
 /**
- * µ¥¸öÖÆ±í·ûÓÃ¼¸¸ö¿Õ¸ñÀ´±íÊ¾
+ * å•ä¸ªåˆ¶è¡¨ç¬¦ç”¨å‡ ä¸ªç©ºæ ¼æ¥è¡¨ç¤º
  */
 const TAB_DEFAULT_SPACES = 4;
 /**
- * »ñÈ¡Ä³Î¬µÄËõ½ø¿Õ¸ñ×Ö·û´®
- * @param $dimensional Î¬Êı£¬¼´µ±Ç°ÔÚÊı×éµÄµÚ¼¸²ã¡£
- * @return string ·µ»Øµ±Ç°²ãµÄËõ½ø¿Õ¸ñµÄ×Ö·û´®
+ * è·å–æŸç»´çš„ç¼©è¿›ç©ºæ ¼å­—ç¬¦ä¸²
+ * @param $dimensional ç»´æ•°ï¼Œå³å½“å‰åœ¨æ•°ç»„çš„ç¬¬å‡ å±‚ã€‚
+ * @return string è¿”å›å½“å‰å±‚çš„ç¼©è¿›ç©ºæ ¼çš„å­—ç¬¦ä¸²
  */
 function obtainSpaces($dimensional)
 {
@@ -59,9 +59,9 @@ function obtainSpaces($dimensional)
 }
 
 /**
- * ¸ñÊ½»¯×Ö·û´®ºÍÆäËü·ÇÒıÓÃÀàĞÍ
- * @param $val Êı×éµÄ¼üÖµ¶ÔÀïµÄÖµ
- * @return string ·µ»ØÏàÓ¦ÀàĞÍËù¶ÔÓ¦µÄ×Ö·û´®
+ * æ ¼å¼åŒ–å­—ç¬¦ä¸²å’Œå…¶å®ƒéå¼•ç”¨ç±»å‹
+ * @param $val æ•°ç»„çš„é”®å€¼å¯¹é‡Œçš„å€¼
+ * @return string è¿”å›ç›¸åº”ç±»å‹æ‰€å¯¹åº”çš„å­—ç¬¦ä¸²
  */
 function formatStringAndOther($val)
 {
@@ -75,10 +75,10 @@ function formatStringAndOther($val)
 }
 
 /**
- * ÓÃReflectionFunctionÀ´»ñÈ¡±Õ»·¶ÔÏóËùÔÚÔ´ÎÄ¼şµÄÒ»Ğ©ĞÅÏ¢
- * ÔÙ¸ù¾İĞÅÏ¢µÃµ½ÏàÓ¦´úÂë²¢´òÓ¡µ½»º´æÖĞ£¬ÔÙ´Ó»º´æÖĞ·µ»Ø×Ö·û´®
- * @param $val Êı×éÖĞ¼üÖµ¶ÔÀïµÄÖµ£¬¼´Òª·´Éä³öÔ­´úÂëµÄ±Õ»·¶ÔÏó¡£
- * @return string ·µ»Ø±Õ»·¶ÔÏó¶ÔÓ¦µÄ´úÂë
+ * ç”¨ReflectionFunctionæ¥è·å–é—­ç¯å¯¹è±¡æ‰€åœ¨æºæ–‡ä»¶çš„ä¸€äº›ä¿¡æ¯
+ * å†æ ¹æ®ä¿¡æ¯å¾—åˆ°ç›¸åº”ä»£ç å¹¶æ‰“å°åˆ°ç¼“å­˜ä¸­ï¼Œå†ä»ç¼“å­˜ä¸­è¿”å›å­—ç¬¦ä¸²
+ * @param $val æ•°ç»„ä¸­é”®å€¼å¯¹é‡Œçš„å€¼ï¼Œå³è¦åå°„å‡ºåŸä»£ç çš„é—­ç¯å¯¹è±¡ã€‚
+ * @return string è¿”å›é—­ç¯å¯¹è±¡å¯¹åº”çš„ä»£ç 
  */
 function formatClosureObject($val)
 {
@@ -87,23 +87,23 @@ function formatClosureObject($val)
     ob_implicit_flush(false);
     $func = new ReflectionFunction($val);
     $filename = $func->getFileName();
-    $start_line = $func->getStartLine(); //×÷ÕßÔ­À´ÔÚÕâÀï¡°-1¡±ºÜÁéÇÉ¡£µ«Îª¿É¶ÁĞÔºÃÒ»µã¸Äµ½ÏÂÃæµÄ"+1"ºÍ"-1"ÁË¡£
+    $start_line = $func->getStartLine(); //ä½œè€…åŸæ¥åœ¨è¿™é‡Œâ€œ-1â€å¾ˆçµå·§ã€‚ä½†ä¸ºå¯è¯»æ€§å¥½ä¸€ç‚¹æ”¹åˆ°ä¸‹é¢çš„"+1"å’Œ"-1"äº†ã€‚
     $end_line = $func->getEndLine();
     $length = $end_line - $start_line + 1;
     $source = file($filename);
-    $code = implode("", array_slice($source, $start_line - 1, $length));//file×ª³ÉÊı×éºóĞĞÊı´ÓÁã¿ªÊ¼¹Ê¼õÒ»
+    $code = implode("", array_slice($source, $start_line - 1, $length));//fileè½¬æˆæ•°ç»„åè¡Œæ•°ä»é›¶å¼€å§‹æ•…å‡ä¸€
     echo $code;
     $code_str = ob_get_clean();
     return $code_str;
 }
 
 /**
- * ¸ñÊ½»¯Êı×é£¨¸ñÊ½»¯³É×Ö·û´®)
- * @param $arr Òª¸ñÊ½»¯µÄÊı×é
- * @param $dimensional Î¬¶È£¬¼´µ±Ç°Êı×é´¦ÓÚ±»Ç¶Ì×ÔÚµÚ¼¸²ãÖĞ
- * @param $pre_sapces_str ÉÏÒ»Î¬¶ÈµÄÊä³ö¿Õ¸ñ×Ö·û´®
- * @param $curr_spaces_str µ±Ç°Î¬¶ÈµÄÊä³ö¿Õ¸ñ×Ö·û´®
- * @return string Êı×é¸ñÊ½»¯ºóËùµÃ×Ö·û´®
+ * æ ¼å¼åŒ–æ•°ç»„ï¼ˆæ ¼å¼åŒ–æˆå­—ç¬¦ä¸²)
+ * @param $arr è¦æ ¼å¼åŒ–çš„æ•°ç»„
+ * @param $dimensional ç»´åº¦ï¼Œå³å½“å‰æ•°ç»„å¤„äºè¢«åµŒå¥—åœ¨ç¬¬å‡ å±‚ä¸­
+ * @param $pre_sapces_str ä¸Šä¸€ç»´åº¦çš„è¾“å‡ºç©ºæ ¼å­—ç¬¦ä¸²
+ * @param $curr_spaces_str å½“å‰ç»´åº¦çš„è¾“å‡ºç©ºæ ¼å­—ç¬¦ä¸²
+ * @return string æ•°ç»„æ ¼å¼åŒ–åæ‰€å¾—å­—ç¬¦ä¸²
  */
 function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 {
@@ -132,10 +132,10 @@ function formatArray($arr,$dimensional,$pre_sapces_str,$curr_spaces_str)
 }
 
 /**
- * ×ª³Éphp´úÂë
- * @param $arr Òª×ªµÄÊı×é
- * @param int $dimensional Î¬¶È£¬¼´µ±Ç°Êı×é´¦ÓÚ±»Ç¶Ì×ÔÚµÚ¼¸²ãÖĞ
- * @return string ¸ñÊ½»¯ºóËùµÃ×Ö·û´®
+ * è½¬æˆphpä»£ç 
+ * @param $arr è¦è½¬çš„æ•°ç»„
+ * @param int $dimensional ç»´åº¦ï¼Œå³å½“å‰æ•°ç»„å¤„äºè¢«åµŒå¥—åœ¨ç¬¬å‡ å±‚ä¸­
+ * @return string æ ¼å¼åŒ–åæ‰€å¾—å­—ç¬¦ä¸²
  */
 function toPhpCode($arr, $dimensional = 0)
 {
