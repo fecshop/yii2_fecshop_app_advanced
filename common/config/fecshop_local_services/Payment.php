@@ -25,7 +25,9 @@ return [
                 
                 'paypal_standard' => [
                     'start_url'            => '@homeUrl/payment/paypal/standard/start',
+                    // 下面是沙盒地址，线上地址为：https://api-3t.paypal.com/nvp
                     'nvp_url'  => 'https://api-3t.sandbox.paypal.com/nvp',
+                    // 下面是沙盒地址，线上地址为：https://www.paypal.com/cgi-bin/webscr
                     'api_url'  => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
                     'account'  => 'zqy234api1-facilitator_api1.126.com',
                     'password' => 'HF4TNTTXUD6YQREH',
@@ -52,38 +54,12 @@ return [
                     'success_redirect_url'  => '@homeUrl/payment/success',
                 ],
                 
-                
-                /*
-                'paypal_standard' => [    // paypal标准支付类型
-                    'label'                 => 'PayPal Website Payments Standard',
-                    'image'                 => ['images/paypal_standard.png', 'common'], // 支付页面显示的图片。
-                    'supplement'            => 'You will be redirected to the PayPal website when you place an order. ', // 补充,j将被显示在前端页面支付列表底部。
-                    // 选择支付后，进入到相应支付页面的start页面。
-                    'start_url'            => '@homeUrl/payment/paypal/standard/start',
-                    // 接收IPN消息的页面。
-                    'IPN_url'                => '@homeUrl/payment/paypal/standard/ipn',
-                    // 在第三方支付成功后，跳转到网站的页面
-                    'success_redirect_url'    => '@homeUrl/payment/success',
-                    // 进入paypal支付页面，点击取消进入网站的页面。
-                    'cancel_url'            => '@homeUrl/payment/paypal/standard/cancel',
-                    // 第三方支付网站的url
-                    'payment_url'=> 'https://www.sandbox.paypal.com/cgi-bin/webscr',
-                    // IPN URL可以和上面的 payment_url 的值。因此不需要单独搞一个url配置了。
-                    //'ipn_url'	 => 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr'
-                    //# 用户名
-                    //'user' => 'zqy234api1-facilitator@126.com',
-                    // 账号
-                    'account'=> 'zqy234api1-facilitator@126.com',
-                    // 密码
-                    'password'=> 'HF4TNTTXUD6YQREH',
-                    // 签名
-                    'signature'=> 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-ANB-xrkMmTHpTszFaUx2v4EHqknV',
-                ],
-                */
             ],
             'express' => [    // 在购物车页面直接跳转到支付平台，譬如paypal快捷支付方式。
                 'paypal_express' => [
+                    // 下面是沙盒地址，线上地址为：https://api-3t.paypal.com/nvp
                     'nvp_url'  => 'https://api-3t.sandbox.paypal.com/nvp',
+                    // 下面是沙盒地址，线上地址为：https://www.paypal.com/cgi-bin/webscr
                     'api_url'  => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
                     'account'  => 'zqy234api1-facilitator_api1.126.com',
                     'password' => 'HF4TNTTXUD6YQREH',
@@ -134,6 +110,14 @@ return [
                 'alipayrsaPublicKey' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt5egD1BQCK5fCQXKsgWh+VFj9zanV9cdwVmM/MOQ/zrwMBHMIRO0IdJMft351iXtyACKVX+noK1qzkiVOdg3MxLjbGoMDKR+/1PDxoxtWSVUJBywoYHH/Dh7TCi5GWGasOlXV4qWi0e5Yfa2x/Wi0cxqx76aY5izXEyabHAvWgTWNv121ZRNhl4qcuoWZYiMIQpTst6hEhRn/isUMgdtLRQ1a06q+qOkLmJ99vq8cqbfduAdOuhzbZNWqLV76CSc0meurlVtDoIn5kVAZdzjNTA2rlqSCgs/OZxaL8s/qrIynhLoB6U6i0fj4RsIsbrvoSnrPWo98rsM0RrlU8fpdwIDAQAB',  //'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApIw+Hsk65Z+mieDsEiTkhtf7ZNBgks83DLUDb1yh2d/HDB0s9zHFzsgQGny0kUTM0fJ43h7WydyUG9Kuv4fxD5iVfM2xkUYW5bvfTXVaj5LLj8rTKL+nnFybzzM5rewqh2u1Gzd7BbpOnhMn4Y+7JyyaWXsnRFBxIrmRAqQJVlVUG4RclLHfplFkMVcEMzoRda2UV54oQDMg8ZxignCqxgIKr7bpwpgdpdqZArHtmyEjhQfIblCLDjVk0rKxGsaz+ATYVt3eQozdyNEuKFRhy0VGmwmdQYhQFbge7SS6bVqXZHsq2fNZ6hMJ2XNOZajFm5jXMksnaX85PzdJ58HFewIDAQAB',
                 // 下面是沙盒地址， 正式环境请改为：https://openapi.alipay.com/gateway.do
                 'gatewayUrl'    => 'https://openapi.alipaydev.com/gateway.do', 
+            ],
+            
+            'wxpay' => [ //注意参数要与WxPay.Config中的一致
+        		'class'         => 'fecshop\services\payment\Wxpay', //新增，没加之前也能正常运行
+        		'devide'        => 'pc',
+                // 微信的授权信息在下面的文件中，因为微信支付php sdk的配置是写到常量文件中，因此只能这样了，无法通过注入的方式写入，具体的配置到下面的文件中进行配置。
+                'configFile'    => '@common/config/payment/wxpay/lib/WxPay.Config.php',
+                
             ],
         ],
     ],
