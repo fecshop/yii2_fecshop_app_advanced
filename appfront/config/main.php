@@ -49,7 +49,6 @@ return [
             'class'     => 'yii\redis\Cache',
             'keyPrefix' => 'appfront',
         ],
-
         'i18n' => [
             'translations' => [
                 'appfront' => [

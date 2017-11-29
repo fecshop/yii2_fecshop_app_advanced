@@ -77,6 +77,16 @@ return [
                 ],
             ],
         ],
+        'i18n' => [
+            'translations' => [
+                'appserver' => [
+                    'basePaths' => [
+                        '@appserver/languages',
+                    ],
+                    'sourceLanguage' => 'en_US', // 如果 en_US 也想翻译，那么可以改成en_XX。
+                ],
+            ],
+        ],
     ],
     // 自定义参数
     'params' => $params,

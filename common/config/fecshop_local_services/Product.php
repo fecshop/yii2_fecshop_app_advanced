@@ -770,6 +770,130 @@ return [
                     ],
 
                 ],
+                'general_attr' => [
+                    // 这是input type='text' 的类型
+                    'my_remark' => [
+                        'dbtype' => 'String',
+                        'label'  => '我的备注',
+                        'name'   => 'my_remark',
+                        'display'=> [
+                            'type' => 'inputString',   // 字符串格式的属性
+                        ],
+                        'require' => 0,
+                    ],
+                    // 这是input type='email' 的类型
+                    'my_email' => [
+                        'dbtype'  => 'String',
+                        'label'   => '我的邮箱',
+                        'name'    => 'my_email',
+                        'require' => 0,
+                        'display' => [
+                            'type' => 'inputEmail',        // 字符串格式的属性（email格式验证）
+                        ],
+                    ],
+                    // 这是input type='date' 的类型
+                    'my_date'  => [
+                        'label'  => '我的日期',
+                        'name'   => 'my_date',
+                        'display'=> [
+                            'type' => 'inputDate',        // 字符串格式的属性（Date格式验证）
+                        ],
+                    ],
+                    // 这是<select> 的类型
+                    'style'   => [
+                        'dbtype'     => 'String',
+                        'label'      => '类型',
+                        'name'       => 'style',
+                        'display'    => [
+                            'type'    => 'select',        // 下拉条选择格式的属性
+                            'data'    => [
+                                'Casual'      => 'Casual',
+                                'Cute'        => 'Cute',
+                                'Sexy & Club' => 'Sexy & Club',
+                                'Bohemian'    => 'Bohemian',
+                                'Vintage '    => 'Vintage ',
+                                'Brief'       => 'Brief',
+                                'Work'        => 'Work',
+                                'Novelty'     => 'Novelty',
+                            ],
+                        ],
+                    ],
+
+                    'dresses-length'    => [
+                        'dbtype'     => 'String',
+                        'label'      => '裙长',
+                        'name'       => 'dresses-length',
+                        'display'    => [
+                            'type'    => 'select',    // 下拉条选择格式的属性
+                            'data'    => [
+                                'Mini'               => 'Mini',
+                                'Knee-Length'        => 'Knee-Length',
+                                'Mid-Calf'           => 'Mid-Calf',
+                                'Ankle-Length'       => 'Ankle-Length',
+                                'Floor-Length '      => 'Floor-Length ',
+
+                            ],
+                        ],
+                    ],
+
+                    'pattern-type'    => [
+                        'dbtype'     => 'String',
+                        'label'      => '款式',
+                        'name'       => 'pattern-type',    // 属性名字
+                        'display'    => [
+                            'type'    => 'select',    // 下拉条选择格式的属性
+                            'data'    => [
+                                'Animal'           => 'Animal',
+                                'Character'        => 'Character',
+                                'Floral'           => 'Floral',
+                                'Geometric '       => 'Geometric ',
+                                'Leopard '         => 'Leopard ',
+                                'Letter'           => 'Letter',
+                                'Paisley'          => 'Paisley',
+                                'Patchwork'        => 'Patchwork',
+                                'Polka Dot'        => 'Polka Dot',
+                                'Print'            => 'Print',
+                                'Striped'          => 'Striped',
+
+                            ],
+                        ],
+                    ],
+
+                    'sleeve-length'    => [
+                        'dbtype'     => 'String',
+                        'label'      => '袖长',
+                        'name'       => 'sleeve-length',
+                        'display'    => [
+                            'type'    => 'select',
+                            'data'    => [
+                                'Sleeveless'             => 'Sleeveless',
+                                'Short-Sleeves'          => 'Short Sleeves',
+                                'Half-Sleeves'           => 'Half Sleeves',
+                                '3-4-Length-Sleeves '    => '3/4 Length Sleeves ',
+                                'Long-Sleeves '          => 'Long Sleeves ',
+
+                            ],
+                        ],
+                    ],
+
+                    'collar' => [
+                        'dbtype'     => 'String',
+                        'label'      => '领口',        // 后台显示的中文名（目前后台只有中文）
+                        'name'       => 'collar',
+                        'display'    => [
+                            'type'    => 'select',
+                            'data'    => [
+                                'Round Neck'          => 'Round Neck',    // 下拉条里面对应的各个可以选择的值。
+                                'V-Neck'              => 'V-Neck',
+                                'Hooded'              => 'Hooded',
+                                'Turn-down-Collar'    => 'Turn-down Collar',
+
+                            ],
+                        ],
+                        //'require' => 0,
+                        //'default' => 2,
+                    ],
+                ],
             ],
         ],
 

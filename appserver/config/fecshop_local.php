@@ -16,5 +16,11 @@ foreach (glob(__DIR__.'/fecshop_local_services/*.php') as $filename) {
 return [
     'modules'  => $modules,
     'services' => $services,
-
+    'params' => [
+        
+        'rateLimit'             => [
+            'enable'=> false,   // 是否开启？默认不开启速度控制。
+            'limit' => [120, 60], // 速度控制[120,60] 代表  60秒内最大访问120次，
+        ]
+    ],
 ];
