@@ -60,9 +60,10 @@ return [
                 ],
             ],
         ],
-        'assetManager' => [
-            'forceCopy' => true,
-        ],
+        // 请去page asset services中设置 forceCopy
+        //'assetManager' => [
+        //    'forceCopy' => true,
+        //],
         
         'log' =>[
             # 追踪级别
