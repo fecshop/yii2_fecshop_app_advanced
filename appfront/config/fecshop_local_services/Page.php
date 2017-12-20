@@ -34,6 +34,49 @@ return [
                 // 是否每次访问都强制复制css js img等文件到发布地址，true代表每次访问都发布
                 // 一般开发环境用true，线上用false。当线上更新jscss文件，可以清空assets发布路径下的文件的方式来更新
                 'forceCopy' => true,
+                // js and css config example:
+                /**
+                 * 'jsOptions'	=> [
+                 *     # js config 1
+                 *     [
+                 *         'options' => [
+                 *             'position' =>  'POS_END',
+                 *         //	'condition'=> 'lt IE 9',
+                 *         ],
+                 *         'js'	=>[
+                 *             'js/my.js',
+                 *         ],
+                 *     ],
+                 *     # js config 2
+                 *     //[
+                 *     //    'options' => [
+                 *     //        'condition'=> 'lt IE 9',
+                 *     //    ],
+                 *     //    'js'	=>[
+                 *     //        'js/ie9js.js'
+                 *     //    ],
+                 *     //],
+                 * ],
+                 * # css config
+                 * 'cssOptions'	=> [
+                 *     # css config 1.
+                 *     [
+                 *         'css'	=>[
+                 *             'css/my.css',
+                 *         ],
+                 *     ],
+                 * 
+                 *     # css config 2.
+                 *     //[
+                 *     //    'options' => [
+                 *     //        'condition'=> 'lt IE 9',
+                 *     //    ],
+                 *     //    'css'	=>[
+                 *     //        'css/ltie9.css',
+                 *     //    ],
+                 *     //],
+                 * ],
+                 **/
             ],
 
             'menu' => [

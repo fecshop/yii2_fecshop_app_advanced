@@ -14,7 +14,7 @@ return [
         // 子服务
         'childService' => [
             'rewrite' => [
-                'storage' => 'RewriteMongodb',
+                //'storage' => 'RewriteMongodb',
             ],
         ],
     ],
