@@ -11,11 +11,12 @@
 [![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop) [![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop/downloads)](https://packagist.org/packages/fancyecommerce/fecshop) [![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop)
 
 
-开源协议：[Fecshop 授权协议](http://www.fecshop.com/license/)
+
 
 项目状态：
 
-> 正式版本已经出来，后台（appadmin）和pc端（appfront）,wap端（apphtml5）已经完成，完成了一些基本的api。
+> 正式版本已经出来，后台（appadmin）和pc端（appfront）,wap端（apphtml5）
+，vue端（appserver）已经完成，完成了一些基本的api。
 
 
 
@@ -29,27 +30,33 @@ Fecshop支持多语言，多货币，架构上支持pc，手机web，手机app�
 
 [Fecshop](http://www.fecshop.com) 官网：http://www.fecshop.com ，您可以在这里提交bug，问题咨询等等。
 
-[Fecshop](http://www.fecshop.com) PC Demo：http://fecshop.appfront.fancyecommerce.com/
+[Fecshop](http://www.fecshop.com) 【已完成】PC Web Demo ：http://fecshop.appfront.fancyecommerce.com/
 
-[Fecshop](http://www.fecshop.com) Mobile Demo：http://fecshop.apphtml5.fancyecommerce.com
+[Fecshop](http://www.fecshop.com) 【已完成】Mobile Web Demo（WAP）：http://fecshop.apphtml5.fancyecommerce.com
+
+[Fecshop](http://www.fecshop.com) 【已完成】Mobile VUE Demo(Appserver,前后端彻底分离模式)：http://demo.fancyecommerce.com/#/
 
 [Fecshop](http://www.fecshop.com) 后台演示地址：加QQ群，在群公告里面有后台演示地址，账号密码等信息
 
 [Fecshop](http://www.fecshop.com) QQ群：186604851 ，入群验证：fecshop
 
-[Fecshop](http://www.fecshop.com) 作者QQ：2358269014
 
-FecShop Email：2358269014@qq.com
+作者, Terry QQ Email：2358269014@qq.com
 
 [Fecshop](http://www.fecshop.com) Github地址: https://github.com/fancyecommerce/yii2_fecshop
 
+开源协议：[Fecshop 授权协议](http://www.fecshop.com/license)
 
-2、Fecshop文档
+2、Fecshop文档和视频
 ------------
 
-**二开以及安装文档：** [Fecshop 安装开发文档](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-README.html)【初版文档撰写完成】
+**二开以及安装文档：** [Fecshop 安装开发文档](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-README.html)【撰写完成】
 
-**使用帮助说明文档：** [Fecshop 使用帮助文档](http://www.fecshop.com/doc/fecshop-guide/instructions/cn-1.0/guide-README.html)【初版文档撰写完成】
+**使用帮助说明文档：** [Fecshop 使用帮助文档](http://www.fecshop.com/doc/fecshop-guide/instructions/cn-1.0/guide-README.html)【撰写完成】
+
+**安装开发帮助视频：** [Fecshop 安装开发视频](http://www.fecshop.com/doc/fecshop-guide/instructions/cn-1.0/guide-fecshop_video_install.html)【撰写完成】
+
+**前后端分离模式Api:** [Appserver VUE Api文档](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-server.html)【撰写完成】
 
 
 3、安装Fecshop
@@ -60,10 +67,10 @@ FecShop Email：2358269014@qq.com
 从基础linux一步一步的配置的方式，详细参看文档： [Fecshop 安装](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-hand-install.html)
 
 
-4、fecshop 配置：
+4、Fecshop 配置：
 ----------------
 
-配置详细参看：[fecshop 配置](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-config.html)
+配置详细参看：[Fecshop 配置](http://www.fecshop.com/doc/fecshop-guide/develop/cn-1.0/guide-fecshop-about-config.html)
 
 如果您使用vagrant box的安装方式，上面的这些步骤，在box都配置好了。
 
@@ -136,5 +143,40 @@ appserver（手机app服务），appapi（erp，或者其他接口对接），
 
 鉴于以上特点，您可以下载安装[Fecshop](http://www.fecshop.com)，然后更改[Fecshop](http://www.fecshop.com)的模板和功能，扩展自己想要
 的功能，或者安装第三方开发好了的扩展或者模板，来快速的组建起来您的网站。
+
+6、捐赠
+-----------
+
+如果您认为这是一个不错的项目，对您有帮助，你可以通过下面的方式进行捐赠，
+这里感谢您对开源项目的支持。
+
+支付宝：
+
+![](http://www.fecshop.com/alipay.png)
+
+微信：
+
+![](http://www.fecshop.com/weixin.png)
+
+
+[捐赠历史](http://www.fecshop.com/donate)：（捐助，建议写一下留言）
+
+| 捐赠人        | 金额      |  时间            |  方式           | 账户                  | 捐助者留言      |
+| --------------| ----------| -------------    | -----------     | ----------------------| ----------|
+| （*）         | ￥6.60    | 2017-12-21       |   微信          | -                     | -     |
+| 水哥          | ￥99.99   | 2017-12-20       |   支付宝        | dd_***@sohu.com       | 祝fecshop发展永久|
+| （*）         | ￥9.90    | 2017-12-11       |   微信          | -                     | 希望长久！|
+| （*）         | ￥100.00  | 2017-10-21       |   微信          | -                     | 希望你坚持下去成为更多人的榜样|
+| （*）         | ￥100.00  | 2017-09-27       |   微信          | -                     | -     |
+| （*）         | ￥2.00    | 2017-09-18       |   微信          | -                     | 赞一个|
+| （*）         | ￥1.00    | 2017-09-15       |   微信          | -                     | -     |
+
+
+
+
+
+
+
+
 
 
