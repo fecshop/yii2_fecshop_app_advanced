@@ -13,11 +13,10 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
 		"yiisoft/yii2-apidoc": "~2.0.0",
-        "fancyecommerce/fecshop": ">=1.2.2.4"
+        "fancyecommerce/fecshop": ">=1.2.2.5"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

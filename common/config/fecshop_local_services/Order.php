@@ -47,6 +47,6 @@ return [
         // 订单已退款【已收款订单因为某些原因进行退款，譬如：仓库无货，用户收到货后发现破损退款等】
         'status_refunded'                   => 'refunded',
         // 订单已完成，【用户收到货物xx时间后，未发起纠纷争端，订单状态标记为已完成】
-        'status_complete'                   => 'completed',
+        'status_completed'                  => 'completed',
     ],    
 ];
