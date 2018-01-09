@@ -17,18 +17,22 @@ $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__.'/../../common/config/main-local.php'),
     require(__DIR__.'/../config/main.php'),
     require(__DIR__.'/../config/main-local.php'),
-    // fecshop services config
-    require(__DIR__.'/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
-    // fecshop module config
-    require(__DIR__.'/../../vendor/fancyecommerce/fecshop/app/appserver/config/appserver.php'),
-
-    // thrid part confing
-
-    // common modules and services.
-    require(__DIR__.'/../../common/config/fecshop_local.php'),
-
-    // appadmin local modules and services.
-    require(__DIR__.'/../config/fecshop_local.php')
+    
+    # fecshop 公用配置
+    require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/config/fecshop.php'),
+    # fecshop 入口配置
+    require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/app/appserver/config/appserver.php'),
+    
+    # thrid part confing
+    # 第三方 公用配置
+    require(__DIR__ . '/../../common/config/fecshop_third.php'),
+    # 第三方 入口配置
+    require(__DIR__ . '/../config/fecshop_third.php'),
+    
+    # 本地 公用配置
+    require(__DIR__ . '/../../common/config/fecshop_local.php'),
+    # 本地 入口配置
+    require(__DIR__ . '/../config/fecshop_local.php')
 
 );
 
