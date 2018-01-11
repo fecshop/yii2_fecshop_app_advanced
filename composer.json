@@ -15,10 +15,7 @@
         "php": ">=5.4.0",
         "yiisoft/yii2-bootstrap": "*",
 		"yiisoft/yii2-apidoc": "~2.0.0",
-        "fancyecommerce/fecshop": ">=1.2.2.8",
-        "fancyecommerce/fecshop_redis_cart": "1.0.5",
-        "fancyecommerce/fecshop_queue": "1.0.1",
-        "fancyecommerce/fecshop_elasticsearch": "1.0.1"
+        "fancyecommerce/fecshop": ">=1.2.2.8"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
