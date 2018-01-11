@@ -30,24 +30,28 @@ return [
         */
         'session' => [
             /*
-             * use mongodb for session.
+             * // use mongodb for session.
+             * 'class' => 'yii\mongodb\Session',
+             * 'db' => 'mongodb',
+             * 'sessionCollection' => 'session',
              */
-            /*
-            'class' => 'yii\mongodb\Session',
-            'db' => 'mongodb',
-            'sessionCollection' => 'session',
-            */
             'class'   => 'yii\redis\Session',
-            'timeout' => 6000,
+            'timeout' => 86400 * 7,
+            'keyPrefix' => 'appapi_session',
+            'redis' => [
+                'database' => 3,
+            ],
         ],
-
         'cache' => [
             /*
-             * use mongodb for cache.
+             * // use mongodb for cache.
+             * 'class' => 'yii\mongodb\Cache',
              */
-            //'class' => 'yii\mongodb\Cache',
             'class'     => 'yii\redis\Cache',
-            'keyPrefix' => 'appapi',
+            'keyPrefix' => 'appapi_cache',
+            'redis' => [
+                'database' => 4,
+            ],
         ],
     ],
     // 自定义参数

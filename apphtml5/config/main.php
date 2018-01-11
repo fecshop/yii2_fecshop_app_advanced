@@ -32,26 +32,29 @@ return [
         */
         'session' => [
             /*
-             * use mongodb for session.
+             * // use mongodb for session.
+             * 'class' => 'yii\mongodb\Session',
+             * 'db' => 'mongodb',
+             * 'sessionCollection' => 'session',
              */
-            /*
-            'class' => 'yii\mongodb\Session',
-            'db' => 'mongodb',
-            'sessionCollection' => 'session',
-            */
             'class'   => 'yii\redis\Session',
             'timeout' => 86400 * 7,
+            'keyPrefix' => 'apphtml5_session',
+            'redis' => [
+                'database' => 7,
+            ],
         ],
-
         'cache' => [
             /*
-             * use mongodb for cache.
+             * // use mongodb for cache.
+             * 'class' => 'yii\mongodb\Cache',
              */
-            //'class' => 'yii\mongodb\Cache',
             'class'     => 'yii\redis\Cache',
-            'keyPrefix' => 'apphtml5',
+            'keyPrefix' => 'apphtml5_cache',
+            'redis' => [
+                'database' => 8,
+            ],
         ],
-
         'i18n' => [
             'translations' => [
                 'apphtml5' => [

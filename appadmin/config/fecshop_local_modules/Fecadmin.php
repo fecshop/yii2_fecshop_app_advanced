@@ -16,12 +16,12 @@ return [
              * 这个配置的作用，是为了在后台清空各个入口的全部缓存，因此需要加载相应的redis的配置
              */
             'cacheRedisConfigFile' => [
-                'commonConfig'      => '@common/config/main-local.php',
-                'appAdmin'           => '@appadmin/config/main-local.php',
-                'appApi'            => '@appapi/config/main-local.php',
-                'appFront'          => '@appfront/config/main-local.php',
-                'appHtml5'          => '@apphtml5/config/main-local.php',
-                'appServer'         => '@appserver/config/main-local.php',
+                'commonConfig'       => '@common/config/main-local.php',
+                'appAdmin'           => '@appadmin/config/main.php',
+                'appApi'             => '@appapi/config/main.php',
+                'appFront'           => '@appfront/config/main.php',
+                'appHtml5'           => '@apphtml5/config/main.php',
+                'appServer'          => '@appserver/config/main.php',
                 
             ],
         ],

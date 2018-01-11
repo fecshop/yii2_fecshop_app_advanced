@@ -28,29 +28,31 @@ return [
             'jsFileCompile'     => true,
         ],
         */
-
         'session' => [
             /*
-             * use mongodb for session.
+             * // use mongodb for session.
+             * 'class' => 'yii\mongodb\Session',
+             * 'db' => 'mongodb',
+             * 'sessionCollection' => 'session',
              */
-            /*
-            'class' => 'yii\mongodb\Session',
-            'db' => 'mongodb',
-            'sessionCollection' => 'session',
-            */
             'class'   => 'yii\redis\Session',
-            'timeout' => 6000,
+            'timeout' => 86400 * 7,
+            'keyPrefix' => 'appserver_session',
+            'redis' => [
+                'database' => 9,
+            ],
         ],
-
         'cache' => [
             /*
-             * use mongodb for cache.
+             * // use mongodb for cache.
+             * 'class' => 'yii\mongodb\Cache',
              */
-            //'class' => 'yii\mongodb\Cache',
             'class'     => 'yii\redis\Cache',
-            'keyPrefix' => 'appserver',
+            'keyPrefix' => 'appserver_cache',
+            'redis' => [
+                'database' => 10,
+            ],
         ],
-        
         'log' =>[
             # 追踪级别
             # 消息跟踪级别

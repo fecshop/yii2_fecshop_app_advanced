@@ -17,8 +17,8 @@ return [
     //'bootstrap' => ['log'],
     'controllerNamespace' => 'appfront\controllers',
     //'bootstrap'    => ['assetsAutoCompress'],
+    
     // 自定义组件
-
     'components' => [
        /*
        'assetsAutoCompress' =>
@@ -32,24 +32,27 @@ return [
         */
         'session' => [
             /*
-             * use mongodb for session.
+             * // use mongodb for session.
+             * 'class' => 'yii\mongodb\Session',
+             * 'db' => 'mongodb',
+             * 'sessionCollection' => 'session',
              */
-            /*
-            'class' => 'yii\mongodb\Session',
-            'db' => 'mongodb',
-            'sessionCollection' => 'session',
-            */
-            'class'   => 'yii\redis\Session',
             'timeout' => 86400 * 7,
+            'keyPrefix' => 'appfront_session',
+            'redis' => [
+                'database' => 5,
+            ],
         ],
-
         'cache' => [
             /*
-             * use mongodb for cache.
+             * // use mongodb for cache.
+             * 'class' => 'yii\mongodb\Cache',
              */
-            //'class' => 'yii\mongodb\Cache',
             'class'     => 'yii\redis\Cache',
-            'keyPrefix' => 'appfront',
+            'keyPrefix' => 'appfront_cache',
+            'redis' => [
+                'database' => 6,
+            ],
         ],
         'i18n' => [
             'translations' => [
