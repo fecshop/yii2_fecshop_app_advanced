@@ -41,9 +41,20 @@ return [
             'appfront/web/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
+            
+            'appfront/web/sitemap.xml',
+            'appfront/web/sitemap_es.xml',
+            'appfront/web/fr/sitemap.xml',
+            'appfront/web/cn/sitemap.xml',
 
             'apphtml5/runtime',
             'apphtml5/web/assets',
+            
+            'apphtml5/web/sitemap.xml',
+            'apphtml5/web/sitemap_es.xml',
+            'apphtml5/web/fr/sitemap.xml',
+            'apphtml5/web/cn/sitemap.xml',
+            
             'appserver/runtime',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',
@@ -76,8 +87,20 @@ return [
             'appfront/web/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
+            
+            'appfront/web/sitemap.xml',
+            'appfront/web/sitemap_es.xml',
+            'appfront/web/fr/sitemap.xml',
+            'appfront/web/cn/sitemap.xml',
+            
             'apphtml5/runtime',
             'apphtml5/web/assets',
+            
+            'apphtml5/web/sitemap.xml',
+            'apphtml5/web/sitemap_es.xml',
+            'apphtml5/web/fr/sitemap.xml',
+            'apphtml5/web/cn/sitemap.xml',
+            
             'appserver/runtime',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',

@@ -36,6 +36,9 @@ return [
             'zh_CN' => [
                 'code'                    => 'zh',
             ],
+            'it_IT' => [
+                'code'                    => 'it',
+            ],
         ],
         // 默认语言。
         'defaultLangCode' => 'en',
