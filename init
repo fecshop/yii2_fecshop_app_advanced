@@ -177,7 +177,12 @@ function setWritable($root, $paths)
             echo "      chmod 0777 $writable\n";
             @chmod("$root/$writable", 0777);
         } else {
-            echo "\n  Error. Directory $writable does not exist. \n";
+            if (substr($writable,(strlen($writable)-4)) == '.xml') {
+                echo "      chmod 0777 $writable\n";
+                @chmod("$root/$writable", 0777);
+            } else {
+                echo "\n  Error. Directory $writable does not exist. \n";
+            }
         }
     }
 }

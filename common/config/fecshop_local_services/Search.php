@@ -27,6 +27,7 @@ return [
                  * 这种方式您会感觉很繁琐，但是必须要这样做，这是mongodb在搜索方面的对语言设置方式。
                  * 
                  */
+                
                 'searchLang'  => [
                     'en' => 'english',
                     'fr' => 'french',
@@ -35,14 +36,17 @@ return [
                     'ru' => 'russian',
                     'pt' => 'portuguese',
                 ],
+                
             ], 
             'xunSearch'  => [
+                'enableService' => true, // xunSearch 开启前，先安装xunsearch。
                 'fuzzy'         => true,  // 是否开启模糊查询
-                'enableService' => true,
                 'synonyms'      => true, //是否开启同义词翻译
+                
                 'searchLang'    => [
                     'zh' => 'chinese',
                 ],
+                
             ],
         ],
     ],

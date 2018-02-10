@@ -11,6 +11,7 @@ return [
     'shipping' => [
         // Shipping的运费，是表格的形式录入，shippingCsvDir是存放运费表格的文件路径。
         'shippingCsvDir' => '@common/config/shipping',
+        'volumeWeightCoefficient' => 5000,
         'shippingConfig' => [
             'free_shipping'=> [  // 免运费
                 'label'=> 'Free shipping( 7-20 work days)',

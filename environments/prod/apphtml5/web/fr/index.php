@@ -18,7 +18,7 @@ defined('YII_ENV') or define('YII_ENV', 'prod');
 require(__DIR__ . '/../../../vendor/autoload.php');
 require(__DIR__ . '/../../../vendor/fancyecommerce/fecshop/yii/Yii.php');
 
-require(__DIR__ . '/../../../../common/config/bootstrap.php');
+require(__DIR__ . '/../../../common/config/bootstrap.php');
 
 require(__DIR__ . '/../../config/bootstrap.php');
 

@@ -23,7 +23,7 @@ if (is_array($third_config_file) && !empty($third_config_file)) {
             $app_enable = isset($curr_config['enable']) ? $curr_config['enable'] : false;
             $app_config = isset($curr_config['config']) ? $curr_config['config'] : false;
             if ($app_enable && is_array($app_config) && !empty($app_config)) {
-                $third_config = array_merge($third_config, $app_config);
+                $third_config = yii\helpers\ArrayHelper::merge($third_config, $app_config);
             }
         }
     }

@@ -50,6 +50,10 @@ return [
                         'css'	=>[
                             'css/my.css',
                         ],
+                        // 加上这个，可以放到css的最后面
+                        'options' => [
+                            'depends'=>['fecadmin\myassets\CustomAsset'],
+                        ]
                     ],
 
                     # css config 2.
