@@ -8,7 +8,9 @@
                 'language'         => 'en_US',        // 语言简码需要在@common/config/fecshop_local_services/FecshopLang.php 中定义。
                 'languageName'     => 'English',    // 语言简码对应的文字名称，将会出现在语言切换列表中显示。
                 'localThemeDir'    => '@appfront/theme/terry/theme01', // 设置当前store对应的模板路径。关于多模板的方面的知识，您可以参看fecshop多模板的知识。
-                'thirdThemeDir'    => [],  // 第三方模板路径，数组，可以多个路径
+                'thirdThemeDir'    => [ // 第三方模板路径，数组，可以多个路径
+                    
+                ],  
                 'currency'         => 'USD', // 当前store的默认货币,这个货币简码，必须在货币配置中配置
                 /*
                  * 当设备满足什么条件的时候，进行跳转。
@@ -42,7 +44,9 @@
                 'language'         => 'fr_FR',
                 'languageName'     => 'Français',
                 'localThemeDir'    => '@appfront/theme/terry/theme01',
-                'thirdThemeDir'    => [],
+                'thirdThemeDir'    => [ // 第三方模板路径，数组，可以多个路径
+                    '@fecshop/theme/rosegal/appfront/theme/rosegal',
+                ], 
                 'currency'         => 'RMB',
                 'mobile'           => [
                     'enable'               => false,

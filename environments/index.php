@@ -95,6 +95,8 @@ return [
             
             'apphtml5/runtime',
             'apphtml5/web/assets',
+            'apphtml5/web/cn/assets',
+            'apphtml5/web/fr/assets',
             
             'apphtml5/web/sitemap.xml',
             'apphtml5/web/sitemap_es.xml',
