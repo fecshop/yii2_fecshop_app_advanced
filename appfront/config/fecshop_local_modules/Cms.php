@@ -30,7 +30,7 @@ return [
                 'home_meta_description_es' => 'Fashion E-Commerce Shop , Base On Yii2 Framework Es',
             ],
             'homeBestSellerSku'        => [
-                'sk10002', 'sk10003-001', 'sk10005', 'sk1000-khak', 'sk0003', 'men0003', 'men0002', 'men0001',
+                'p10001-kahaki-xl', 'sk10003-001', 'sk10005', 'sk1000-khak', 'sk0003', 'men0003', 'men0002', 'men0001',
             ],
             'homeFeaturedSku'        => [
                 'men0003', 'men0002', 'men0001', 'computer001-xinghao2-cpu3', '22221', 'sk10005', 'sk1000-khak', '222212',
