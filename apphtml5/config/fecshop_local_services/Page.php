@@ -134,6 +134,12 @@ return [
                     'flashmessage' => [
                         'view'  => 'widgets/flashmessage.php',
                     ],
+                    'trace' => [
+                        'view'  => 'widgets/trace.php',
+                    ],
+                    'beforeContent' => [
+                        'view'  => 'widgets/beforeContent.php',
+                    ],
                 ],
             ],
 

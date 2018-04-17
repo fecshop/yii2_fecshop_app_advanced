@@ -1,4 +1,21 @@
 <?php
+/**
+ * 【Appserver端性能优化】：如果vue和appserver是不一样的域名，对于这种跨域的前端和后端交互，需要cros机制，具体您可以自己查阅
+ * 原理为：第一次发送options请求，如果请求成功，获取服务端允许的请求类型，然后再发起具体的数据请求
+ * 对于options请求，不涉及到数据，因此直接返回即可，因此下面加了下面的代码
+ * 对于下面的设置的允许的值，是fecshop目前允许的，如果您添加了其他的，请在下面自行修改
+ * 下面的cros的信息要和 @fecshop/app/appserver/modules/AppserverTokenController.php 这个文件里面的设置要一致。
+ * 默认，下面是注释掉，您可以根据自己的情况，取消掉下面的注释，让options请求在index.php文件执行的时候直接返回，节省资源。
+ */ 
+/*
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    $cors_allow_headers = ['fecshop-uuid','fecshop-lang','fecshop-currency','access-token'];       
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, ".implode(', ',$cors_allow_headers));
+    header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS');
+    exit;
+}
+*/
 error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //除去 E_NOTICE E_COMPILE_WARNING 之外的所有错误信息
 //ini_set('session.cookie_domain', '.fancyecommerce.com'); //初始化域名，
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';

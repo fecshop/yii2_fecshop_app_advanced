@@ -91,6 +91,14 @@ return [
                 ],
             ],
         ],
+        'user' => [
+            // 'class'            => 'fecshop\yii\web\User',
+            // 【默认】不开启速度限制的 User Model
+            'identityClass'     => 'fecshop\models\mysqldb\Customer',
+            // 开启速度限制的 User Model
+            // 'identityClass'     => 'fecshop\models\mysqldb\customer\CustomerAccessToken',
+            
+        ],
     ],
     // 自定义参数
     'params' => $params,

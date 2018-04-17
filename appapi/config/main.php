@@ -53,6 +53,14 @@ return [
                 'database' => 4,
             ],
         ],
+        'user' => [
+            // 【默认】不开启速度限制的 User Model
+            'identityClass' => 'fecshop\models\mysqldb\AdminUser',
+            // 开启速度限制的 User Model
+            //'identityClass' => 'fecshop\models\mysqldb\adminUser\AdminUserAccessToken',
+            
+            //'enableAutoLogin' => true,
+        ],
     ],
     // 自定义参数
     'params' => $params,
