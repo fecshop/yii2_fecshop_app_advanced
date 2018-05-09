@@ -17,7 +17,7 @@
                  * 这种方式不怎么高效，最好的方式是在nginx中配置。
                  */
                 'mobile'        => [
-                    'enable'            => false,
+                    'enable'            => true,
                     'condition'         => ['phone', 'tablet'], // phone 代表手机，tablet代表平板，当都填写，代表手机和平板都会进行跳转
                     'redirectDomain'    => 'fecshop.apphtml5.fancyecommerce.com',    // 如果是移动设备访问进行域名跳转，这里填写的值为store key
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false

@@ -17,7 +17,7 @@ return [
                     'class'       => 'Swift_SmtpTransport',
                     'host'        => 'smtp.qq.com',            //SMTP Host
                     'username'    => '2420577683@qq.com',   //SMTP 账号
-                    'password'    => 'zdveeweuevnldjgd',    //SMTP 密码
+                    'password'    => 'ylvskvloyxhpecdb',    //SMTP 密码
                     'port'        => '587',                    //SMTP 端口
                     'encryption'  => 'tls',
                 ],

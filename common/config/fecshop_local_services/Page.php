@@ -32,11 +32,28 @@ return [
                         'symbol'      => '£',
                     ],
                     'CNY' => [            // 人民币
-                        'rate'        =>  1, //6.87,
+                        'rate'        =>  6.3, //6.87,
                         'symbol'      => '￥',
                     ],
                 ],
             ],
+            'trace' => [
+                'class' => 'fecshop\services\page\Trace',
+                // 关闭和打开Trace功能，默认关闭，打开前，请先联系申请下面的信息，QQ：2358269014
+                'traceJsEnable' => false,
+                // trace系统的 站点唯一标示  website id
+                'website_id'    => '',
+                // trace系统的Token，当fecshop给trace通过curl发送数据的时候，需要使用该token进行安全认证。
+                'access_token'  => '',
+                // 当fecshop给trace通过curl发送数据，最大的超时时间，该时间是为了防止
+                'api_time_out' => 1, // 秒
+                // 追踪js url，这个是在统计系统，由管理员提供
+                'trace_url'     => '',
+                // 管理员提供，用于发送登录注册邮件，下单信息等。
+                'trace_api_url' => '',
+            ],
+            
+            /** 这个是提交的内容
             'trace' => [
                 // 关闭和打开Trace功能，默认关闭，打开前，请先联系申请下面的信息，QQ：2358269014
                 'traceJsEnable' => false,
@@ -51,6 +68,7 @@ return [
                 // 管理员提供，用于发送登录注册邮件，下单信息等。
                 'trace_api_url' => '',
             ],
+            */
         ],
     ],
 ];
