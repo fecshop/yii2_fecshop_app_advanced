@@ -51,6 +51,11 @@ return [
                         'db_columns'   => 'created_at',
                         'direction'    => 'desc',
                     ],
+                    'stock' => [
+                        'label'        => 'Stock',
+                        'db_columns'   => 'qty',
+                        'direction'    => 'desc',
+                    ],
                     'low-to-high' => [
                         'label'        => '$ Low to High',
                         'db_columns'   => 'final_price',

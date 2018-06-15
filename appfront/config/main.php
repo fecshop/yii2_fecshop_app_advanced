@@ -12,7 +12,7 @@ $params = array_merge(
 return [
     'id'       => 'app-front',
     // 设置时区，查看php 支持的所支持的时区列表  ：http://www.php.net/manual/zh/timezones.php
-    'timeZone' => 'UTC',
+    'timeZone' => 'Asia/Shanghai',
     'basePath' => dirname(__DIR__),
     //'bootstrap' => ['log'],
     'controllerNamespace' => 'appfront\controllers',
