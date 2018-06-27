@@ -128,7 +128,7 @@ return [
                  * 存放日志，AOP缓存数据
                  * window 将其修改成您自己的支付目录（因为win下面没有/tmp/文件目录）
                  */
-                'alipay_aop_sdk_work_dir' => '/tmp/fecshop',
+                'alipay_aop_sdk_work_dir' => '/tmp',
                 /**
                  * 支付宝库包的选项：
                  * 是否处于开发模式
