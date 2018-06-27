@@ -19,8 +19,9 @@
                 'mobile'        => [
                     'enable'            => true,
                     'condition'         => ['phone', 'tablet'], // phone 代表手机，tablet代表平板，当都填写，代表手机和平板都会进行跳转
-                    'redirectDomain'    => 'fecshop.apphtml5.fancyecommerce.com',    // 如果是移动设备访问进行域名跳转，这里填写的值为store key
+                    'redirectDomain'    => 'demo.fancyecommerce.com',    // 如果是移动设备访问进行域名跳转，这里填写的值为store key
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false
+                    'type'              => 'appserver',  //  填写值选择：[apphtml5, appserver]，如果是 apphtml5 ， 则表示跳转到html5入口，如果是appserver，则表示跳转到vue这种appserver对应的入口
                 ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
@@ -49,10 +50,11 @@
                 ], 
                 'currency'         => 'RMB',
                 'mobile'           => [
-                    'enable'               => false,
+                    'enable'               => true,
                     'condition'            => ['phone'], // phone 代表手机，tablet代表平板。
                     'redirectDomain'       => 'fecshop.apphtml5.fancyecommerce.com/fr', // 跳转后的url。
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false
+                    'type'              => 'apphtml5',  //  填写值选择：[apphtml5, appserver]，如果是 apphtml5 ， 则表示跳转到html5入口，如果是appserver，则表示跳转到vue这种appserver对应的入口
                 ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
@@ -76,10 +78,11 @@
                 'thirdThemeDir'    => [],
                 'currency'         => 'USD',
                 'mobile'           => [
-                    'enable'            => false,
+                    'enable'            => true,
                     'condition'         => ['tablet'],
                     'redirectDomain'    => 'fecshop.apphtml5.es.fancyecommerce.com',
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false
+                    'type'              => 'apphtml5',  //  填写值选择：[apphtml5, appserver]，如果是 apphtml5 ， 则表示跳转到html5入口，如果是appserver，则表示跳转到vue这种appserver对应的入口
                 ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
@@ -102,11 +105,12 @@
                 'localThemeDir'    => '@appfront/theme/terry/theme01',
                 'thirdThemeDir'    => [],
                 'currency'         => 'CNY',
-                'mobile'           => [
-                    'enable'            => false,
-                    'condition'         => ['phone', 'tablet'],
-                    'redirectDomain'    => 'fecshop.apphtml5.fancyecommerce.com/cn',
+                'mobile'        => [
+                    'enable'            => true,
+                    'condition'         => ['phone', 'tablet'], // phone 代表手机，tablet代表平板，当都填写，代表手机和平板都会进行跳转
+                    'redirectDomain'    => 'demo.fancyecommerce.com',    // 如果是移动设备访问进行域名跳转，这里填写的值为store key
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false
+                    'type'              => 'appserver',  //  填写值选择：[apphtml5, appserver]，如果是 apphtml5 ， 则表示跳转到html5入口，如果是appserver，则表示跳转到vue这种appserver对应的入口
                 ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
@@ -136,6 +140,7 @@
                     'condition'            => ['phone'], // phone 代表手机，tablet代表平板。
                     'redirectDomain'       => 'fecshop.apphtml5.fancyecommerce.com/it', // 跳转后的url。
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false
+                    'type'              => 'apphtml5',  //  填写值选择：[apphtml5, appserver]，如果是 apphtml5 ， 则表示跳转到html5入口，如果是appserver，则表示跳转到vue这种appserver对应的入口
                 ],
                 // 第三方账号登录配置
                 'thirdLogin' => [

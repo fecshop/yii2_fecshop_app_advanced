@@ -122,6 +122,20 @@ return [
                 'alipayrsaPublicKey' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt5egD1BQCK5fCQXKsgWh+VFj9zanV9cdwVmM/MOQ/zrwMBHMIRO0IdJMft351iXtyACKVX+noK1qzkiVOdg3MxLjbGoMDKR+/1PDxoxtWSVUJBywoYHH/Dh7TCi5GWGasOlXV4qWi0e5Yfa2x/Wi0cxqx76aY5izXEyabHAvWgTWNv121ZRNhl4qcuoWZYiMIQpTst6hEhRn/isUMgdtLRQ1a06q+qOkLmJ99vq8cqbfduAdOuhzbZNWqLV76CSc0meurlVtDoIn5kVAZdzjNTA2rlqSCgs/OZxaL8s/qrIynhLoB6U6i0fj4RsIsbrvoSnrPWo98rsM0RrlU8fpdwIDAQAB',  //'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApIw+Hsk65Z+mieDsEiTkhtf7ZNBgks83DLUDb1yh2d/HDB0s9zHFzsgQGny0kUTM0fJ43h7WydyUG9Kuv4fxD5iVfM2xkUYW5bvfTXVaj5LLj8rTKL+nnFybzzM5rewqh2u1Gzd7BbpOnhMn4Y+7JyyaWXsnRFBxIrmRAqQJVlVUG4RclLHfplFkMVcEMzoRda2UV54oQDMg8ZxignCqxgIKr7bpwpgdpdqZArHtmyEjhQfIblCLDjVk0rKxGsaz+ATYVt3eQozdyNEuKFRhy0VGmwmdQYhQFbge7SS6bVqXZHsq2fNZ6hMJ2XNOZajFm5jXMksnaX85PzdJ58HFewIDAQAB',
                 // 下面是沙盒地址， 正式环境请改为：https://openapi.alipay.com/gateway.do
                 'gatewayUrl'    => 'https://openapi.alipaydev.com/gateway.do', 
+                /**
+                 * 支付宝库包的选项：
+                 * SDK工作目录
+                 * 存放日志，AOP缓存数据
+                 * window 将其修改成您自己的支付目录（因为win下面没有/tmp/文件目录）
+                 */
+                'alipay_aop_sdk_work_dir' => '/tmp/fecshop',
+                /**
+                 * 支付宝库包的选项：
+                 * 是否处于开发模式
+                 * 在你自己电脑上开发程序的时候千万不要设为false，以免缓存造成你的代码修改了不生效
+                 * 部署到生产环境正式运营后，如果性能压力大，可以把此常量设定为false，能提高运行速度（对应的代价就是你下次升级程序时要清一下缓存）
+                 */
+                'alipay_aop_sdk_dev_mode' => true,
             ],
             
             'wxpay' => [ //注意参数要与WxPay.Config中的一致
