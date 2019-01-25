@@ -9,7 +9,7 @@
                 'languageName'     => 'English',    // 语言简码对应的文字名称，将会出现在语言切换列表中显示。
                 'localThemeDir'    => '@appfront/theme/terry/theme01', // 设置当前store对应的模板路径。关于多模板的方面的知识，您可以参看fecshop多模板的知识。
                 'thirdThemeDir'    => [ // 第三方模板路径，数组，可以多个路径
-                    
+
                 ],  
                 'currency'         => 'USD', // 当前store的默认货币,这个货币简码，必须在货币配置中配置
                 /*
@@ -75,10 +75,10 @@
                 'language'         => 'es_ES',
                 'languageName'     => 'Español',
                 'localThemeDir'    => '@appfront/theme/terry/theme01',
-                'thirdThemeDir'    => [],
+                'thirdThemeDir'    => ['@fectfurnilife/appfront/theme/furnilife',],
                 'currency'         => 'USD',
                 'mobile'           => [
-                    'enable'            => true,
+                    'enable'            => false,
                     'condition'         => ['tablet'],
                     'redirectDomain'    => 'fecshop.apphtml5.es.fancyecommerce.com',
                     'https'             => false,  // 手机端url是否支持https,如果支持，设置https为true，如果不支持，设置为false

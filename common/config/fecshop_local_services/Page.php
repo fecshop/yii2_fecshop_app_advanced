@@ -40,7 +40,7 @@ return [
             'trace' => [
                 'class' => 'fecshop\services\page\Trace',
                 // 关闭和打开Trace功能，默认关闭，打开前，请先联系申请下面的信息，QQ：2358269014
-                'traceJsEnable' => true,
+                'traceJsEnable' => false,
                 // trace系统的 站点唯一标示  website id
                 'website_id'    => '9b17f5b4-b96f-46fd-abe6-a579837ccdd9',
                 // trace系统的Token，当fecshop给trace通过curl发送数据的时候，需要使用该token进行安全认证。
@@ -72,3 +72,4 @@ return [
         ],
     ],
 ];
+

@@ -9,6 +9,8 @@
  */
 return [
     'product' => [
+        // 'storagePath' => 'common\\local\\local_services\\product',
+        // 'storage' => 'ProductMongodb',
         // 属性组的配置
         'customAttrGroup' => [
             //属性组的名字（每一个子项是一个属性组，譬如下面的clothes_group对应的就是一个属性组）
