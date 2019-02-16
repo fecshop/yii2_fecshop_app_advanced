@@ -11,7 +11,8 @@
  * 本配置文件为第三方插件库包的配置文件
  */
 $third_config = [];
-$current_app_name = 'common';
+$current_app = FEC_APP ? FEC_APP : '';
+$app_arr = ['common', $current_app];
 $third_config_file = glob(__DIR__.'/fecshop_third_extensions/*.php');
 if (is_array($third_config_file) && !empty($third_config_file)) {
     sort($third_config_file);
@@ -19,12 +20,14 @@ if (is_array($third_config_file) && !empty($third_config_file)) {
         $c = require($filename);
         $extension_enable = isset($c['enable']) ? $c['enable'] : false;
         if ($extension_enable) {
-            $curr_config = isset($c['app'][$current_app_name]) ? $c['app'][$current_app_name] : false;
-            $app_enable = isset($curr_config['enable']) ? $curr_config['enable'] : false;
-            $app_config = isset($curr_config['config']) ? $curr_config['config'] : false;
-            if ($app_enable && is_array($app_config) && !empty($app_config)) {
-                $third_config = yii\helpers\ArrayHelper::merge($third_config, $app_config);
-            }
+            foreach ($app_arr as $current_app_name) {
+                $curr_config = isset($c['app'][$current_app_name]) ? $c['app'][$current_app_name] : false;
+                $app_enable = isset($curr_config['enable']) ? $curr_config['enable'] : false;
+                $app_config = isset($curr_config['config']) ? $curr_config['config'] : false;
+                if ($app_enable && is_array($app_config) && !empty($app_config)) {
+                    $third_config = yii\helpers\ArrayHelper::merge($third_config, $app_config);
+                }
+            }    
         }
     }
 }

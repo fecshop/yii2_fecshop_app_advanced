@@ -11,6 +11,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //除去 E_NOTICE E_CO
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 // 由于脚本是后台跑，不会暴露出来错误，因此prod也可以使用dev的方式。
 defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('FEC_APP') or define('FEC_APP', 'console');
+
 require(__DIR__ . '/vendor/autoload.php');
 #require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/vendor/fancyecommerce/fecshop/yii/Yii.php');

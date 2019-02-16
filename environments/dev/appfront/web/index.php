@@ -14,6 +14,7 @@ $use_merge_config_file = false;
  
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('FEC_APP') or define('FEC_APP', 'appfront');
 
 require(__DIR__ . '/../../vendor/autoload.php');
 require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/yii/Yii.php');

@@ -14,7 +14,7 @@ return [
                     'blog_article' 								=> 'Blog-Article',
                 ],
             ],
-
+/*
             'menu' => [
                 'menuConfig' => [
                     'blog' => [
@@ -34,6 +34,7 @@ return [
 
                 ],
             ],
+*/            
         ],
     ],
 ];
