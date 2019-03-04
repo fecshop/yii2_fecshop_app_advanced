@@ -30,11 +30,12 @@ return [
                 
                 'searchLang'  => [
                     'en' => 'english',
-                    'fr' => 'french',
+                    'fr'  => 'french',
                     'de' => 'german',
                     'es' => 'spanish',
                     'ru' => 'russian',
                     'pt' => 'portuguese',
+                    'it'  =>  'italian',
                 ],
                 
             ], 

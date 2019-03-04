@@ -47,6 +47,6 @@ return [
                 'code' 					=> 'pt',
             ],
         ],
-        'defaultLangCode' => 'zh',
+        'defaultLangCode' => 'en',
     ],
 ];
