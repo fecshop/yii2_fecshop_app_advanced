@@ -55,23 +55,6 @@ return [
                 'database' => 8,
             ],
         ],
-        'i18n' => [
-            'translations' => [
-                'apphtml5' => [
-                    'basePaths' => [
-                        '@apphtml5/languages',
-                    ],
-                    // base language code
-                    'sourceLanguage' => 'en_US',
-                    /**
-                     * @var bool whether to force message translation when the source and target languages are the same.
-                     * Defaults to false, meaning translation is only performed when source and target languages are different.
-                     * see: @yii/i18n/MessageSource.php  @property $forceTranslation
-                     */
-                    'forceTranslation' => true,
-                ],
-            ],
-        ],
         // 请去page asset services中设置 forceCopy
         //'assetManager' => [
         //    'forceCopy' => true,

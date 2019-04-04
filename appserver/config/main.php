@@ -81,23 +81,6 @@ return [
                 ],
             ],
         ],
-        'i18n' => [
-            'translations' => [
-                'appserver' => [
-                    'basePaths' => [
-                        '@appserver/languages',
-                    ],
-                    // base language code
-                    'sourceLanguage' => 'en_US',
-                    /**
-                     * @var bool whether to force message translation when the source and target languages are the same.
-                     * Defaults to false, meaning translation is only performed when source and target languages are different.
-                     * see: @yii/i18n/MessageSource.php  @property $forceTranslation
-                     */
-                    'forceTranslation' => true,
-                ],
-            ],
-        ],
         'user' => [
             // 'class'            => 'fecshop\yii\web\User',
             // 【默认】不开启速度限制的 User Model
