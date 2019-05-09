@@ -15,7 +15,7 @@
         "php": ">=5.4.0",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-apidoc": "~2.0.0",
-        "fancyecommerce/fecshop": ">=1.7.2.0"
+        "fancyecommerce/fecshop": ">=1.7.3.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
