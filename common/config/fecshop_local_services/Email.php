@@ -26,5 +26,17 @@ return [
                 ],
             ],
         ],
+        'childService' => [
+            'customer' => [
+                /**
+                  * 注册账户是否需要邮件激活
+                  */
+                'registerAccountIsNeedEnableByEmail'  => false,
+                /**
+                 * 注册账户激活邮件的token的过期时间（秒），只有当 registerAccountIsNeedEnableByEmail 为true的时候有效。
+	             */
+                'registerAccountEnableTokenExpire' => 86400,
+            ],
+        ],
     ],
 ];
