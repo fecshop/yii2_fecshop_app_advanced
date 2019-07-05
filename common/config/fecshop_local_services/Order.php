@@ -12,7 +12,7 @@ return [
         'increment_id'        => '1100000000', // 订单的格式。
         'requiredAddressAttr' => [ // 必填的订单字段。
             'first_name',
-            'last_name',
+            //'last_name',
             'email',
             'telephone',
             'street1',
