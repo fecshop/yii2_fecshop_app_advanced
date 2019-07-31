@@ -14,9 +14,28 @@
  * @license http://www.yiiframework.com/license/
  */
 
-if (!extension_loaded('openssl')) {
-    die('The OpenSSL PHP extension is required by Yii2.');
-}
+$noLoadExtension = [];
+extension_loaded('openssl') || $noLoadExtension[] = 'openssl';
+extension_loaded('bcmath') || $noLoadExtension[] = 'bcmath';
+extension_loaded('curl') || $noLoadExtension[] = 'curl';
+extension_loaded('gd') || $noLoadExtension[] = 'gd';
+extension_loaded('iconv') || $noLoadExtension[] = 'iconv';
+extension_loaded('hash') || $noLoadExtension[] = 'hash';
+extension_loaded('mbstring') || $noLoadExtension[] = 'mbstring';
+extension_loaded('mcrypt') || $noLoadExtension[] = 'mcrypt';
+extension_loaded('mysqli') || $noLoadExtension[] = 'mysqli';
+extension_loaded('OAuth') || $noLoadExtension[] = 'OAuth';
+extension_loaded('pcre') || $noLoadExtension[] = 'pcre';
+extension_loaded('PDO') || $noLoadExtension[] = 'PDO';
+extension_loaded('pdo_mysql') || $noLoadExtension[] = 'pdo_mysql';
+extension_loaded('pdo_sqlite') || $noLoadExtension[] = 'pdo_sqlite';
+extension_loaded('Reflection') || $noLoadExtension[] = 'Reflection';
+extension_loaded('soap') || $noLoadExtension[] = 'soap';
+extension_loaded('imap') || $noLoadExtension[] = 'imap';
+if (!empty($noLoadExtension)) {
+    $noLoadExtensionStr = implode(',', $noLoadExtension);
+    die("PHP extension [ $noLoadExtensionStr ]  is required by Fecshop. you must install this php extension \n");
+}  
 
 $params = getParams();
 $root = str_replace('\\', '/', __DIR__);
