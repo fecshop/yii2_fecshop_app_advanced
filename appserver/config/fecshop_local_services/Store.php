@@ -2,6 +2,7 @@
    return [
    'store' => [
         'class'  => 'fecshop\services\Store',
+        /*
         'stores' => [
             // store key：域名去掉http部分，作为key，这个必须这样定义。
             'fecshop.appserver.fancyecommerce.com' => [
@@ -53,6 +54,7 @@
             ],
             
         ],
+        */
 
     ],
 

@@ -30,29 +30,14 @@ return [
             'jsFileCompile'     => true,
         ],
         */
+        'redis' => [
+            'database' => 1,
+        ],
         'session' => [
-            /*
-             * // use mongodb for session.
-             * 'class' => 'yii\mongodb\Session',
-             * 'db' => 'mongodb',
-             * 'sessionCollection' => 'session',
-             */
-            'timeout' => 86400 * 7,
-            'keyPrefix' => 'appfront_session',
-            'redis' => [
-                'database' => 5,
-            ],
+            //'keyPrefix' => 'appfront_session',  如果您使用redis session，您需要去掉注释
         ],
         'cache' => [
-            /*
-             * // use mongodb for cache.
-             * 'class' => 'yii\mongodb\Cache',
-             */
-            'class'     => 'yii\redis\Cache',
             'keyPrefix' => 'appfront_cache',
-            'redis' => [
-                'database' => 6,
-            ],
         ],
         // 请去page asset services中设置 forceCopy
         //'assetManager' => [

@@ -89,7 +89,6 @@ return [
                         'view'  => 'widgets/head.php',
                         // 缓存
                         'cache' => [
-                            'enable'     => false, // 是否开启
                             'timeout'    => 4500,  // 缓存过期时间
                         ],
                     ],
@@ -98,7 +97,6 @@ return [
                         // 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
                         'view'  => 'widgets/header.php',
                         'cache' => [
-                            'enable'     => false,
                             'timeout'    => 4500,
                         ],
                     ],
@@ -110,7 +108,6 @@ return [
                         // 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
                         'view'  => 'widgets/menu.php',
                         'cache' => [
-                            'enable'    => false,
                             //'timeout' 	=> 4500,
                         ],
                     ],
@@ -119,7 +116,6 @@ return [
                         // 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
                         'view'  => 'widgets/footer.php',
                         'cache' => [
-                            'enable'    => false,
                             //'timeout' 	=> 4500,
                         ],
                     ],

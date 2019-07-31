@@ -28,30 +28,14 @@ return [
             'jsFileCompile'     => true,
         ],
         */
+        'redis' => [
+            'database' => 2,
+        ],
         'session' => [
-            /*
-             * // use mongodb for session.
-             * 'class' => 'yii\mongodb\Session',
-             * 'db' => 'mongodb',
-             * 'sessionCollection' => 'session',
-             */
-            'class'   => 'yii\redis\Session',
-            'timeout' => 86400 * 7,
-            'keyPrefix' => 'appapi_session',
-            'redis' => [
-                'database' => 3,
-            ],
+            //'keyPrefix' => 'appapi_session',  如果您使用redis session，您需要去掉注释
         ],
         'cache' => [
-            /*
-             * // use mongodb for cache.
-             * 'class' => 'yii\mongodb\Cache',
-             */
-            'class'     => 'yii\redis\Cache',
             'keyPrefix' => 'appapi_cache',
-            'redis' => [
-                'database' => 4,
-            ],
         ],
         'user' => [
             // 【默认】不开启速度限制的 User Model

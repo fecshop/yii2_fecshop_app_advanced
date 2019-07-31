@@ -2,7 +2,9 @@
    return [
    'store' => [
         'class'  => 'fecshop\services\Store',
+        /*
         'stores' => [
+        
             // store key：域名去掉http部分，作为key，这个必须这样定义。
             'fecshop.apphtml5.fancyecommerce.com' => [
                 'language'         => 'en_US',        // 语言简码需要在@common/config/fecshop_local_services/FecshopLang.php 中定义。
@@ -35,11 +37,7 @@
                 'localThemeDir'    => '@apphtml5/theme/terry/theme01',
                 'thirdThemeDir'    => [],
                 'currency'         => 'RMB',
-                'mobile'           => [
-                    'enable'               => false,
-                    'condition'            => ['phone'], // phone 代表手机，tablet代表平板。
-                    'redirectDomain'       => 'fecshop.apphtml5.fancyecommerce.com/fr', // 跳转后的url。
-                ],
+                
                 // 第三方账号登录配置
                 'thirdLogin' => [
                     // facebook账号登录
@@ -61,11 +59,6 @@
                 'localThemeDir'    => '@apphtml5/theme/terry/theme01',
                 'thirdThemeDir'    => [],
                 'currency'         => 'USD',
-                'mobile'           => [
-                    'enable'            => false,
-                    'condition'         => ['tablet'],
-                    'redirectDomain'    => 'fecshop.apphtml5.es.fancyecommerce.com',
-                ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
                     // facebook账号登录
@@ -87,11 +80,6 @@
                 'localThemeDir'    => '@apphtml5/theme/terry/theme01',
                 'thirdThemeDir'    => [],
                 'currency'         => 'CNY',
-                'mobile'           => [
-                    'enable'            => false,
-                    'condition'         => ['phone', 'tablet'],
-                    'redirectDomain'    => 'fecshop.apphtml5.fancyecommerce.com/cn',
-                ],
                 // 第三方账号登录配置
                 'thirdLogin' => [
                     // facebook账号登录
@@ -107,8 +95,9 @@
                 ],
                 'sitemapDir' => '@apphtml5/web/cn/sitemap.xml',
             ],
+            
         ],
-
+        */
     ],
 
 ];
