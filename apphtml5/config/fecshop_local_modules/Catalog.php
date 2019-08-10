@@ -13,22 +13,23 @@ return [
             //##############################
             //# 		category部分设置	 ##
             //##############################
-            'category_breadcrumbs' => false, // 是否显示分类的面包屑导航。
+            //'category_breadcrumbs' => false, // 是否显示分类的面包屑导航。
             /*
              * 注意：做侧栏分类产品过滤的属性，必须是select类型的，其他的类型请不要用，
              * 对于select类型，目前不支持多语言数据库存储，select类型的各个值是通过前端翻译文件来实现翻译的、
              * 对于color  size 对应的保存值，只可以使用 '数字','字符','空格','&','-','_' 这6类字符
              */
-            'category_filter_attr' => [
-                'color', 'size',
-            ],
+            //'category_filter_attr' => [
+            //    'color', 'size',
+            //],
 
-            'category_filter_category'    => true,
-            'category_filter_price'       => true,
-            'category_query'              => [
+            //'category_filter_category'    => true,
+            //'category_filter_price'       => true,
+            //'category_query'              => [
                 // 放到第一个的就是默认值，譬如下面的30
-                'numPerPage' => [6],        // 产品显示个数的列举
+                //'numPerPage' => [6],        // 产品显示个数的列举
                 // 放到第一个的就是默认值，譬如下面的hot
+                /*
                 'sort' => [                        // 所有排序方式
                     // 下面的譬如hot  new  low-to-high 只能用 字母，数组，-，_ 这4种字符。
                     'hot' => [
@@ -67,6 +68,8 @@ return [
                         'direction'    => 'desc',
                     ],
                 ],
+                */
+                /*
                 'price_range' => [
                     '0-10',
                     '10-20',
@@ -79,21 +82,24 @@ return [
                     '500-1000',
                     '1000-',
                 ],
-            ],
+                */
+            //],
             //##############################
             //# 		Product部分设置		 ##
             //##############################
             // 产品页面图片的设置
+            /*
             'productImgSize' => [
                 'small_img_width'  => 80,  // 底部小图的宽度
                 'small_img_height' => 110,  // 底部小图的高度
                 'middle_img_width' => 400,  // 主图的宽度
             ],
             'productImgMagnifier' => false, // 是否已放大镜的方式显示，如果否，则是内窥的方式查看
-
+            */
             //##############################
             //#     Review部分设置		 ##
             //##############################
+            /*
             'review' => [
                 'add_captcha'                    => true,  // 增加review页面是否开启验证码验证。
                 'productPageReviewCount'         => 10,    // 在产品页面显示的review的个数。
@@ -106,7 +112,7 @@ return [
             'favorite' => [
                 'addSuccessRedirectFavoriteList' => false, // 产品收藏成功后是否跳转到账户中心的收藏列表
             ],
-
+            */
         ],
     ],
 ];

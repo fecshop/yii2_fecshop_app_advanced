@@ -32,7 +32,8 @@ return [
             'database' => 4,
         ],
         'session' => [
-            //'keyPrefix' => 'appserver_session',  如果您使用redis session，您需要去掉注释
+            // appserver 是api端，不会用到session组件。
+            //'keyPrefix' => 'appserver_session',  
         ],
         'cache' => [
             'keyPrefix' => 'appserver_cache',

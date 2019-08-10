@@ -9,6 +9,7 @@
  */
 return [
     'order' => [
+        /*
         'increment_id'        => '1100000000', // 订单的格式。
         'requiredAddressAttr' => [ // 必填的订单字段。
             'first_name',
@@ -21,16 +22,17 @@ return [
             'state',
             'zip',
         ],
+        */
         /**
          * 计算销量的订单时间范围（将最近几个月内的订单中的产品销售个数累加，作为产品的销量值,譬如3代表计算最近3个月的订单产品）
          * 0：代表计算订单表中所有的订单。
          * 这个值用于console入口（脚本端），通过shell脚本执行，计算产品的销量，将订单中产品个数累加作为产品的销量，然后将这个值更新到产品表字段中，用于产品按照销量排序或者过滤
          */
-        'orderProductSaleInMonths' => 3,
+        //'orderProductSaleInMonths' => 3,
         //处理多少分钟后，支付状态为pending的订单，归还库存。
-        'minuteBeforeThatReturnPendingStock'    => 600,
+        //'minuteBeforeThatReturnPendingStock'    => 600,
         // 脚本一次性处理多少个pending订单。
-        'orderCountThatReturnPendingStock'        => 30,
+        //'orderCountThatReturnPendingStock'        => 30,
         // 订单状态配置
         
         // 下面是订单支付状态

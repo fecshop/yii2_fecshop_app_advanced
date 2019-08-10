@@ -31,9 +31,7 @@ return [
                  * 这样就可以将js和css文件使用独立的域名了【把域名对应的地址对应到$basePath】。
                  */
                 'baseUrl' => '@web/assets',
-                // 是否每次访问都强制复制css js img等文件到发布地址，true代表每次访问都发布
-                // 一般开发环境用true，线上用false。当线上更新jscss文件，可以清空assets发布路径下的文件的方式来更新
-                'forceCopy' => true,
+                
                 // js and css config example:
                 /**
                  * 'jsOptions'	=> [

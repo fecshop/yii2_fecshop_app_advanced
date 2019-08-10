@@ -1,6 +1,7 @@
 *
 !.gitignore
 !assets/
+!download/
 !favicon.ico
 !robots.php
 !skin/

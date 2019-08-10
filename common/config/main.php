@@ -9,9 +9,8 @@ return [
             'showScriptName'  => false,
             'rules'           => [],
         ],
-        'assetManager' => [
-            'forceCopy' => false,
-        ],
-
+        //'assetManager' => [
+        //    'forceCopy' => false,
+        //],
     ],
 ];

@@ -10,6 +10,7 @@
 return [
     'cms' => [
         'params'=> [
+        /*
             'home_title'            => [
                 'home_title_en' => 'Fecshop Home Page En',
                 'home_title_zh' => 'Fecshop Home Page Zh',
@@ -44,7 +45,7 @@ return [
                 'sk0002', 'sk1000-black',
                 //'sk1000-blue',
             ],
-
+        */
         ],
     ],
 ];

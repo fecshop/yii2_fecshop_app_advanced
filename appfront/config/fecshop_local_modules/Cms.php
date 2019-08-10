@@ -10,6 +10,7 @@
 return [
     'cms' => [
         'params'=> [
+        /*
             'home_title'            => [
                 'home_title_en' => 'Fecshop Home Page En',
                 'home_title_zh' => 'Fecshop Home Page Zh',
@@ -35,6 +36,7 @@ return [
             'homeFeaturedSku'        => [
                 'men0003', 'men0002', 'men0001', 'computer001-xinghao2-cpu3', '22221', 'sk10005', 'sk1000-khak', '222212',
             ],
+        */
 
         ],
     ],
