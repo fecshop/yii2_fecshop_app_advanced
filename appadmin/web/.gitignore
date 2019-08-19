@@ -2,7 +2,7 @@
 !.gitignore
 !.htaccess
 !assets/
-!download/
+!download/*
 !favicon.ico
 !robots.php
 !skin/
