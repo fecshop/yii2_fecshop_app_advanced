@@ -23,11 +23,11 @@ class WxPayConfig
 	 * @var string
 	 */   
                 
-	const APPID = 'wxedc17529191bc54f';
-    const APPSECRET = '3b97c3fb4edeb0ca15e5386d753347a9';
+	const APPID = WX_APP_ID;  // 'wxedc77529191bc54f';
+    const APPSECRET = WX_APP_SECRET; //'3b97c3fb4edeb0ca25e5386d753347a9';
     
-	const MCHID = '1537420921';
-	const KEY = '8934e7d15453e97501ef794cf7b0519e';
+	const MCHID = WX_MCH_ID; //'1537420921';
+	const KEY = WX_MCH_KEY; //'8934e7d15453e97507ef794cf7b0519e';
 	//
 	
 	//=======【证书路径设置】=====================================

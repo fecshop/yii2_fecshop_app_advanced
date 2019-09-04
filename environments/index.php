@@ -58,6 +58,11 @@ return [
             'appserver/runtime',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',
+            'appimage/common/appfront/media',
+            'appimage/common/apphtml5/media',
+            'appimage/common/appadmin/media',
+            'appimage/common/media',
+            'addons',
 
             //'appapi/merge_config.php',
             //'appfront/merge_config.php',
@@ -67,6 +72,12 @@ return [
         'setExecutable' => [
             'yii',
             'tests/codeception/bin/yii',
+            'appimage/common/media/catalog/product',
+            'appimage/common/appfront/media',
+            'appimage/common/apphtml5/media',
+            'appimage/common/appadmin/media',
+            'appimage/common/media',
+            'addons',
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
@@ -105,7 +116,13 @@ return [
             
             'appserver/runtime',
             'appserver/web/assets',
+            
             'appimage/common/media/catalog/product',
+            'appimage/common/appfront/media',
+            'appimage/common/apphtml5/media',
+            'appimage/common/appadmin/media',
+            'appimage/common/media',
+            'addons',
             //'appapi/merge_config.php',
             //'appfront/merge_config.php',
             //'apphtml5/merge_config.php',
@@ -113,6 +130,12 @@ return [
         ],
         'setExecutable' => [
             'yii',
+            'appimage/common/media/catalog/product',
+            'appimage/common/appfront/media',
+            'appimage/common/apphtml5/media',
+            'appimage/common/appadmin/media',
+            'appimage/common/media',
+            'addons',
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',

@@ -8,21 +8,20 @@
  * @license http://www.yiiframework.com/license/
  */
 error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //除去 E_NOTICE E_COMPILE_WARNING 之外的所有错误信息
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-// 由于脚本是后台跑，不会暴露出来错误，因此prod也可以使用dev的方式。
-defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('YII_DEBUG') or define('YII_DEBUG', false);
+defined('YII_ENV') or define('YII_ENV', 'prod');
 defined('FEC_APP') or define('FEC_APP', 'console');
 
 require(__DIR__ . '/vendor/autoload.php');
 #require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/vendor/fancyecommerce/fecshop/yii/Yii.php');
-
+$fecmall_common_main_local_config = require(__DIR__ . '/common/config/main-local.php');
 require(__DIR__ . '/common/config/bootstrap.php');
 require(__DIR__ . '/console/config/bootstrap.php');
 $config = yii\helpers\ArrayHelper::merge(
 
     require(__DIR__ . '/common/config/main.php'),
-    require(__DIR__ . '/common/config/main-local.php'),
+    $fecmall_common_main_local_config,
     require(__DIR__ . '/console/config/main.php'),
     require(__DIR__ . '/console/config/main-local.php'),
 	
@@ -43,42 +42,12 @@ $config = yii\helpers\ArrayHelper::merge(
 	
 );
 
-
-/**
- * yii class Map Custom 
- */ 
-$yiiClassMap = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/console/config/YiiClassMap.php'),
-    require(__DIR__ . '/common/config/YiiClassMap.php')
-);
-if(is_array($yiiClassMap) && !empty($yiiClassMap)){
-	foreach($yiiClassMap as $namespace => $filePath){
-		Yii::$classMap[$namespace] = $filePath;
-	}
-}
-
-/**
- * Yii 重写block controller model等
- * 也就是说：除了compoent 和services，其他的用RewriteMap的方式来实现重写
- * 重写的类可以集成被重写的类
- */ 
-$yiiRewriteMap = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/console/config/YiiRewriteMap.php'),
-    require(__DIR__ . '/common/config/YiiRewriteMap.php')
-);
-if(is_array($yiiRewriteMap) && !empty($yiiRewriteMap)){
-	Yii::$rewriteMap = $yiiRewriteMap;
-}
-
-
 /**
  * 添加fecshop的服务 ，Yii::$service  ,  将services的配置添加到这个对象。
  * 使用方法：Yii::$service->cms->article;
  * 上面的例子就是获取cms服务的子服务article。
  */
-new fecshop\services\Application($config['services']);
-unset($config['services']);
-
+new fecshop\services\Application($config);
 $application = new yii\console\Application($config);
 
 $exitCode = $application->run();
