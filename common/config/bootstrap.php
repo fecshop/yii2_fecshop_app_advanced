@@ -13,12 +13,25 @@ Yii::setAlias('@google', dirname(dirname(__DIR__)).'/vendor/fancyecommerce/fecsh
 // $fecmall_common_main_local_config为index.php的变量。是db 组件的配置。
 Yii::setAlias('@addons', dirname(dirname(__DIR__)).'/addons');
 
-$dbConfig = isset($fecmall_common_main_local_config['components']['db']) ? $fecmall_common_main_local_config['components']['db'] : '';
-if (is_array($dbConfig) && !empty($dbConfig)) {
-    $connection = Yii::createObject($dbConfig);
-    $command = $connection->createCommand('SELECT * FROM  extensions where  status=:status AND installed_status=:installed_status');
-    $command->bindValue(':status', 1);
-    $command->bindValue(':installed_status', 1);
-    $fecmall_db_extensions_data = $command->queryAll();
+// 下面的代码部分为：命令行执行sql初始化，不加载应用插件部分。
+$is_install = false;
+if (is_array($argv)) {
+    foreach ($argv as $av) {
+        if ($av == '--migrationPath=@fecshop/migrations/mysqldb') {
+            $is_install = true; 
+            break;
+        }
+    }
+}  
+
+if (!$is_install) {
+    $dbConfig = isset($fecmall_common_main_local_config['components']['db']) ? $fecmall_common_main_local_config['components']['db'] : '';
+    if (is_array($dbConfig) && !empty($dbConfig)) {
+        $connection = Yii::createObject($dbConfig);
+        $command = $connection->createCommand('SELECT * FROM  extensions where  status=:status AND installed_status=:installed_status');
+        $command->bindValue(':status', 1);
+        $command->bindValue(':installed_status', 1);
+        $fecmall_db_extensions_data = $command->queryAll();
+    }
 }
 

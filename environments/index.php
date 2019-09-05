@@ -130,12 +130,12 @@ return [
         ],
         'setExecutable' => [
             'yii',
-            'appimage/common/media/catalog/product',
-            'appimage/common/appfront/media',
-            'appimage/common/apphtml5/media',
-            'appimage/common/appadmin/media',
-            'appimage/common/media',
-            'addons',
+            // 'appimage/common/media/catalog/product',
+            // 'appimage/common/appfront/media',
+            // 'appimage/common/apphtml5/media',
+            // 'appimage/common/appadmin/media',
+            // 'appimage/common/media',
+            // 'addons',
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
