@@ -63,6 +63,8 @@ return [
             'appimage/common/appadmin/media',
             'appimage/common/media',
             'addons',
+            // 设置可写，再界面安装完成后，会被重新设置成644
+            'common/config/main-local.php'
 
             //'appapi/merge_config.php',
             //'appfront/merge_config.php',
@@ -72,12 +74,12 @@ return [
         'setExecutable' => [
             'yii',
             'tests/codeception/bin/yii',
-            'appimage/common/media/catalog/product',
-            'appimage/common/appfront/media',
-            'appimage/common/apphtml5/media',
-            'appimage/common/appadmin/media',
-            'appimage/common/media',
-            'addons',
+            //'appimage/common/media/catalog/product',
+            //'appimage/common/appfront/media',
+            //'appimage/common/apphtml5/media',
+           // 'appimage/common/appadmin/media',
+            //'appimage/common/media',
+            //'addons',
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
@@ -123,6 +125,8 @@ return [
             'appimage/common/appadmin/media',
             'appimage/common/media',
             'addons',
+            // 设置可写，再界面安装完成后，会被重新设置成644
+            'common/config/main-local.php'
             //'appapi/merge_config.php',
             //'appfront/merge_config.php',
             //'apphtml5/merge_config.php',

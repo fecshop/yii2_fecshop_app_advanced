@@ -4,9 +4,9 @@ return [
         // Mysql部分的配置
         'db' => [ 
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=fecshop',
-            'username' => 'root',
-            'password' => 'xxxxxx',
+            'dsn' => 'mysql:host={mysql_host};dbname={mysql_database}',
+            'username' => '{mysql_user}',
+            'password' => '{mysql_password}',
             'charset' => 'utf8',
         ],
         // Mongodb部分的配置
