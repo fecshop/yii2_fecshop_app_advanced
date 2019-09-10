@@ -58,10 +58,11 @@ return [
             'appserver/runtime',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',
-            'appimage/common/appfront/media',
-            'appimage/common/apphtml5/media',
-            'appimage/common/appadmin/media',
-            'appimage/common/media',
+            'appimage/common/addons',
+            //'appimage/common/appfront/media',
+            //'appimage/common/apphtml5/media',
+            //'appimage/common/appadmin/media',
+            //'appimage/common/media',
             'addons',
             // 设置可写，再界面安装完成后，会被重新设置成644
             'common/config/main-local.php'
@@ -120,10 +121,11 @@ return [
             'appserver/web/assets',
             
             'appimage/common/media/catalog/product',
-            'appimage/common/appfront/media',
-            'appimage/common/apphtml5/media',
-            'appimage/common/appadmin/media',
-            'appimage/common/media',
+            'appimage/common/addons',
+            //'appimage/common/appfront/media',
+            //'appimage/common/apphtml5/media',
+            //'appimage/common/appadmin/media',
+            //'appimage/common/media',
             'addons',
             // 设置可写，再界面安装完成后，会被重新设置成644
             'common/config/main-local.php'

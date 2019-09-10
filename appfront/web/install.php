@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING );
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';

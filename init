@@ -53,7 +53,7 @@ if (empty($params['env']) || $params['env'] === '1') {
         echo "  [$i] $name\n";
     }
     echo "\n  Your choice 0" ;
-    $answer = 0; //trim(fgets(STDIN));
+    $answer = "0"; //trim(fgets(STDIN));
 
     if (!ctype_digit($answer) || !in_array($answer, range(0, count($envs) - 1))) {
         echo "\n  Quit initialization.\n";
