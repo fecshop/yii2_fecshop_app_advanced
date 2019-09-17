@@ -28,7 +28,7 @@ if (!$is_install) {
     $dbConfig = isset($fecmall_common_main_local_config['components']['db']) ? $fecmall_common_main_local_config['components']['db'] : '';
     if (is_array($dbConfig) && !empty($dbConfig)) {
         $connection = Yii::createObject($dbConfig);
-        $command = $connection->createCommand('SELECT * FROM  extensions where  status=:status AND installed_status=:installed_status');
+        $command = $connection->createCommand('SELECT * FROM  extensions where  status=:status AND installed_status=:installed_status ORDER BY priority ASC ');
         $command->bindValue(':status', 1);
         $command->bindValue(':installed_status', 1);
         $fecmall_db_extensions_data = $command->queryAll();
