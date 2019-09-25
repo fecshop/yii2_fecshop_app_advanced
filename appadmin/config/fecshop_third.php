@@ -16,6 +16,7 @@ $current_app_name = 'appadmin';
 if (is_array($fecmall_db_extensions_data) && !empty($fecmall_db_extensions_data)) {
     foreach ($fecmall_db_extensions_data as $one) {
         $configFile = Yii::getAlias($one['config_file_path']);
+        if (!file_exists($configFile)) continue;
         $c = require($configFile);
         $curr_config = isset($c['app'][$current_app_name]) ? $c['app'][$current_app_name] : false;
         $app_enable = isset($curr_config['enable']) ? $curr_config['enable'] : false;
