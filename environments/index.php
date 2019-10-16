@@ -58,6 +58,7 @@ return [
             'appserver/runtime',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',
+            'appimage/common/media/catalog/category',
             'appimage/common/addons',
             //'appimage/common/appfront/media',
             //'appimage/common/apphtml5/media',
@@ -121,6 +122,7 @@ return [
             'appserver/web/assets',
             
             'appimage/common/media/catalog/product',
+            'appimage/common/media/catalog/category',
             'appimage/common/addons',
             //'appimage/common/appfront/media',
             //'appimage/common/apphtml5/media',
