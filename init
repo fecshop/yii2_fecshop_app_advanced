@@ -26,6 +26,8 @@ extension_loaded('PDO') || $noLoadExtension[] = 'PDO';
 extension_loaded('pdo_mysql') || $noLoadExtension[] = 'pdo_mysql';
 extension_loaded('pdo_sqlite') || $noLoadExtension[] = 'pdo_sqlite';
 extension_loaded('Reflection') || $noLoadExtension[] = 'Reflection';
+extension_loaded('xmlwriter') || $noLoadExtension[] = 'xmlwriter';
+extension_loaded('zip') || $noLoadExtension[] = 'zip';
 // extension_loaded('imap') || $noLoadExtension[] = 'imap';
 
 // extension_loaded('soap') || $noLoadExtension[] = 'soap';
