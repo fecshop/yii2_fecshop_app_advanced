@@ -34,6 +34,10 @@ return [
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/web/assets',
+            
+            'appbdmin/runtime',
+            'appbdmin/web/assets',
+            
             'appapi/runtime',
             'appapi/web/assets',
 
@@ -85,6 +89,7 @@ return [
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
+            'appbdmin/config/main-local.php',
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',
@@ -96,6 +101,8 @@ return [
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/web/assets',
+            'appbdmin/runtime',
+            'appbdmin/web/assets',
             'appapi/runtime',
             'appapi/web/assets',
             'appfront/runtime',
@@ -147,6 +154,7 @@ return [
         ],
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
+            'appbdmin/config/main-local.php',
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',
