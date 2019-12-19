@@ -139,11 +139,10 @@ return [
             ],
             
             'wxpay' => [ //注意参数要与WxPay.Config中的一致
-        		'class'         => 'fecshop\services\payment\Wxpay', //新增，没加之前也能正常运行
-        		'devide'        => 'pc',
+        		// 'class'         => 'fecshop\services\payment\Wxpay', //新增，没加之前也能正常运行
+        		// 'devide'        => 'pc',
                 // 微信的授权信息在下面的文件中，因为微信支付php sdk的配置是写到常量文件中，因此只能这样了，无法通过注入的方式写入，具体的配置到下面的文件中进行配置。
-                'configFile'    => '@common/config/payment/wxpay/lib/WxPay.Config.php',
-                
+                // 'configFile'    => '@common/config/payment/wxpay/lib/WxPay.Config.php',
             ],
         ],
     ],
