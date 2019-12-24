@@ -13,7 +13,7 @@ return [
             //'widget' => [
             //],
             'asset' => [
-                'class' => 'fecshop\services\page\Asset',
+                // 'class' => 'fecshop\services\page\Asset',
                 // 在js后面加一个v参数，修改js后，更改v参数，否则，浏览器会使用缓存。
                 // /assets/dbdba3fa/js/js.js?v=2
                 'jsVersion'        => 2,
