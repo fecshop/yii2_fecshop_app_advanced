@@ -33,15 +33,19 @@ return [
         'path'        => 'dev',
         'setWritable' => [
             'appadmin/runtime',
+            'appadmin/runtime/cache',
             'appadmin/web/assets',
             
             'appbdmin/runtime',
+            'appbdmin/runtime/cache',
             'appbdmin/web/assets',
             
             'appapi/runtime',
+            'appapi/runtime/cache',
             'appapi/web/assets',
 
             'appfront/runtime',
+            'appfront/runtime/cache',
             'appfront/web/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
@@ -52,6 +56,7 @@ return [
             'appfront/web/cn/sitemap.xml',
 
             'apphtml5/runtime',
+            'apphtml5/runtime/cache',
             'apphtml5/web/assets',
             
             'apphtml5/web/sitemap.xml',
@@ -60,6 +65,7 @@ return [
             'apphtml5/web/cn/sitemap.xml',
             
             'appserver/runtime',
+            'appserver/runtime/cache',
             'appserver/web/assets',
             'appimage/common/media/catalog/product',
             'appimage/common/media/catalog/category',
@@ -100,12 +106,16 @@ return [
         'path'        => 'prod',
         'setWritable' => [
             'appadmin/runtime',
+            'appadmin/runtime/cache',
             'appadmin/web/assets',
             'appbdmin/runtime',
+            'appbdmin/runtime/cache',
             'appbdmin/web/assets',
             'appapi/runtime',
+            'appapi/runtime/cache',
             'appapi/web/assets',
             'appfront/runtime',
+            'appfront/runtime/cache',
             'appfront/web/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
@@ -116,6 +126,7 @@ return [
             'appfront/web/cn/sitemap.xml',
             
             'apphtml5/runtime',
+            'apphtml5/runtime/cache',
             'apphtml5/web/assets',
             'apphtml5/web/cn/assets',
             'apphtml5/web/fr/assets',
@@ -126,6 +137,7 @@ return [
             'apphtml5/web/cn/sitemap.xml',
             
             'appserver/runtime',
+            'appserver/runtime/cache',
             'appserver/web/assets',
             
             'appimage/common/media/catalog/product',
