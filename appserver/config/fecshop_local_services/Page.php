@@ -13,8 +13,8 @@ return [
             
             'menu' => [
                 'displayHome' => [
-                    'enable' => true,        // ÊÇ·ñÔÚ²Ëµ¥ÖÐÏÔÊ¾home
-                    'display'=> 'Home',        // ÏÔÊ¾¶ÔÓ¦µÄ×Ö·û¡£
+                    'enable' => true,        // æ˜¯å¦åœ¨èœå•ä¸­æ˜¾ç¤ºhome
+                    'display'=> 'Home',        // æ˜¾ç¤ºå¯¹åº”çš„å­—ç¬¦ã€‚
                 ],
                 
             ],
