@@ -11,7 +11,7 @@ return [
         'params'=> [
             // 开始Start页面配置
             'startConfig' => [
-                'picUrl' => 'wx/start.png',
+                'picUrl' => 'wx/start.jpg',
                 'title' => 'Fecshop',
                 'remark' => 'Wx Micro Program',
             ],
