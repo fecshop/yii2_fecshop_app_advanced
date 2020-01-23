@@ -10,13 +10,13 @@ Yii::setAlias('@appserver', dirname(dirname(__DIR__)).'/appserver');
 Yii::setAlias('@appapi', dirname(dirname(__DIR__)).'/appapi');
 Yii::setAlias('@appimage', dirname(dirname(__DIR__)).'/appimage');
 //Yii::setAlias('@Facebook', dirname(dirname(__DIR__)).'/vendor/fancyecommerce/fecshop/lib/Facebook');
-Yii::setAlias('@google', dirname(dirname(__DIR__)).'/vendor/fancyecommerce/fecshop/lib/google');
+Yii::setAlias('@google', dirname(dirname(__DIR__)) . '/vendor/fancyecommerce/fecshop/lib/google');
 // $fecmall_common_main_local_config为index.php的变量。是db 组件的配置。
 Yii::setAlias('@addons', dirname(dirname(__DIR__)).'/addons');
 
 // 下面的代码部分为：命令行执行sql初始化，不加载应用插件部分。
 $is_install = false;
-if (is_array($argv)) {
+if (isset($argv) && is_array($argv)) {
     foreach ($argv as $av) {
         if ($av == '--migrationPath=@fecshop/migrations/mysqldb') {
             $is_install = true; 
