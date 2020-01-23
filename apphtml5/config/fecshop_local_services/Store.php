@@ -1,7 +1,7 @@
 <?php
    return [
    'store' => [
-        'class'  => 'fecshop\services\Store',
+        //'class'  => 'fecshop\services\Store',
         /*
         'stores' => [
         
