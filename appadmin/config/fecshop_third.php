@@ -26,4 +26,8 @@ if (is_array($fecmall_db_extensions_data) && !empty($fecmall_db_extensions_data)
         }
     }
 }
+// 引入theme，前面的优先级高，所以进行反转
+if (isset($third_config['services']['page']['childService']['theme']['thirdThemeDir']) && is_array($third_config['services']['page']['childService']['theme']['thirdThemeDir'])) {
+    $third_config['services']['page']['childService']['theme']['thirdThemeDir'] = array_reverse($third_config['services']['page']['childService']['theme']['thirdThemeDir']);
+}
 return $third_config;
