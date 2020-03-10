@@ -34,6 +34,7 @@ return [
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/runtime/cache',
+            'appadmin/runtime/upload',
             'appadmin/web/assets',
             
             'appbdmin/runtime',
@@ -107,6 +108,7 @@ return [
         'setWritable' => [
             'appadmin/runtime',
             'appadmin/runtime/cache',
+            'appadmin/runtime/upload',
             'appadmin/web/assets',
             'appbdmin/runtime',
             'appbdmin/runtime/cache',
