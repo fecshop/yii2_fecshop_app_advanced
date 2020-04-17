@@ -34,7 +34,7 @@ return [
             'middle_shipping'=> [  // xxx shipping
                 'label'=> 'middle shipping( 6-15 work days)',
                 'name' => 'HKBRAM',
-                'formula' => '[weight] * 0.5',  // 这里填写公式
+                'formula' => '[weight] * 0.0005',  // 这里填写公式
                 // 对于国家和重量限制，如果没有，则不用填写，如果有，参考上面的样式填写
             ],
             'fast_shipping'=> [
