@@ -48,6 +48,7 @@ return [
             'appfront/runtime',
             'appfront/runtime/cache',
             'appfront/web/assets',
+            'appfront/web/install/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
             
@@ -121,6 +122,7 @@ return [
             'appfront/runtime',
             'appfront/runtime/cache',
             'appfront/web/assets',
+            'appfront/web/install/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
             
