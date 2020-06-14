@@ -24,7 +24,7 @@ require(__DIR__ . '/../../../common/config/bootstrap.php');
 require(__DIR__ . '/../../config/bootstrap.php');
 
 if($use_merge_config_file){
-	$config = require('../../merge_config.php');
+	$config = require(__DIR__.'/../../config/merge_config.php');
 }else{
     $config = yii\helpers\ArrayHelper::merge(
         require(__DIR__ . '/../../../common/config/main.php'),

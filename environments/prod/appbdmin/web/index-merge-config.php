@@ -158,5 +158,5 @@ function toPhpCode($arr, $dimensional = 0)
 
 $str .= toPhpCode($config);
 $str .= ';';
-file_put_contents('../merge_config.php', $str);
+file_put_contents(__DIR__.'/../config/merge_config.php', $str);
 echo 'generate merge config file success';
