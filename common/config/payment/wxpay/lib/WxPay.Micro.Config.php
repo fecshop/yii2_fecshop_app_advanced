@@ -3,7 +3,7 @@
 * 	配置账号信息
 */
 
-class WxPayConfig
+class WxPayMicroConfig
 {
 	//=======【基本信息设置】=====================================
 	//
