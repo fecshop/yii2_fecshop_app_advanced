@@ -51,6 +51,7 @@ return [
                  *	在菜单后面部分（产品分类菜单的前面部分）的自定义菜单
                  */
                 'behindCustomMenu' => [
+                /*
                     [
                         'name'        => 'custom menu',            // 菜单名字
                         'urlPath'     => '/my-custom-menu.html',    // 菜单对应的url
@@ -75,6 +76,7 @@ return [
                             ],
                         ],
                     ],
+                */
                 ],
             ],
 
