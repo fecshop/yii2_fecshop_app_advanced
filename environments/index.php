@@ -51,20 +51,26 @@ return [
             'appfront/web/install/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
+            'appfront/web/jp/assets',
             
             'appfront/web/sitemap.xml',
             'appfront/web/sitemap_es.xml',
             'appfront/web/fr/sitemap.xml',
             'appfront/web/cn/sitemap.xml',
+            'appfront/web/jp/sitemap.xml',
 
             'apphtml5/runtime',
             'apphtml5/runtime/cache',
             'apphtml5/web/assets',
+            'apphtml5/web/cn/assets',
+            'apphtml5/web/fr/assets',
+            'apphtml5/web/jp/assets',
             
             'apphtml5/web/sitemap.xml',
             'apphtml5/web/sitemap_es.xml',
             'apphtml5/web/fr/sitemap.xml',
             'apphtml5/web/cn/sitemap.xml',
+            'apphtml5/web/jp/sitemap.xml',
             
             'appserver/runtime',
             'appserver/runtime/cache',
@@ -125,22 +131,26 @@ return [
             'appfront/web/install/assets',
             'appfront/web/cn/assets',
             'appfront/web/fr/assets',
+            'appfront/web/jp/assets',
             
             'appfront/web/sitemap.xml',
             'appfront/web/sitemap_es.xml',
             'appfront/web/fr/sitemap.xml',
             'appfront/web/cn/sitemap.xml',
+            'appfront/web/jp/sitemap.xml',
             
             'apphtml5/runtime',
             'apphtml5/runtime/cache',
             'apphtml5/web/assets',
             'apphtml5/web/cn/assets',
             'apphtml5/web/fr/assets',
+            'apphtml5/web/jp/assets',
             
             'apphtml5/web/sitemap.xml',
             'apphtml5/web/sitemap_es.xml',
             'apphtml5/web/fr/sitemap.xml',
             'apphtml5/web/cn/sitemap.xml',
+            'apphtml5/web/jp/sitemap.xml',
             
             'appserver/runtime',
             'appserver/runtime/cache',
