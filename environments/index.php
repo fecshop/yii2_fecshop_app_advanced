@@ -41,6 +41,10 @@ return [
             'appbdmin/runtime/cache',
             'appbdmin/web/assets',
             
+            'appfa/runtime',
+            'appfa/runtime/cache',
+            'appfa/web/assets',
+            
             'appapi/runtime',
             'appapi/runtime/cache',
             'appapi/web/assets',
@@ -106,6 +110,7 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appbdmin/config/main-local.php',
+            'appfa/config/main-local.php',
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',
@@ -122,6 +127,11 @@ return [
             'appbdmin/runtime',
             'appbdmin/runtime/cache',
             'appbdmin/web/assets',
+            
+            'appfa/runtime',
+            'appfa/runtime/cache',
+            'appfa/web/assets',
+            
             'appapi/runtime',
             'appapi/runtime/cache',
             'appapi/web/assets',
@@ -185,6 +195,7 @@ return [
         'setCookieValidationKey' => [
             'appadmin/config/main-local.php',
             'appbdmin/config/main-local.php',
+            'appfa/config/main-local.php',
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',

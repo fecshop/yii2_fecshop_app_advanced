@@ -4,9 +4,9 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING ); //除去 E_NOTICE E_CO
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
 $homeUrl = $http.'://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME']), '\\/');
 
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
-defined('FEC_APP') or define('FEC_APP', 'appbdmin');
+defined('YII_DEBUG') or define('YII_DEBUG', false);
+defined('YII_ENV') or define('YII_ENV', 'prod');
+defined('FEC_APP') or define('FEC_APP', 'appfa');
 
 require(__DIR__ . '/../../vendor/autoload.php');
 require(__DIR__ . '/../../vendor/fancyecommerce/fecshop/yii/Yii.php');

@@ -1,0 +1,7 @@
+!.gitignore
+!.htaccess
+!assets/
+!favicon.ico
+!robots.php
+!fec_trace.js
+
