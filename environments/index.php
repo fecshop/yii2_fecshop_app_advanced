@@ -45,6 +45,10 @@ return [
             'appfa/runtime/cache',
             'appfa/web/assets',
             
+            'apperp/runtime',
+            'apperp/runtime/cache',
+            'apperp/web/assets',
+            
             'appapi/runtime',
             'appapi/runtime/cache',
             'appapi/web/assets',
@@ -111,6 +115,8 @@ return [
             'appadmin/config/main-local.php',
             'appbdmin/config/main-local.php',
             'appfa/config/main-local.php',
+            'apperp/config/main-local.php',
+            
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',
@@ -131,6 +137,10 @@ return [
             'appfa/runtime',
             'appfa/runtime/cache',
             'appfa/web/assets',
+            
+            'apperp/runtime',
+            'apperp/runtime/cache',
+            'apperp/web/assets',
             
             'appapi/runtime',
             'appapi/runtime/cache',
@@ -196,6 +206,7 @@ return [
             'appadmin/config/main-local.php',
             'appbdmin/config/main-local.php',
             'appfa/config/main-local.php',
+            'apperp/config/main-local.php',
             'appapi/config/main-local.php',
             'appfront/config/main-local.php',
             'apphtml5/config/main-local.php',

@@ -14,11 +14,12 @@ foreach (glob(__DIR__.'/fecshop_local_services/*.php') as $filename) {
 }
 // 组件
 $components = [
+    
     'i18n' => [
         'translations' => [
-            'appfa' => [
+            'apperp' => [
                 'basePaths' => [
-                    '@appfa/languages',
+                    '@apperp/languages',
                 ],
                 // base language code
                 'sourceLanguage' => 'en_US',
