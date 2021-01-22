@@ -8,5 +8,5 @@ return [
     'systemlog' => [
         'enable' => 1,
     ],
-    //'localThemeDir' => '@appfa/theme/local/theme01',
+    //'localThemeDir' => '@apperp/theme/local/theme01',
 ];
