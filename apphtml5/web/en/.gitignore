@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.htaccess
+!assets
+!favicon.ico
+!gss.xsl
