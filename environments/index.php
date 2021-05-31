@@ -130,6 +130,8 @@ return [
             'appimage/common/addons',
             'appimage/common/media/upload',
             'appimage/common/media/wxmicroqrcode',
+            'appimage/zip_upload',
+            
             //'appimage/common/appfront/media',
             //'appimage/common/apphtml5/media',
             //'appimage/common/appadmin/media',
@@ -269,6 +271,8 @@ return [
             'appimage/common/addons',
             'appimage/common/media/upload',
             'appimage/common/media/wxmicroqrcode',
+            'appimage/zip_upload',
+            
             //'appimage/common/appfront/media',
             //'appimage/common/apphtml5/media',
             //'appimage/common/appadmin/media',
