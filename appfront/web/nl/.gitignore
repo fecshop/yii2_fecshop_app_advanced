@@ -1,6 +1,6 @@
 *
 !.gitignore
-!assets
+!assets/
 !favicon.ico
 !gss.xsl
 !.htaccess
