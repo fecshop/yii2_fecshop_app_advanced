@@ -73,6 +73,8 @@ return [
             'appfront/web/ru/assets',
             'appfront/web/tw/assets',
             
+            
+            'appfront/web/google_shopping_feed.xml',
             'appfront/web/sitemap.xml',
             'appfront/web/sitemap_es.xml',
             'appfront/web/fr/sitemap.xml',
@@ -210,6 +212,7 @@ return [
             'appfront/web/ru/assets',
             'appfront/web/tw/assets',
             
+            'appfront/web/google_shopping_feed.xml',
             'appfront/web/sitemap.xml',
             'appfront/web/sitemap_es.xml',
             'appfront/web/fr/sitemap.xml',
