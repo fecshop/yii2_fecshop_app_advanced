@@ -30,23 +30,23 @@ return [
              * 'db' => 'mongodb',
              * 'sessionCollection' => 'session',
              */
-            'class'   => 'yii\redis\Session',
-            'timeout' => 86400 * 7,
+            //'class'   => 'yii\redis\Session',
+            //'timeout' => 86400 * 7,
             'keyPrefix' => 'appadmin_session',
-            'redis' => [
-                'database' => 11,
-            ],
+            //'redis' => [
+            //    'database' => 11,
+            //],
         ],
         'cache' => [
             /*
              * // use mongodb for cache. 
              * 'class' => 'yii\mongodb\Cache',
              */
-            'class'     => 'yii\redis\Cache',
+            //'class'     => 'yii\redis\Cache',
             'keyPrefix' => 'appadmin_cache',
-            'redis' => [
-                'database' => 12,
-            ],
+            //'redis' => [
+            //    'database' => 12,
+            //],
         ],
         
         'log' =>[
