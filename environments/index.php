@@ -131,6 +131,7 @@ return [
             'appimage/common/media/catalog/category',
             'appimage/common/addons',
             'appimage/common/media/upload',
+            'appimage/common/media/review',
             'appimage/common/media/wxmicroqrcode',
             'appimage/zip_upload',
             
@@ -273,6 +274,7 @@ return [
             'appimage/common/media/catalog/category',
             'appimage/common/addons',
             'appimage/common/media/upload',
+            'appimage/common/media/review',
             'appimage/common/media/wxmicroqrcode',
             'appimage/zip_upload',
             
