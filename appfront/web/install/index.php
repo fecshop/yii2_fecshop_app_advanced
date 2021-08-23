@@ -3,6 +3,7 @@ ini_set("max_execution_time", "3600");
 error_reporting(E_ALL & ~E_NOTICE & ~E_COMPILE_WARNING );
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('FEC_INSTALL') or define('FEC_INSTALL', true);
 $http = ($_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
 $homeUrl = $http.'://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME']), '\\/');
 require(__DIR__ . '/../../../vendor/autoload.php');

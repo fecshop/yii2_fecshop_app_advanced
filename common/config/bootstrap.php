@@ -18,16 +18,8 @@ Yii::setAlias('@addons', dirname(dirname(__DIR__)).'/addons');
 
 // 下面的代码部分为：命令行执行sql初始化，不加载应用插件部分。
 $is_install = false;
-if (isset($argv) && is_array($argv)) {
-    foreach ($argv as $av) {
-        if ($av == '--migrationPath=@fecshop/migrations/mysqldb') {
-            $is_install = true; 
-            break;
-        }
-    }
-}  
 
-if (!$is_install) {
+if (!FEC_INSTALL) {
     $dbConfig = isset($fecmall_common_main_local_config['components']['db']) ? $fecmall_common_main_local_config['components']['db'] : '';
     if (is_array($dbConfig) && !empty($dbConfig)) {
         $connection = Yii::createObject($dbConfig);
